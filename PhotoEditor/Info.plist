@@ -21,5 +21,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>camera access</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>photo access</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>video</string>
 </dict>
 </plist>
