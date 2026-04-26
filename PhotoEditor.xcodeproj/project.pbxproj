@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C2CE3CE86A977B3FB21B08CA /* Pods_PhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */; };
+		CB19E2D82F98C02A003CAB54 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19E2D62F98C02A003CAB54 /* CanvasView.swift */; };
+		CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB947D382F9BACF40042DD79 /* CanvasView.xib */; };
 		CBE3455C2F933318004BD70B /* PEImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3455A2F933318004BD70B /* PEImagePickerVC.swift */; };
 		CBE3455D2F933318004BD70B /* PEImagePickerTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE345592F933318004BD70B /* PEImagePickerTopBar.swift */; };
 		CBE345622F9334B8004BD70B /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3455E2F9334B8004BD70B /* CommonMethods.swift */; };
@@ -27,6 +29,8 @@
 		047C5D672DCC0F2C0E8328A0 /* Pods-PhotoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoEditor.release.xcconfig"; path = "Target Support Files/Pods-PhotoEditor/Pods-PhotoEditor.release.xcconfig"; sourceTree = "<group>"; };
 		073B99118D27E83B3434847E /* Pods-PhotoEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoEditor.debug.xcconfig"; path = "Target Support Files/Pods-PhotoEditor/Pods-PhotoEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB19E2D62F98C02A003CAB54 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		CB947D382F9BACF40042DD79 /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
 		CBE345592F933318004BD70B /* PEImagePickerTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEImagePickerTopBar.swift; sourceTree = "<group>"; };
 		CBE3455A2F933318004BD70B /* PEImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEImagePickerVC.swift; sourceTree = "<group>"; };
 		CBE3455E2F9334B8004BD70B /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
@@ -62,6 +66,23 @@
 				985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB19E2D32F98BFCA003CAB54 /* MenuViews */ = {
+			isa = PBXGroup;
+			children = (
+				CB19E2D72F98C02A003CAB54 /* Canvas */,
+			);
+			path = MenuViews;
+			sourceTree = "<group>";
+		};
+		CB19E2D72F98C02A003CAB54 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				CB19E2D62F98C02A003CAB54 /* CanvasView.swift */,
+				CB947D382F9BACF40042DD79 /* CanvasView.xib */,
+			);
+			path = Canvas;
 			sourceTree = "<group>";
 		};
 		CBE3455B2F933318004BD70B /* PickerVC */ = {
@@ -120,6 +141,7 @@
 				CBE3455B2F933318004BD70B /* PickerVC */,
 				CBF449C32F926D820098C788 /* LandingPage */,
 				CBE3456B2F9382FE004BD70B /* EditPageVC */,
+				CB19E2D32F98BFCA003CAB54 /* MenuViews */,
 				CBF449A22F926B930098C788 /* Assets.xcassets */,
 				CBF449A32F926B930098C788 /* Info.plist */,
 				CBF449A52F926B930098C788 /* LaunchScreen.storyboard */,
@@ -215,6 +237,7 @@
 			files = (
 				CBF449AE2F926B930098C788 /* Assets.xcassets in Resources */,
 				CBF449B02F926B930098C788 /* LaunchScreen.storyboard in Resources */,
+				CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */,
 				CBF449B12F926B930098C788 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +297,7 @@
 			files = (
 				CBE345622F9334B8004BD70B /* CommonMethods.swift in Sources */,
 				CBE345712F93C297004BD70B /* BottomMenuBar.swift in Sources */,
+				CB19E2D82F98C02A003CAB54 /* CanvasView.swift in Sources */,
 				CBE345642F9334B8004BD70B /* Utils.swift in Sources */,
 				CBE3455C2F933318004BD70B /* PEImagePickerVC.swift in Sources */,
 				CBE3455D2F933318004BD70B /* PEImagePickerTopBar.swift in Sources */,

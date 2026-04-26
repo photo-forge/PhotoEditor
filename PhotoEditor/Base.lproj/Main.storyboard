@@ -39,7 +39,7 @@
         <!--Image PickerVC-->
         <scene sceneID="psJ-EB-Qht">
             <objects>
-                <viewController storyboardIdentifier="IMAGE_PICKER" modalPresentationStyle="fullScreen" id="oTY-z9-G8Y" customClass="PEImagePickerVC" customModule="PhotoEraser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IMAGE_PICKER" modalPresentationStyle="fullScreen" id="oTY-z9-G8Y" customClass="PEImagePickerVC" customModule="PhotoEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o2M-8g-wur">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="GALLERY_CELL" id="6ne-1k-w0E" customClass="ImageCollectionViewCell" customModule="PhotoEraser" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="GALLERY_CELL" id="6ne-1k-w0E" customClass="ImageCollectionViewCell" customModule="PhotoEditor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="88y-OE-aXv">
@@ -216,15 +216,23 @@
                                     <constraint firstAttribute="bottom" secondItem="u1M-0S-zaY" secondAttribute="bottom" id="Kom-G8-xCM"/>
                                     <constraint firstAttribute="trailing" secondItem="6dM-ZJ-IqA" secondAttribute="trailing" id="N69-G6-QcC"/>
                                     <constraint firstAttribute="height" constant="44" id="Neb-Ym-AGI"/>
+                                    <constraint firstItem="6dM-ZJ-IqA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u1M-0S-zaY" secondAttribute="trailing" constant="8" symbolic="YES" id="Y8P-Er-YBg"/>
                                     <constraint firstAttribute="bottom" secondItem="6dM-ZJ-IqA" secondAttribute="bottom" id="fuL-6g-eJu"/>
                                     <constraint firstItem="u1M-0S-zaY" firstAttribute="leading" secondItem="ebC-ge-1Ej" secondAttribute="leading" id="qz3-sU-mW7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymE-Jp-UAw" userLabel="BottomBarView" customClass="BottomMenuBar" customModule="PhotoEditor" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="740" width="393" height="44"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.24702380952380953" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="j16-vn-6nz"/>
+                                </constraints>
+                            </view>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="run-X5-SuI" userLabel="MenuContainerView">
+                                <rect key="frame" x="0.0" y="740" width="393" height="600"/>
+                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.24744897959183673" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="600" id="jT3-mc-BD3"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -232,19 +240,27 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ddl-mU-Djb" firstAttribute="leading" secondItem="Ftp-1I-DP8" secondAttribute="leading" id="1o5-LS-Xaj"/>
-                            <constraint firstItem="ymE-Jp-UAw" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="bottom" id="4d1-kx-2bA"/>
+                            <constraint firstItem="run-X5-SuI" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="3FW-u9-2mT"/>
                             <constraint firstAttribute="trailing" secondItem="ymE-Jp-UAw" secondAttribute="trailing" id="8g4-Tv-4vb"/>
+                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="bottom" id="A1i-Cd-mRd"/>
                             <constraint firstItem="ebC-ge-1Ej" firstAttribute="top" secondItem="iCp-nh-s2X" secondAttribute="top" constant="44" id="JhI-0J-g2Y"/>
                             <constraint firstAttribute="trailing" secondItem="ebC-ge-1Ej" secondAttribute="trailing" id="SbH-IU-fFh"/>
                             <constraint firstItem="Ftp-1I-DP8" firstAttribute="bottom" secondItem="ymE-Jp-UAw" secondAttribute="bottom" id="Xvm-Ex-86K"/>
                             <constraint firstItem="Ddl-mU-Djb" firstAttribute="trailing" secondItem="Ftp-1I-DP8" secondAttribute="trailing" id="Zr9-nP-BkV"/>
+                            <constraint firstAttribute="trailing" secondItem="run-X5-SuI" secondAttribute="trailing" id="bjg-pB-GSM"/>
                             <constraint firstItem="ymE-Jp-UAw" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="lyM-Ay-xUj"/>
                             <constraint firstItem="ebC-ge-1Ej" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="t2o-B3-m5j"/>
                             <constraint firstItem="Ddl-mU-Djb" firstAttribute="top" secondItem="ebC-ge-1Ej" secondAttribute="bottom" id="tPc-uK-fwi"/>
+                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ftp-1I-DP8" secondAttribute="bottom" constant="-44" id="tv9-pd-wmU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBarConstraint" destination="Xvm-Ex-86K" id="jgk-jM-jfE"/>
+                        <outlet property="bottomMenuBar" destination="ymE-Jp-UAw" id="Pjx-G1-yfK"/>
+                        <outlet property="containerView" destination="Ddl-mU-Djb" id="CDL-sS-5Fi"/>
                         <outlet property="imageView" destination="OxO-oV-z0b" id="2s8-ys-T5Q"/>
+                        <outlet property="menuContainerTopConstraint" destination="tv9-pd-wmU" id="bRL-Cp-BrH"/>
+                        <outlet property="menuContainerView" destination="run-X5-SuI" id="q2k-8s-zZi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egg-AM-ArH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

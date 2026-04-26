@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="CanvasView" id="iN0-l3-epB" customClass="CanvasView" customModule="PhotoEditor" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="153"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFc-4b-85e" userLabel="TopBarView">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-td-S1M" userLabel="BackButton">
+                            <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="0dS-td-S1M" secondAttribute="height" multiplier="27:22" id="phf-cH-vPS"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="menubar-back-button"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lMe-yX-C44"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="lpz-bM-TIe"/>
+                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="0dS-td-S1M" secondAttribute="bottom" id="40H-Tt-CI9"/>
+                        <constraint firstItem="0dS-td-S1M" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="top" id="91c-yu-N9G"/>
+                        <constraint firstAttribute="height" constant="44" id="Etp-dO-Jlv"/>
+                        <constraint firstItem="0dS-td-S1M" firstAttribute="leading" secondItem="xFc-4b-85e" secondAttribute="leading" id="F5G-5n-UqA"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-iU-UCy">
+                    <rect key="frame" x="0.0" y="44" width="393" height="109"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GPD-vL-WvP">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xFc-4b-85e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QtB-gh-CAA"/>
+                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RiA-n5-z9v"/>
+                <constraint firstAttribute="trailing" secondItem="ZcJ-iU-UCy" secondAttribute="trailing" id="a6z-3Z-qIX"/>
+                <constraint firstAttribute="bottom" secondItem="ZcJ-iU-UCy" secondAttribute="bottom" id="fH0-V9-X11"/>
+                <constraint firstItem="xFc-4b-85e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gog-DH-LA0"/>
+                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="bottom" id="hRg-qz-6PM"/>
+                <constraint firstAttribute="trailing" secondItem="xFc-4b-85e" secondAttribute="trailing" id="rd3-wS-Gtj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="collectionView" destination="ZcJ-iU-UCy" id="qYC-xe-gqD"/>
+            </connections>
+            <point key="canvasLocation" x="14.503816793893129" y="340.49295774647891"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menubar-back-button" width="30" height="30"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
