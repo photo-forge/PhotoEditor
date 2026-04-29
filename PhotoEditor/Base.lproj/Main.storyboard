@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -175,7 +176,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="652"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="OxO-oV-z0b" secondAttribute="trailing" id="Hu9-hh-cT9"/>
                                     <constraint firstItem="OxO-oV-z0b" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="top" id="bWh-tC-nDJ"/>
@@ -209,7 +210,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="TopBarColor"/>
                                 <constraints>
                                     <constraint firstItem="u1M-0S-zaY" firstAttribute="top" secondItem="ebC-ge-1Ej" secondAttribute="top" id="4Iq-Mo-eiF"/>
                                     <constraint firstItem="6dM-ZJ-IqA" firstAttribute="top" secondItem="ebC-ge-1Ej" secondAttribute="top" id="I1I-4y-iIv"/>
@@ -223,26 +224,26 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymE-Jp-UAw" userLabel="BottomBarView" customClass="BottomMenuBar" customModule="PhotoEditor" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="740" width="393" height="44"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.24702380952380953" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="TopBarColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="j16-vn-6nz"/>
                                 </constraints>
                             </view>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="run-X5-SuI" userLabel="MenuContainerView">
-                                <rect key="frame" x="0.0" y="740" width="393" height="600"/>
-                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.24744897959183673" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="0.0" y="818" width="393" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="600" id="jT3-mc-BD3"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ftp-1I-DP8"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="TopBarColor"/>
                         <constraints>
                             <constraint firstItem="Ddl-mU-Djb" firstAttribute="leading" secondItem="Ftp-1I-DP8" secondAttribute="leading" id="1o5-LS-Xaj"/>
                             <constraint firstItem="run-X5-SuI" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="3FW-u9-2mT"/>
                             <constraint firstAttribute="trailing" secondItem="ymE-Jp-UAw" secondAttribute="trailing" id="8g4-Tv-4vb"/>
-                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="bottom" id="A1i-Cd-mRd"/>
+                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="bottom" constant="78" id="A1i-Cd-mRd"/>
                             <constraint firstItem="ebC-ge-1Ej" firstAttribute="top" secondItem="iCp-nh-s2X" secondAttribute="top" constant="44" id="JhI-0J-g2Y"/>
                             <constraint firstAttribute="trailing" secondItem="ebC-ge-1Ej" secondAttribute="trailing" id="SbH-IU-fFh"/>
                             <constraint firstItem="Ftp-1I-DP8" firstAttribute="bottom" secondItem="ymE-Jp-UAw" secondAttribute="bottom" id="Xvm-Ex-86K"/>
@@ -251,13 +252,14 @@
                             <constraint firstItem="ymE-Jp-UAw" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="lyM-Ay-xUj"/>
                             <constraint firstItem="ebC-ge-1Ej" firstAttribute="leading" secondItem="iCp-nh-s2X" secondAttribute="leading" id="t2o-B3-m5j"/>
                             <constraint firstItem="Ddl-mU-Djb" firstAttribute="top" secondItem="ebC-ge-1Ej" secondAttribute="bottom" id="tPc-uK-fwi"/>
-                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ftp-1I-DP8" secondAttribute="bottom" constant="-44" id="tv9-pd-wmU"/>
+                            <constraint firstItem="run-X5-SuI" firstAttribute="top" secondItem="Ftp-1I-DP8" secondAttribute="bottom" constant="34" id="tv9-pd-wmU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomBarConstraint" destination="Xvm-Ex-86K" id="jgk-jM-jfE"/>
                         <outlet property="bottomMenuBar" destination="ymE-Jp-UAw" id="Pjx-G1-yfK"/>
                         <outlet property="containerView" destination="Ddl-mU-Djb" id="CDL-sS-5Fi"/>
+                        <outlet property="containerViewBottomConstraints" destination="A1i-Cd-mRd" id="OQg-R0-vLo"/>
                         <outlet property="imageView" destination="OxO-oV-z0b" id="2s8-ys-T5Q"/>
                         <outlet property="menuContainerTopConstraint" destination="tv9-pd-wmU" id="bRL-Cp-BrH"/>
                         <outlet property="menuContainerView" destination="run-X5-SuI" id="q2k-8s-zZi"/>
@@ -271,6 +273,12 @@
     <resources>
         <image name="menubar-back-button" width="30" height="30"/>
         <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.28000000000000003" green="0.34000000000000002" blue="0.31" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TopBarColor">
+            <color red="0.17999999999999999" green="0.22" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

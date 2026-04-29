@@ -13,8 +13,9 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
     @IBOutlet weak var menuContainerView: UIView!
     
-    @IBOutlet weak var bottomBarConstraint: NSLayoutConstraint!
-    @IBOutlet weak var menuContainerTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var bottomBarConstraint: NSLayoutConstraint! //  0
+    @IBOutlet weak var menuContainerTopConstraint: NSLayoutConstraint!  // 34
+    @IBOutlet weak var containerViewBottomConstraints: NSLayoutConstraint!  // 78
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -31,7 +32,10 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     
     // MARK: TopBarDelegate
     @IBAction func backButtonAction(_ sender: UIButton) {
-        print("Show Discard View")
+        
+        self.dismiss(animated: true) {
+            print("View Dismissed")
+        }
     }
     
     @IBAction func shareButtonAction(_ sender: UIButton) {
@@ -76,19 +80,10 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     
     // MARK: Animations & Transitions
     
-    func showBottomMenuBar(completion: (() -> Void)? = nil) {
-        bottomBarConstraint.constant = 0
-        UIView.animate(withDuration: 0.4) {
-            self.view.layoutIfNeeded()
-        } completion: { [self] _ in
-            bottomMenuBar.isUserInteractionEnabled = true
-            completion?()
-        }
-    }
-    
     func hideBottomMenuBar(completion: (() -> Void)? = nil) {
         bottomBarConstraint.constant = -78
-        UIView.animate(withDuration: 0.4) {
+        containerViewBottomConstraints.constant = 0
+        UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         } completion: { [self] _ in
             bottomMenuBar.isUserInteractionEnabled = false
@@ -96,9 +91,20 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
         }
     }
     
+    func showBottomMenuBar(completion: (() -> Void)? = nil) {
+        bottomBarConstraint.constant = 0
+        containerViewBottomConstraints.constant = 78
+        UIView.animate(withDuration: 0.2) {
+            self.view.layoutIfNeeded()
+        } completion: { [self] _ in
+            bottomMenuBar.isUserInteractionEnabled = true
+            completion?()
+        }
+    }
+    
     func showMenuView(height: CGFloat) {
-        self.menuContainerTopConstraint.constant = -height
-        UIView.animate(withDuration: 0.9) {
+        menuContainerTopConstraint.constant = -height
+        UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         } completion: { [self] _ in
             menuContainerView.isUserInteractionEnabled = true
@@ -107,15 +113,13 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     }
     
     func hideMenuView(completion: (() -> Void)? = nil) {
-        menuContainerTopConstraint.constant = -44
-        UIView.animate(withDuration: 0.9) {
+        menuContainerTopConstraint.constant = 34
+        containerViewBottomConstraints.constant = 0
+        UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         } completion: { [self] _ in
             menuContainerView.isUserInteractionEnabled = false
             completion?()
-            showBottomMenuBar {
-                
-            }
         }
         
     }
@@ -127,21 +131,19 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
         
         // Create View
         let viewHeight: CGFloat = 200
-        let viewFrame: CGRect = CGRect(x: 0, y: 78, width: menuContainerView.frame.width, height: viewHeight)
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if canvasView == nil {
             canvasView = Bundle.main.loadNibNamed("CanvasView", owner: nil, options: nil)?.first as? CanvasView
-            canvasView?.frame = viewFrame
             canvasView?.delegate = self
         }
         
+        canvasView?.frame = viewFrame
+        menuContainerView.addSubview(canvasView!)
+        
         // Show Menu View
         hideBottomMenuBar { [self] in
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-                menuContainerView.addSubview(canvasView!)
-                self.showMenuView(height: viewHeight)
-            }
-            
+            menuContainerView.addSubview(canvasView!)
+            self.showMenuView(height: viewHeight)
         }
         
     }
@@ -150,10 +152,13 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
         print("canvasView_CrossButtonTapped")
         hideMenuView { [self] in
             canvasView?.removeFromSuperview()
+            
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
+                showBottomMenuBar {
+                    
+                }
+//            }
         }
-//        if canvasView != nil {
-//            canvasView?.removeFromSuperview()
-//        }
     }
     
 }

@@ -48,7 +48,7 @@ class CanvasView: UIView {
     }
 
     private func commonInit() {
-        self.backgroundColor = .systemBlue
+        self.backgroundColor = .clear
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {

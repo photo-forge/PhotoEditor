@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,6 +18,13 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xFc-4b-85e" userLabel="TopBarView">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdo-c1-yxE" userLabel="LineView">
+                            <rect key="frame" x="0.0" y="43" width="393" height="1"/>
+                            <color key="backgroundColor" name="ThemeColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Ei6-uD-wJt"/>
+                            </constraints>
+                        </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dS-td-S1M" userLabel="BackButton">
                             <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
                             <constraints>
@@ -32,17 +38,20 @@
                         </button>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="lpz-bM-TIe"/>
-                    <color key="backgroundColor" systemColor="systemMintColor"/>
+                    <color key="backgroundColor" name="TopBarColor"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="0dS-td-S1M" secondAttribute="bottom" id="40H-Tt-CI9"/>
                         <constraint firstItem="0dS-td-S1M" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="top" id="91c-yu-N9G"/>
+                        <constraint firstAttribute="bottom" secondItem="bdo-c1-yxE" secondAttribute="bottom" id="9Mf-Uc-K89"/>
                         <constraint firstAttribute="height" constant="44" id="Etp-dO-Jlv"/>
                         <constraint firstItem="0dS-td-S1M" firstAttribute="leading" secondItem="xFc-4b-85e" secondAttribute="leading" id="F5G-5n-UqA"/>
+                        <constraint firstItem="bdo-c1-yxE" firstAttribute="leading" secondItem="xFc-4b-85e" secondAttribute="leading" id="M8r-XI-IU6"/>
+                        <constraint firstAttribute="trailing" secondItem="bdo-c1-yxE" secondAttribute="trailing" id="wr4-4o-9Tc"/>
                     </constraints>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-iU-UCy">
                     <rect key="frame" x="0.0" y="44" width="393" height="109"/>
-                    <color key="backgroundColor" name="AccentColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GPD-vL-WvP">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -52,7 +61,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="xFc-4b-85e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QtB-gh-CAA"/>
                 <constraint firstItem="ZcJ-iU-UCy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RiA-n5-z9v"/>
@@ -71,11 +80,11 @@
     </objects>
     <resources>
         <image name="menubar-back-button" width="30" height="30"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="ThemeColor">
+            <color red="0.23999999999999999" green="0.29999999999999999" blue="0.27000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="TopBarColor">
+            <color red="0.17999999999999999" green="0.22" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

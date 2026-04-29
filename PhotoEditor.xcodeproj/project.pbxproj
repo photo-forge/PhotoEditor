@@ -10,6 +10,8 @@
 		C2CE3CE86A977B3FB21B08CA /* Pods_PhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */; };
 		CB19E2D82F98C02A003CAB54 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19E2D62F98C02A003CAB54 /* CanvasView.swift */; };
 		CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB947D382F9BACF40042DD79 /* CanvasView.xib */; };
+		CBA588E12FA2471F00DA5902 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA588E02FA2471F00DA5902 /* Colors.xcassets */; };
+		CBD324A92FA1BF5C00DD6811 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD324A82FA1BF5C00DD6811 /* GlobalConstant.swift */; };
 		CBE3455C2F933318004BD70B /* PEImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3455A2F933318004BD70B /* PEImagePickerVC.swift */; };
 		CBE3455D2F933318004BD70B /* PEImagePickerTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE345592F933318004BD70B /* PEImagePickerTopBar.swift */; };
 		CBE345622F9334B8004BD70B /* CommonMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3455E2F9334B8004BD70B /* CommonMethods.swift */; };
@@ -31,6 +33,8 @@
 		985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB19E2D62F98C02A003CAB54 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		CB947D382F9BACF40042DD79 /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
+		CBA588E02FA2471F00DA5902 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CBD324A82FA1BF5C00DD6811 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		CBE345592F933318004BD70B /* PEImagePickerTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEImagePickerTopBar.swift; sourceTree = "<group>"; };
 		CBE3455A2F933318004BD70B /* PEImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEImagePickerVC.swift; sourceTree = "<group>"; };
 		CBE3455E2F9334B8004BD70B /* CommonMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMethods.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			children = (
 				CBF449A12F926B930098C788 /* AppDelegate.swift */,
 				CBF449A82F926B930098C788 /* SceneDelegate.swift */,
+				CBD324A82FA1BF5C00DD6811 /* GlobalConstant.swift */,
+				CBA588E02FA2471F00DA5902 /* Colors.xcassets */,
 				CBE345612F9334B8004BD70B /* Util */,
 				CBF449C42F9271F40098C788 /* Images */,
 				CBE3455B2F933318004BD70B /* PickerVC */,
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA588E12FA2471F00DA5902 /* Colors.xcassets in Resources */,
 				CBF449AE2F926B930098C788 /* Assets.xcassets in Resources */,
 				CBF449B02F926B930098C788 /* LaunchScreen.storyboard in Resources */,
 				CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */,
@@ -303,6 +310,7 @@
 				CBE3455D2F933318004BD70B /* PEImagePickerTopBar.swift in Sources */,
 				CBE3456A2F934B2C004BD70B /* UIImage+features.swift in Sources */,
 				CBE3456F2F93972E004BD70B /* EditPageVC.swift in Sources */,
+				CBD324A92FA1BF5C00DD6811 /* GlobalConstant.swift in Sources */,
 				CBF449AB2F926B930098C788 /* AppDelegate.swift in Sources */,
 				CBF449AC2F926B930098C788 /* SceneDelegate.swift in Sources */,
 				CBF449AD2F926B930098C788 /* LandingPageVC.swift in Sources */,
@@ -340,6 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEditor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -374,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoEditor/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
