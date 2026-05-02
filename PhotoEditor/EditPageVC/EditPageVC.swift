@@ -50,13 +50,9 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     
     func bottomMenuBar_FGGalleryButtonTapped() {
         print("Gallery")
-        
-        showMenuView(height: 200)
     }
     func bottomMenuBar_BGGalleryButtonTapped() {
         print("BG")
-        
-        hideMenuView()
     }
     func bottomMenuBar_CanvasButtonTapped() {
         print("Canvas")
@@ -102,23 +98,31 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
         }
     }
     
-    func showMenuView(height: CGFloat) {
-        menuContainerTopConstraint.constant = -height
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        } completion: { [self] _ in
-            menuContainerView.isUserInteractionEnabled = true
-        }
+    func showMenuView(view: UIView, height: CGFloat) {
         
+                
+        hideBottomMenuBar { [self] in
+            menuContainerView.addSubview(view)
+            
+            menuContainerTopConstraint.constant = -height
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            } completion: { [self] _ in
+                menuContainerView.isUserInteractionEnabled = true
+            }
+        }
     }
     
-    func hideMenuView(completion: (() -> Void)? = nil) {
+    func hideMenuView(view:UIView, completion: (() -> Void)? = nil) {
         menuContainerTopConstraint.constant = 34
         containerViewBottomConstraints.constant = 0
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         } completion: { [self] _ in
             menuContainerView.isUserInteractionEnabled = false
+            view.removeFromSuperview()
+            showBottomMenuBar {
+            }
             completion?()
         }
         
@@ -130,34 +134,21 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     func createCanvasView() {
         
         // Create View
-        let viewHeight: CGFloat = 200
+        let viewHeight: CGFloat = 150
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if canvasView == nil {
             canvasView = Bundle.main.loadNibNamed("CanvasView", owner: nil, options: nil)?.first as? CanvasView
             canvasView?.delegate = self
         }
-        
         canvasView?.frame = viewFrame
-        menuContainerView.addSubview(canvasView!)
         
         // Show Menu View
-        hideBottomMenuBar { [self] in
-            menuContainerView.addSubview(canvasView!)
-            self.showMenuView(height: viewHeight)
-        }
-        
+        showMenuView(view: canvasView!, height: viewHeight)
     }
     
     func canvasView_CrossButtonTapped() {
         print("canvasView_CrossButtonTapped")
-        hideMenuView { [self] in
-            canvasView?.removeFromSuperview()
-            
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [self] in
-                showBottomMenuBar {
-                    
-                }
-//            }
+        hideMenuView(view: canvasView!) {
         }
     }
     

@@ -36,6 +36,16 @@
                                 <action selector="backButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lMe-yX-C44"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canvas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4H-KC-dr4">
+                            <rect key="frame" x="146.66666666666666" y="11.666666666666664" width="100" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="acs-9m-ZNZ"/>
+                                <constraint firstAttribute="height" constant="21" id="sTH-o4-brU"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.68721165113329674" green="0.8361340241948354" blue="0.7610363504818336" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="lpz-bM-TIe"/>
                     <color key="backgroundColor" name="TopBarColor"/>
@@ -45,7 +55,9 @@
                         <constraint firstAttribute="bottom" secondItem="bdo-c1-yxE" secondAttribute="bottom" id="9Mf-Uc-K89"/>
                         <constraint firstAttribute="height" constant="44" id="Etp-dO-Jlv"/>
                         <constraint firstItem="0dS-td-S1M" firstAttribute="leading" secondItem="xFc-4b-85e" secondAttribute="leading" id="F5G-5n-UqA"/>
+                        <constraint firstItem="N4H-KC-dr4" firstAttribute="centerX" secondItem="xFc-4b-85e" secondAttribute="centerX" id="Jxe-X2-RQi"/>
                         <constraint firstItem="bdo-c1-yxE" firstAttribute="leading" secondItem="xFc-4b-85e" secondAttribute="leading" id="M8r-XI-IU6"/>
+                        <constraint firstItem="N4H-KC-dr4" firstAttribute="centerY" secondItem="xFc-4b-85e" secondAttribute="centerY" id="hIm-4I-aKE"/>
                         <constraint firstAttribute="trailing" secondItem="bdo-c1-yxE" secondAttribute="trailing" id="wr4-4o-9Tc"/>
                     </constraints>
                 </view>
@@ -81,10 +93,10 @@
     <resources>
         <image name="menubar-back-button" width="30" height="30"/>
         <namedColor name="ThemeColor">
-            <color red="0.23999999999999999" green="0.29999999999999999" blue="0.27000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23999999463558197" green="0.30000001192092896" blue="0.27000001072883606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TopBarColor">
-            <color red="0.17999999999999999" green="0.22" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
