@@ -8,8 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		C2CE3CE86A977B3FB21B08CA /* Pods_PhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */; };
-		CB19E2D82F98C02A003CAB54 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB19E2D62F98C02A003CAB54 /* CanvasView.swift */; };
-		CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB947D382F9BACF40042DD79 /* CanvasView.xib */; };
+		CB6F93F02FAA16C5005BF98C /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */; };
+		CB6F93F12FAA16C5005BF98C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F93EE2FAA16C5005BF98C /* CanvasView.swift */; };
+		CB83475F2FADFF34005EC518 /* Rario9x16.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475B2FADFF34005EC518 /* Rario9x16.png */; };
+		CB8347602FADFF34005EC518 /*  Rario1x2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347522FADFF34005EC518 /*  Rario1x2.png */; };
+		CB8347612FADFF34005EC518 /* RarioSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347532FADFF34005EC518 /* RarioSquare.png */; };
+		CB8347622FADFF34005EC518 /* Rario3x1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347572FADFF34005EC518 /* Rario3x1.png */; };
+		CB8347632FADFF34005EC518 /* Rario2x1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347552FADFF34005EC518 /* Rario2x1.png */; };
+		CB8347642FADFF34005EC518 /* Rario3x2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347582FADFF34005EC518 /* Rario3x2.png */; };
+		CB8347652FADFF34005EC518 /* Rario1x3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347542FADFF34005EC518 /* Rario1x3.png */; };
+		CB8347662FADFF34005EC518 /* Rario2x3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347562FADFF34005EC518 /* Rario2x3.png */; };
+		CB8347672FADFF34005EC518 /* Rario16x9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475C2FADFF34005EC518 /* Rario16x9.png */; };
+		CB8347682FADFF34005EC518 /* Rario4x3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475A2FADFF34005EC518 /* Rario4x3.png */; };
+		CB8347692FADFF34005EC518 /* Rario3x4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347592FADFF34005EC518 /* Rario3x4.png */; };
+		CB83476A2FADFF34005EC518 /* RarioOriginal.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475D2FADFF34005EC518 /* RarioOriginal.png */; };
 		CBA588E12FA2471F00DA5902 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA588E02FA2471F00DA5902 /* Colors.xcassets */; };
 		CBD324A92FA1BF5C00DD6811 /* GlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD324A82FA1BF5C00DD6811 /* GlobalConstant.swift */; };
 		CBE3455C2F933318004BD70B /* PEImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE3455A2F933318004BD70B /* PEImagePickerVC.swift */; };
@@ -25,14 +37,28 @@
 		CBF449AE2F926B930098C788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBF449A22F926B930098C788 /* Assets.xcassets */; };
 		CBF449B02F926B930098C788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF449A52F926B930098C788 /* LaunchScreen.storyboard */; };
 		CBF449B12F926B930098C788 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBF449A72F926B930098C788 /* Main.storyboard */; };
+		CBFFC00A2FA8DAFF00B96C58 /* SampleMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBFFC0092FA8DAFF00B96C58 /* SampleMenuView.xib */; };
+		CBFFC00B2FA8DAFF00B96C58 /* SampleMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFFC0082FA8DAFF00B96C58 /* SampleMenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		047C5D672DCC0F2C0E8328A0 /* Pods-PhotoEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoEditor.release.xcconfig"; path = "Target Support Files/Pods-PhotoEditor/Pods-PhotoEditor.release.xcconfig"; sourceTree = "<group>"; };
 		073B99118D27E83B3434847E /* Pods-PhotoEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoEditor.debug.xcconfig"; path = "Target Support Files/Pods-PhotoEditor/Pods-PhotoEditor.debug.xcconfig"; sourceTree = "<group>"; };
 		985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB19E2D62F98C02A003CAB54 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		CB947D382F9BACF40042DD79 /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
+		CB6F93EE2FAA16C5005BF98C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
+		CB8347522FADFF34005EC518 /*  Rario1x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = " Rario1x2.png"; sourceTree = "<group>"; };
+		CB8347532FADFF34005EC518 /* RarioSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RarioSquare.png; sourceTree = "<group>"; };
+		CB8347542FADFF34005EC518 /* Rario1x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario1x3.png; sourceTree = "<group>"; };
+		CB8347552FADFF34005EC518 /* Rario2x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario2x1.png; sourceTree = "<group>"; };
+		CB8347562FADFF34005EC518 /* Rario2x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario2x3.png; sourceTree = "<group>"; };
+		CB8347572FADFF34005EC518 /* Rario3x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario3x1.png; sourceTree = "<group>"; };
+		CB8347582FADFF34005EC518 /* Rario3x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario3x2.png; sourceTree = "<group>"; };
+		CB8347592FADFF34005EC518 /* Rario3x4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario3x4.png; sourceTree = "<group>"; };
+		CB83475A2FADFF34005EC518 /* Rario4x3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario4x3.png; sourceTree = "<group>"; };
+		CB83475B2FADFF34005EC518 /* Rario9x16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario9x16.png; sourceTree = "<group>"; };
+		CB83475C2FADFF34005EC518 /* Rario16x9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario16x9.png; sourceTree = "<group>"; };
+		CB83475D2FADFF34005EC518 /* RarioOriginal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RarioOriginal.png; sourceTree = "<group>"; };
 		CBA588E02FA2471F00DA5902 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CBD324A82FA1BF5C00DD6811 /* GlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstant.swift; sourceTree = "<group>"; };
 		CBE345592F933318004BD70B /* PEImagePickerTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEImagePickerTopBar.swift; sourceTree = "<group>"; };
@@ -50,6 +76,8 @@
 		CBF449A62F926B930098C788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBF449A82F926B930098C788 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CBF449A92F926B930098C788 /* LandingPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageVC.swift; sourceTree = "<group>"; };
+		CBFFC0082FA8DAFF00B96C58 /* SampleMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMenuView.swift; sourceTree = "<group>"; };
+		CBFFC0092FA8DAFF00B96C58 /* SampleMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SampleMenuView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +103,7 @@
 		CB19E2D32F98BFCA003CAB54 /* MenuViews */ = {
 			isa = PBXGroup;
 			children = (
+				CBFFC0072FA8D85900B96C58 /* SampleMenu */,
 				CB19E2D72F98C02A003CAB54 /* Canvas */,
 			);
 			path = MenuViews;
@@ -83,10 +112,30 @@
 		CB19E2D72F98C02A003CAB54 /* Canvas */ = {
 			isa = PBXGroup;
 			children = (
-				CB19E2D62F98C02A003CAB54 /* CanvasView.swift */,
-				CB947D382F9BACF40042DD79 /* CanvasView.xib */,
+				CB83475E2FADFF34005EC518 /* Ratio Images */,
+				CB6F93EE2FAA16C5005BF98C /* CanvasView.swift */,
+				CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */,
 			);
 			path = Canvas;
+			sourceTree = "<group>";
+		};
+		CB83475E2FADFF34005EC518 /* Ratio Images */ = {
+			isa = PBXGroup;
+			children = (
+				CB83475D2FADFF34005EC518 /* RarioOriginal.png */,
+				CB8347532FADFF34005EC518 /* RarioSquare.png */,
+				CB8347522FADFF34005EC518 /*  Rario1x2.png */,
+				CB8347542FADFF34005EC518 /* Rario1x3.png */,
+				CB8347552FADFF34005EC518 /* Rario2x1.png */,
+				CB8347562FADFF34005EC518 /* Rario2x3.png */,
+				CB8347572FADFF34005EC518 /* Rario3x1.png */,
+				CB8347582FADFF34005EC518 /* Rario3x2.png */,
+				CB8347592FADFF34005EC518 /* Rario3x4.png */,
+				CB83475A2FADFF34005EC518 /* Rario4x3.png */,
+				CB83475B2FADFF34005EC518 /* Rario9x16.png */,
+				CB83475C2FADFF34005EC518 /* Rario16x9.png */,
+			);
+			path = "Ratio Images";
 			sourceTree = "<group>";
 		};
 		CBE3455B2F933318004BD70B /* PickerVC */ = {
@@ -171,6 +220,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		CBFFC0072FA8D85900B96C58 /* SampleMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CBFFC0082FA8DAFF00B96C58 /* SampleMenuView.swift */,
+				CBFFC0092FA8DAFF00B96C58 /* SampleMenuView.xib */,
+			);
+			path = SampleMenu;
+			sourceTree = "<group>";
+		};
 		D972DFE8DAB1FCDE30B29120 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,8 +301,21 @@
 			files = (
 				CBA588E12FA2471F00DA5902 /* Colors.xcassets in Resources */,
 				CBF449AE2F926B930098C788 /* Assets.xcassets in Resources */,
+				CB6F93F02FAA16C5005BF98C /* CanvasView.xib in Resources */,
+				CB83475F2FADFF34005EC518 /* Rario9x16.png in Resources */,
+				CB8347602FADFF34005EC518 /*  Rario1x2.png in Resources */,
+				CB8347612FADFF34005EC518 /* RarioSquare.png in Resources */,
+				CB8347622FADFF34005EC518 /* Rario3x1.png in Resources */,
+				CB8347632FADFF34005EC518 /* Rario2x1.png in Resources */,
+				CB8347642FADFF34005EC518 /* Rario3x2.png in Resources */,
+				CB8347652FADFF34005EC518 /* Rario1x3.png in Resources */,
+				CB8347662FADFF34005EC518 /* Rario2x3.png in Resources */,
+				CB8347672FADFF34005EC518 /* Rario16x9.png in Resources */,
+				CB8347682FADFF34005EC518 /* Rario4x3.png in Resources */,
+				CB8347692FADFF34005EC518 /* Rario3x4.png in Resources */,
+				CB83476A2FADFF34005EC518 /* RarioOriginal.png in Resources */,
+				CBFFC00A2FA8DAFF00B96C58 /* SampleMenuView.xib in Resources */,
 				CBF449B02F926B930098C788 /* LaunchScreen.storyboard in Resources */,
-				CB947D392F9BACF40042DD79 /* CanvasView.xib in Resources */,
 				CBF449B12F926B930098C788 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +375,8 @@
 			files = (
 				CBE345622F9334B8004BD70B /* CommonMethods.swift in Sources */,
 				CBE345712F93C297004BD70B /* BottomMenuBar.swift in Sources */,
-				CB19E2D82F98C02A003CAB54 /* CanvasView.swift in Sources */,
+				CB6F93F12FAA16C5005BF98C /* CanvasView.swift in Sources */,
+				CBFFC00B2FA8DAFF00B96C58 /* SampleMenuView.swift in Sources */,
 				CBE345642F9334B8004BD70B /* Utils.swift in Sources */,
 				CBE3455C2F933318004BD70B /* PEImagePickerVC.swift in Sources */,
 				CBE3455D2F933318004BD70B /* PEImagePickerTopBar.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
+class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -20,6 +20,8 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     
     var mainImage: UIImage?
+    
+    var sampleMenuView: SampleMenuView?
     var canvasView: CanvasView?
     
     override func viewDidLoad() {
@@ -50,6 +52,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
     
     func bottomMenuBar_FGGalleryButtonTapped() {
         print("Gallery")
+        createSampleMenuView()
     }
     func bottomMenuBar_BGGalleryButtonTapped() {
         print("BG")
@@ -126,6 +129,30 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, CanvasViewDelegate {
             completion?()
         }
         
+    }
+    
+    
+    // MARK: Sample Menu View and Delegates
+    
+    func createSampleMenuView() {
+        
+        // Create View
+        let viewHeight: CGFloat = 200
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+        if sampleMenuView == nil {
+            sampleMenuView = Bundle.main.loadNibNamed("SampleMenuView", owner: nil, options: nil)?.first as? SampleMenuView
+            sampleMenuView?.delegate = self
+        }
+        sampleMenuView?.frame = viewFrame
+        
+        // Show Menu View
+        showMenuView(view: sampleMenuView!, height: viewHeight)
+    }
+    
+    func sampleMenuView_CrossButtonTapped() {
+        print("sampleMenuView_CrossButtonTapped")
+        hideMenuView(view: sampleMenuView!) {
+        }
     }
     
     
