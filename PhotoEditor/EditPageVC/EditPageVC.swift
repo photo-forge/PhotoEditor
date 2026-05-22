@@ -17,19 +17,39 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     @IBOutlet weak var menuContainerTopConstraint: NSLayoutConstraint!  // 34
     @IBOutlet weak var containerViewBottomConstraints: NSLayoutConstraint!  // 78
     
+    @IBOutlet weak var editViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var editViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var referanceView: UIImageView!
+    @IBOutlet weak var editView: UIView!
+    @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
-    var mainImage: UIImage?
+    var mainImage: UIImage!
+    var canvasSize: CGSize = CGSize(width: 800, height: 2000)
     
-    var sampleMenuView: SampleMenuView?
-    var canvasView: CanvasView?
+    // Menus
+    var sampleMenuView: SampleMenuView!
+    var canvasView: CanvasView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // BottomBar
+        bottomMenuBar.delegate = self
+        
+        // BG View
+        bgView.contentMode = .scaleAspectFill
+        bgView.backgroundColor = .white
+        
+        // Image View
         imageView.image = mainImage
         
-        bottomMenuBar.delegate = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.1)
+        }
+        
     }
     
     // MARK: TopBarDelegate
@@ -43,9 +63,6 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     @IBAction func shareButtonAction(_ sender: UIButton) {
         print("Show Share View")
         
-    //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-    //            completion?()
-    //        }
     }
     
     // MARK: BottomMenuBarDelegate
@@ -103,14 +120,14 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     func showMenuView(view: UIView, height: CGFloat) {
         
-                
         hideBottomMenuBar { [self] in
             menuContainerView.addSubview(view)
-            
+                        
             menuContainerTopConstraint.constant = -height
             UIView.animate(withDuration: 0.3) {
                 self.view.layoutIfNeeded()
             } completion: { [self] _ in
+                updateEditViewFrameWithCanvas(size: canvasSize, duration: 1.3)
                 menuContainerView.isUserInteractionEnabled = true
             }
         }
@@ -124,7 +141,8 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         } completion: { [self] _ in
             menuContainerView.isUserInteractionEnabled = false
             view.removeFromSuperview()
-            showBottomMenuBar {
+            showBottomMenuBar { [self] in
+                updateEditViewFrameWithCanvas(size: canvasSize, duration: 1.3)
             }
             completion?()
         }
@@ -166,6 +184,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         if canvasView == nil {
             canvasView = Bundle.main.loadNibNamed("CanvasView", owner: nil, options: nil)?.first as? CanvasView
             canvasView?.delegate = self
+            canvasView.alpha = 0.5
         }
         canvasView?.frame = viewFrame
         
@@ -177,6 +196,82 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         print("canvasView_CrossButtonTapped")
         hideMenuView(view: canvasView!) {
         }
+    }
+    
+    var timer : Timer?
+    var timerCount: Int = 0
+    var loopCount: Int = 0
+    var widthPerLoopCollageView: CGFloat!
+    var heightPerLoopCollageView: CGFloat!
+    var previousCanvasSize: CGSize!
+    
+    func canvasView_ItemSelectedWithSize(size: CGSize) {
+        print("Canvas", size.width, size.height)
+        
+        loopCount = 50
+        
+        let widthDiff: CGFloat = size.width - canvasSize.width
+        let heightDiff: CGFloat = size.height - canvasSize.height
+        widthPerLoopCollageView = widthDiff / CGFloat(loopCount)
+        heightPerLoopCollageView = heightDiff / CGFloat(loopCount)
+        
+        previousCanvasSize = canvasSize
+        canvasSize = size
+        
+        timerCount = 0
+        timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(self.updateEditView), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func updateEditView() {
+        
+        // Create Edit View
+        
+        previousCanvasSize.width += widthPerLoopCollageView;
+        previousCanvasSize.height += heightPerLoopCollageView;
+        updateEditViewFrameWithCanvas(size: previousCanvasSize, duration: 0.0)
+        
+        timerCount += 1
+        if timer!.isValid && timerCount >= loopCount {
+            timer?.invalidate()
+            timer = nil
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.0)
+        }
+        
+    }
+    
+    func updateEditViewFrameWithCanvas(size:CGSize, duration:TimeInterval) {
+        
+        print("Canvas .....", size.width, size.height)
+        
+        editViewWidthConstraint.constant = size.width
+        editViewHeightConstraint.constant = size.height
+        let scale = scaleValueOfEditView(size: size)
+        editView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        if duration > 0 {
+            UIView.animate(withDuration: duration) {
+                self.view.layoutIfNeeded()
+            }
+        }
+        
+    }
+    
+    
+    func scaleValueOfEditView(size:CGSize) -> CGFloat {
+        
+//        let containerHWRatio: CGFloat = containerView.bounds.width / containerView.bounds.height
+//        let sizeHWRatio: CGFloat = size.width / size.height
+//        
+//        if containerHWRatio < sizeHWRatio {
+//            return containerView.bounds.width / size.width
+//        } else {
+//            return containerView.bounds.height / size.height
+//        }
+        
+        let scaleX: CGFloat = referanceView.bounds.width / size.width
+        let scaleY: CGFloat = referanceView.bounds.height / size.height
+        print("Scale .....", scaleX, scaleY)
+        return min(scaleX, scaleY)
     }
     
 }

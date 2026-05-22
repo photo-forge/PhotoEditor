@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -62,31 +61,25 @@
                         <constraint firstAttribute="trailing" secondItem="bdo-c1-yxE" secondAttribute="trailing" id="wr4-4o-9Tc"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-iU-UCy">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ia-QX-wZc">
                     <rect key="frame" x="0.0" y="44" width="393" height="109"/>
-                    <color key="backgroundColor" systemColor="systemGreenColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GPD-vL-WvP">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="4Ia-QX-wZc" secondAttribute="trailing" id="BHY-Mh-VpW"/>
+                <constraint firstAttribute="bottom" secondItem="4Ia-QX-wZc" secondAttribute="bottom" id="CYv-7j-bc0"/>
                 <constraint firstItem="xFc-4b-85e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QtB-gh-CAA"/>
-                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RiA-n5-z9v"/>
-                <constraint firstAttribute="trailing" secondItem="ZcJ-iU-UCy" secondAttribute="trailing" id="a6z-3Z-qIX"/>
-                <constraint firstAttribute="bottom" secondItem="ZcJ-iU-UCy" secondAttribute="bottom" id="fH0-V9-X11"/>
+                <constraint firstItem="4Ia-QX-wZc" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="bottom" id="XPU-80-U1X"/>
+                <constraint firstItem="4Ia-QX-wZc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fnk-SV-EvB"/>
                 <constraint firstItem="xFc-4b-85e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gog-DH-LA0"/>
-                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="bottom" id="hRg-qz-6PM"/>
                 <constraint firstAttribute="trailing" secondItem="xFc-4b-85e" secondAttribute="trailing" id="rd3-wS-Gtj"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="collectionView" destination="ZcJ-iU-UCy" id="qYC-xe-gqD"/>
+                <outlet property="viewContainer" destination="4Ia-QX-wZc" id="Rbe-qp-qJc"/>
             </connections>
             <point key="canvasLocation" x="14.503816793893129" y="340.49295774647891"/>
         </view>
@@ -99,8 +92,5 @@
         <namedColor name="TopBarColor">
             <color red="0.18000000715255737" green="0.2199999988079071" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

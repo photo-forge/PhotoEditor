@@ -13,7 +13,7 @@ import UIKit
     @objc optional func canvasView_CrossButtonTapped()
     @objc optional func canvasView_freeSizeButtonTapped()
     @objc optional func canvasView_Appeared()
-    @objc optional func canvasView_ItemSelectedAt() -> Int;
+    @objc optional func canvasView_ItemSelectedWithSize(size:CGSize)
 }
 
 enum CanvasType: Int {
@@ -36,16 +36,18 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var delegate:CanvasViewDelegate!
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
+    @IBOutlet weak var viewContainer: UIView!
+    var collectionView: UICollectionView!
     
     let menuItems = [CanvasType.RarioOriginal, .RarioSquare, .Rario9x16, .Rario16x9, .Rario3x4, .Rario4x3, .Rario2x3, .Rario3x2, .Rario1x3, .Rario3x1, .Rario1x2, .Rario2x1]
     let menuItemNames = ["RarioOriginal", "RarioSquare", "Rario9x16", "Rario16x9", "Rario3x4", "Rario4x3", "Rario2x3", "Rario3x2", "Rario1x3", "Rario3x1", "Rario1x2", "Rario2x1"]
     
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            self.commonInit()
+        }
+        
     }
     
     override init(frame: CGRect) {
@@ -92,7 +94,7 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         collectionView.delegate = self
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.register(CanvasMenuCell.self, forCellWithReuseIdentifier: "MenuItemCell")
+        collectionView.register(CanvasMenuCell.self, forCellWithReuseIdentifier: "CanvasMenuCell")
         
     }
     
@@ -102,9 +104,43 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuItemCell", for: indexPath) as! BottomMenuBarCell
-        cell.imageView.image = UIImage(named: menuItemNames[indexPath.row])!
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CanvasMenuCell", for: indexPath) as! CanvasMenuCell
+        cell.imageView.image = UIImage(named: menuItemNames[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (delegate != nil) {
+            switch menuItems[indexPath.row] {
+            case .RarioOriginal:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1024, height: 1024))
+            case .RarioSquare:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1024, height: 1024))
+            case .Rario9x16:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 900, height: 1600))
+            case .Rario16x9:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1600, height: 900))
+            case .Rario3x4:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 900, height: 1200))
+            case .Rario4x3:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1200, height: 900))
+            case .Rario2x3:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1000, height: 1500))
+            case .Rario3x2:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1500, height: 1000))
+            case .Rario1x3:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 600, height: 1800))
+            case .Rario3x1:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1800, height: 600))
+            case .Rario1x2:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 800, height: 1600))
+            case .Rario2x1:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1600, height: 800))
+            default:
+                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1000, height: 1000))
+            }
+                        
+        }
     }
     
 
@@ -119,7 +155,7 @@ class CanvasMenuCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .clear
+        self.backgroundColor = .red
         
         // Image
         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height-6))
