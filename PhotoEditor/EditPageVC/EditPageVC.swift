@@ -20,7 +20,6 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     @IBOutlet weak var editViewWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var editViewHeightConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var referanceView: UIImageView!
     @IBOutlet weak var editView: UIView!
     @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
@@ -44,11 +43,21 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         bgView.backgroundColor = .white
         
         // Image View
+        imageView.contentMode = .scaleAspectFit
         imageView.image = mainImage
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
+            
+            setconstraints()
+            
             updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.1)
         }
+        
+    }
+    
+    func setconstraints() {
+        
+//        intermediateView.removecon
         
     }
     
@@ -75,7 +84,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         print("BG")
     }
     func bottomMenuBar_CanvasButtonTapped() {
-        print("Canvas")
+        print("Canvas - Appear")
         createCanvasView()
     }
     func bottomMenuBar_FilterButtonTapped() {
@@ -99,8 +108,9 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     func hideBottomMenuBar(completion: (() -> Void)? = nil) {
         bottomBarConstraint.constant = -78
         containerViewBottomConstraints.constant = 0
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.2) { [self] in
             self.view.layoutIfNeeded()
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.2)
         } completion: { [self] _ in
             bottomMenuBar.isUserInteractionEnabled = false
             completion?()
@@ -110,8 +120,9 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     func showBottomMenuBar(completion: (() -> Void)? = nil) {
         bottomBarConstraint.constant = 0
         containerViewBottomConstraints.constant = 78
-        UIView.animate(withDuration: 0.2) {
+        UIView.animate(withDuration: 0.2) { [self] in
             self.view.layoutIfNeeded()
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.2)
         } completion: { [self] _ in
             bottomMenuBar.isUserInteractionEnabled = true
             completion?()
@@ -120,14 +131,17 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     func showMenuView(view: UIView, height: CGFloat) {
         
+        // Hide Bottom Bar
         hideBottomMenuBar { [self] in
+            // Add Menu View
             menuContainerView.addSubview(view)
-                        
+            
+            // Appear Menu
             menuContainerTopConstraint.constant = -height
-            UIView.animate(withDuration: 0.3) {
+            UIView.animate(withDuration: 0.3) { [self] in
                 self.view.layoutIfNeeded()
+                updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.3)
             } completion: { [self] _ in
-                updateEditViewFrameWithCanvas(size: canvasSize, duration: 1.3)
                 menuContainerView.isUserInteractionEnabled = true
             }
         }
@@ -136,13 +150,13 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     func hideMenuView(view:UIView, completion: (() -> Void)? = nil) {
         menuContainerTopConstraint.constant = 34
         containerViewBottomConstraints.constant = 0
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.3) { [self] in
             self.view.layoutIfNeeded()
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.3)
         } completion: { [self] _ in
             menuContainerView.isUserInteractionEnabled = false
             view.removeFromSuperview()
-            showBottomMenuBar { [self] in
-                updateEditViewFrameWithCanvas(size: canvasSize, duration: 1.3)
+            showBottomMenuBar {
             }
             completion?()
         }
@@ -242,7 +256,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     func updateEditViewFrameWithCanvas(size:CGSize, duration:TimeInterval) {
         
-        print("Canvas .....", size.width, size.height)
+//        print("Canvas .....", size.width, size.height)
         
         editViewWidthConstraint.constant = size.width
         editViewHeightConstraint.constant = size.height
@@ -259,19 +273,19 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     func scaleValueOfEditView(size:CGSize) -> CGFloat {
         
-//        let containerHWRatio: CGFloat = containerView.bounds.width / containerView.bounds.height
-//        let sizeHWRatio: CGFloat = size.width / size.height
-//        
-//        if containerHWRatio < sizeHWRatio {
-//            return containerView.bounds.width / size.width
-//        } else {
-//            return containerView.bounds.height / size.height
-//        }
+        let containerHWRatio: CGFloat = containerView.bounds.width / containerView.bounds.height
+        let sizeHWRatio: CGFloat = size.width / size.height
         
-        let scaleX: CGFloat = referanceView.bounds.width / size.width
-        let scaleY: CGFloat = referanceView.bounds.height / size.height
-        print("Scale .....", scaleX, scaleY)
-        return min(scaleX, scaleY)
+        if containerHWRatio < sizeHWRatio {
+            return containerView.bounds.width / size.width
+        } else {
+            return containerView.bounds.height / size.height
+        }
+        
+//        let scaleX: CGFloat = containerView.bounds.width / size.width
+//        let scaleY: CGFloat = containerView.bounds.height / size.height
+//        print("Scale .....", scaleX, scaleY)
+//        return min(scaleX, scaleY)
     }
     
 }

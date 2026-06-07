@@ -202,12 +202,12 @@
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="FQe-q0-whq" firstAttribute="centerX" secondItem="Ddl-mU-Djb" secondAttribute="centerX" id="1p5-h2-4md"/>
                                     <constraint firstAttribute="bottom" secondItem="xYS-Gf-WYz" secondAttribute="bottom" id="H5u-OC-sRF"/>
                                     <constraint firstItem="xYS-Gf-WYz" firstAttribute="leading" secondItem="Ddl-mU-Djb" secondAttribute="leading" id="I0f-Yp-Py2"/>
                                     <constraint firstItem="xYS-Gf-WYz" firstAttribute="top" secondItem="Ddl-mU-Djb" secondAttribute="top" id="JTI-0L-Po6"/>
-                                    <constraint firstItem="FQe-q0-whq" firstAttribute="centerY" secondItem="Ddl-mU-Djb" secondAttribute="centerY" id="PRM-2d-pg2"/>
+                                    <constraint firstItem="FQe-q0-whq" firstAttribute="centerY" secondItem="Ddl-mU-Djb" secondAttribute="centerY" id="eIA-jJ-0hx"/>
                                     <constraint firstAttribute="trailing" secondItem="xYS-Gf-WYz" secondAttribute="trailing" id="tiw-hF-IfS"/>
+                                    <constraint firstItem="FQe-q0-whq" firstAttribute="centerX" secondItem="Ddl-mU-Djb" secondAttribute="centerX" id="zRn-u2-g6F"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ebC-ge-1Ej" userLabel="TopBarView">
@@ -293,7 +293,6 @@
                         <outlet property="imageView" destination="6Nh-PA-8DL" id="sue-Dm-bG7"/>
                         <outlet property="menuContainerTopConstraint" destination="tv9-pd-wmU" id="bRL-Cp-BrH"/>
                         <outlet property="menuContainerView" destination="run-X5-SuI" id="q2k-8s-zZi"/>
-                        <outlet property="referanceView" destination="xYS-Gf-WYz" id="LXE-AX-zph"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egg-AM-ArH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -315,7 +314,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
