@@ -209,6 +209,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     func canvasView_CrossButtonTapped() {
         print("canvasView_CrossButtonTapped")
         hideMenuView(view: canvasView!) {
+            print("edit view size: ", self.editView.bounds.size)
         }
     }
     
@@ -238,8 +239,6 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     }
     
     @objc func updateEditView() {
-        
-        // Create Edit View
         
         previousCanvasSize.width += widthPerLoopCollageView;
         previousCanvasSize.height += heightPerLoopCollageView;

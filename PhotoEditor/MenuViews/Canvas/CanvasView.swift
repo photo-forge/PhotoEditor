@@ -31,7 +31,7 @@ enum CanvasType: Int {
     case Rario2x1
 }
 
-class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
+class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     var delegate:CanvasViewDelegate!
@@ -80,12 +80,12 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
             let numOfItems: CGFloat = CGFloat(menuItems.count)
             let lineSpacing: CGFloat = (cvFrame.width - (layout.sectionInset.left+layout.sectionInset.right) - cellSize*numOfItems-2) / (numOfItems-1)
             layout.minimumLineSpacing = lineSpacing
-            layout.itemSize = CGSize(width: cellSize, height: cellSize)
+            layout.estimatedItemSize = .zero
         } else {
             layout.sectionInset = UIEdgeInsets(top: inset, left: inset*3, bottom: inset, right: inset)
             layout.minimumInteritemSpacing = inset * 4
             layout.minimumLineSpacing = inset * 4
-            layout.itemSize = CGSize(width: cellSize, height: cellSize)
+            layout.estimatedItemSize = .zero
         }
         collectionView = UICollectionView(frame: cvFrame, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
@@ -102,10 +102,28 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
         return menuItems.count
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let inset:CGFloat = 2.0
+        let cellHeight:CGFloat = collectionView.bounds.height - inset*2
+        
+        let image = UIImage(named: menuItemNames[indexPath.row])
+        let imageSize:CGSize = image?.size ?? CGSize.zero
+        let cellWidth:CGFloat = cellHeight * imageSize.width / imageSize.height
+        
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        }
+                
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CanvasMenuCell", for: indexPath) as! CanvasMenuCell
         cell.imageView.image = UIImage(named: menuItemNames[indexPath.row])
+        cell.imageView.frame = cell.bounds
         return cell
     }
     
@@ -155,10 +173,10 @@ class CanvasMenuCell: UICollectionViewCell {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .red
+        self.backgroundColor = .clear
         
         // Image
-        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height-6))
+        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
         imageView.contentMode = .scaleAspectFit
         self.addSubview(imageView)
         
