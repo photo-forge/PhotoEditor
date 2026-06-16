@@ -9,7 +9,7 @@ import UIKit
 import Mantis
 
 class LandingPageVC: UIViewController, PEImagePickerVCDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,6 +48,6 @@ class LandingPageVC: UIViewController, PEImagePickerVCDelegate {
         editPageVC.mainImage = image
         self.present(editPageVC, animated: true, completion: nil)
     }
-
+    
 }
 
