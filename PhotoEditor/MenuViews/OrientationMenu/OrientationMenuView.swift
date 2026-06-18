@@ -30,7 +30,9 @@ class OrientationMenuView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.commonInit()
+        }
     }
     
     override init(frame: CGRect) {

@@ -80,6 +80,28 @@ class PEImagePickerVC: UIViewController, PEImagePickerTopBarDelegate, UICollecti
         return thumbnail
     }
     
+    func getAssetFullImage(asset: PHAsset, size: CGFloat) -> UIImage {
+        let retinaScale = UIScreen.main.scale
+        let retinaSquare = CGSize(width: size * retinaScale, height: size * retinaScale)//CGSizeMake(size * retinaScale, size * retinaScale)
+        let cropSizeLength = max(asset.pixelWidth, asset.pixelHeight)
+        let square = CGRect(x: 0, y: 0, width: cropSizeLength, height: cropSizeLength)//CGRectMake(0, 0, CGFloat(cropSizeLength), CGFloat(cropSizeLength))
+        let cropRect = square.applying(CGAffineTransform(scaleX: 1.0/CGFloat(asset.pixelWidth), y: 1.0/CGFloat(asset.pixelHeight)))
+        
+        let manager = PHImageManager.default()
+        let options = PHImageRequestOptions()
+        var thumbnail = UIImage()
+        
+        options.isSynchronous = true
+        options.deliveryMode = .highQualityFormat
+        options.resizeMode = .exact
+        options.normalizedCropRect = cropRect
+        
+        manager.requestImage(for: asset, targetSize: retinaSquare, contentMode: .aspectFit, options: options, resultHandler: {(result, info)->Void in
+            thumbnail = result!
+        })
+        return thumbnail
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -103,7 +125,7 @@ class PEImagePickerVC: UIViewController, PEImagePickerTopBarDelegate, UICollecti
     
     //MARK:UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let img = self.getAssetThumbnail(asset: self.arr_img.object(at: indexPath.row) as! PHAsset, size:CGFloat((self.arr_img.object(at: indexPath.row) as! PHAsset).pixelWidth))
+        let img = self.getAssetFullImage(asset: self.arr_img.object(at: indexPath.row) as! PHAsset, size:CGFloat((self.arr_img.object(at: indexPath.row) as! PHAsset).pixelWidth))
         img.saveToDocuments(filename: "initial_image")
         self.dismiss(animated: true) {
             self.delegate.imagePicked(fileName: "initial_image", fromFG: self.fromForGround)

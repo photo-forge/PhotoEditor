@@ -175,7 +175,7 @@
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mountain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xYS-Gf-WYz" userLabel="ReferanceView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="652"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-q0-whq" userLabel="EditView">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQe-q0-whq" userLabel="EditView">
                                         <rect key="frame" x="46.666666666666657" y="126" width="300" height="400"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jKc-T1-U9k" userLabel="BGView">

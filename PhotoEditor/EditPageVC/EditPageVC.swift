@@ -26,7 +26,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     @IBOutlet weak var imageView: UIImageView!
     
     var mainImage: UIImage!
-    var canvasSize: CGSize = CGSize(width: 800, height: 2000)
+    var canvasSize: CGSize = CGSize(width: 1024, height: 1920)
     
     // Menus
     var sampleMenuView: SampleMenuView!
@@ -47,22 +47,15 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         // Image View
 //        imageView.contentMode = .scaleAspectFit
         imageView.image = mainImage
+        imageView.backgroundColor = .red
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [self] in
-            
-            setconstraints()
-            
-            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.1)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
+                        
+            updateEditViewFrameWithCanvas(size: canvasSize, duration: 0.0)
         }
         
     }
-    
-    func setconstraints() {
         
-//        intermediateView.removecon
-        
-    }
-    
     // MARK: TopBarDelegate
     @IBAction func backButtonAction(_ sender: UIButton) {
         
@@ -87,14 +80,14 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     }
     func bottomMenuBar_CanvasButtonTapped() {
         print("Canvas - Appear")
-        createCanvasView()
+        appearCanvasView()
     }
     func bottomMenuBar_FilterButtonTapped() {
         print("Filter")
     }
     func bottomMenuBar_OverlayButtonTapped() {
         print("Overlay")
-        createOrientationMenuView()
+        appearOrientationMenuView()
     }
     func bottomMenuBar_StickerButtonTapped() {
         print("Sticker")
@@ -181,6 +174,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
             sampleMenuView?.delegate = self
         }
         sampleMenuView?.frame = viewFrame
+        sampleMenuView.layoutIfNeeded()
         
         // Show Menu View
         showMenuView(view: sampleMenuView!, height: viewHeight)
@@ -195,7 +189,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     // MARK: Canvas View and Delegates
     
-    func createCanvasView() {
+    func appearCanvasView() {
         
         // Create View
         let viewHeight: CGFloat = 150
@@ -203,9 +197,9 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         if canvasMenuView == nil {
             canvasMenuView = Bundle.main.loadNibNamed("CanvasView", owner: nil, options: nil)?.first as? CanvasView
             canvasMenuView?.delegate = self
-            canvasMenuView.alpha = 0.5
         }
         canvasMenuView?.frame = viewFrame
+        canvasMenuView.layoutIfNeeded()
         
         // Show Menu View
         showMenuView(view: canvasMenuView!, height: viewHeight)
@@ -295,17 +289,17 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     
     // MARK: Orientation Menu View and Delegates
     
-    func createOrientationMenuView() {
+    func appearOrientationMenuView() {
         
         // Create View
         let viewHeight: CGFloat = 200
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if orientationMenuView == nil {
             orientationMenuView = Bundle.main.loadNibNamed("OrientationMenuView", owner: nil, options: nil)?.first as? OrientationMenuView
-            orientationMenuView = Bundle.main.loadNibNamed("OrientationMenuView", owner: nil, options: nil)?.first as? OrientationMenuView
             orientationMenuView?.delegate = self
         }
         orientationMenuView?.frame = viewFrame
+        orientationMenuView.layoutIfNeeded()
         
         // Show Menu View
         showMenuView(view: orientationMenuView!, height: viewHeight)
@@ -321,28 +315,67 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         }
     }
     
+    var scaleValueOfImageView: CGFloat = 1
+    var isHFlipped = false
     func orientationMenuView_HFlipButtonAction() {
         print("HFlip")
+        isHFlipped.toggle()
+        if isHFlipped {
+            print("HFlip ON")
+            imageView.transform = CGAffineTransform(scaleX: -scaleValueOfImageView, y: scaleValueOfImageView)
+        } else {
+            print("HFlip OFF")
+            imageView.transform = CGAffineTransform(scaleX: scaleValueOfImageView, y: scaleValueOfImageView)
+        }
+        
     }
     
+    var isVFlipped = false
     func orientationMenuView_VFlipButtonAction() {
         print("VFlip")
+        isVFlipped.toggle()
+        if isVFlipped {
+            print("VFlip ON")
+            imageView.transform = CGAffineTransform(scaleX: scaleValueOfImageView, y: -scaleValueOfImageView)
+        } else {
+            print("VFlip OFF")
+            imageView.transform = CGAffineTransform(scaleX: scaleValueOfImageView, y: scaleValueOfImageView)
+        }
     }
     
+//    var rotationValue: CGFloat = 0
+    var rotateDegree: CGFloat = 0
+    var rotationDegree: CGFloat = 0
     func orientationMenuView_RotateForwardButtonAction() {
-        print("RotateForward")
+        rotationDegree += 90;
+        let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
+        imageView.image = tiltedImage
+        
+//        rotationValue += .pi / 2
+//        imageView.transform = CGAffineTransform(rotationAngle: rotationValue)
     }
     
     func orientationMenuView_RotateBackwardButtonAction() {
         print("RotateBackward")
+        rotationDegree -= 90;
+        let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
+        imageView.image = tiltedImage
+        
+//        rotationValue -= .pi / 2
+//        imageView.transform = CGAffineTransform(rotationAngle: rotationValue)
     }
     
     func orientationMenuView_ScaleSliderAction(scaleValue: CGFloat) {
         print("ScaleValue: \(scaleValue)")
+        scaleValueOfImageView = 1 + (scaleValue-0.15)*4
+        imageView.transform = CGAffineTransform(scaleX: scaleValueOfImageView, y: scaleValueOfImageView)
     }
     
     func orientationMenuView_RotationSliderAction(rotateValue: CGFloat) {
         print("RotateValue: \(rotateValue)")
+        rotateDegree  = (rotateValue - 0.5)*360
+        let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
+        imageView.image = tiltedImage
     }
     
 }
