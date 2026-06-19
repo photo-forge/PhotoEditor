@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate, OrientationMenuViewDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate, OrientationMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -25,6 +25,8 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
+    var screenBound : CGRect!
+    
     var mainImage: UIImage!
     var canvasSize: CGSize = CGSize(width: 1024, height: 1920)
     
@@ -33,9 +35,14 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     var canvasMenuView: CanvasView!
     var orientationMenuView: OrientationMenuView!
     
+    var stickerMenuView : StickerMenuView? = nil
+    var stickerArray = NSMutableArray()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        screenBound = UIScreen.main.bounds
         
         // BottomBar
         bottomMenuBar.delegate = self
@@ -91,6 +98,7 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
     }
     func bottomMenuBar_StickerButtonTapped() {
         print("Sticker")
+        appearStickerMenuView()
     }
     func bottomMenuBar_TextButtonTapped() {
         print("Text")
@@ -377,6 +385,87 @@ class EditPageVC: UIViewController, BottomMenuBarDelegate, SampleMenuViewDelegat
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
         imageView.image = tiltedImage
     }
+    
+    // MARK: Sticker View and Delegates
+    
+    func appearStickerMenuView() {
+        
+        if stickerMenuView == nil {
+            let viewHeight: CGFloat = 300
+            let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+            stickerMenuView = StickerMenuView(frame: viewFrame)
+//            view.addSubview(stickerMenuView!)
+//            stickerMenuView!.isUserInteractionEnabled = true
+            stickerMenuView!.delegate = self;
+            
+            // Tap Gesture
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+            tapGesture.delegate = self
+            bgView.addGestureRecognizer(tapGesture)
+        }
+        
+        // Show Menu View
+        showMenuView(view: stickerMenuView!, height: stickerMenuView!.bounds.height)
+    }
+    
+    func stickerMenuView_BackButtonTapped() {
+        print("Back Button")
+        hideMenuView(view: stickerMenuView!) {
+        }
+    }
+    
+    func stickerMenuView_TickButtonTapped() {
+        print("Tick Button")
+        
+    }
+    
+    func stickerMenuView_didSelectStickerName(stickerName: String) {
+        
+        let image: UIImage = CommonMethods.ins.uiImageWithName(named: stickerName)
+        
+        // Image Sticker
+        let imageSticker = ImageStickerView(frame: CGRect(x: 0, y: 0, width: 300, height: 300), image: image)
+        editView.addSubview(imageSticker);
+        imageSticker.center = CGPoint(x: editView.bounds.midX, y: editView.bounds.midY)
+        imageSticker.delegate = self
+        imageSticker.select()
+        stickerArray.add(imageSticker)
+    }
+    
+    
+    // MARK: ImageStickerViewDelegate
+    
+    func imageStickerView_WillBeSelected() {
+        deselectAllStickers( )
+    }
+    func imageStickerView_Selected() {
+        
+    }
+    
+    func imageStickerView_WillBeDeselected() {
+        
+    }
+    func imageStickerView_Deselected() {
+        
+    }
+    func imageStickerView_Deleted() {
+        
+    }
+    
+    
+    // Tap
+    @objc func handleTapGesture(_ sender: UITapGestureRecognizer) {
+        
+        deselectAllStickers()
+    }
+    
+    func deselectAllStickers() {
+        for sticker in stickerArray as! [ImageStickerView] {
+            sticker.deselect()
+        }
+    }
+    
+    
     
 }
  

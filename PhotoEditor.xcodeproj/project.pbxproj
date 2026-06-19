@@ -10,6 +10,186 @@
 		C2CE3CE86A977B3FB21B08CA /* Pods_PhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */; };
 		CB0620592FDDBA7D00341CDE /* OrientationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0620562FDDBA7D00341CDE /* OrientationMenuView.swift */; };
 		CB06205A2FDDBA7D00341CDE /* OrientationMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0620572FDDBA7D00341CDE /* OrientationMenuView.xib */; };
+		CB5C53412FE434FF00B86E4F /* StickerCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C533E2FE434FF00B86E4F /* StickerCategoryView.swift */; };
+		CB5C53422FE434FF00B86E4F /* StickerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C533F2FE434FF00B86E4F /* StickerMenuView.swift */; };
+		CB5C53432FE434FF00B86E4F /* ImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */; };
+		CB5C53442FE434FF00B86E4F /* sticker_bird_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B92FE434FF00B86E4F /* sticker_bird_6_thumb.png */; };
+		CB5C53452FE434FF00B86E4F /* sticker_gift_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52EE2FE434FF00B86E4F /* sticker_gift_0.png */; };
+		CB5C53462FE434FF00B86E4F /* sticker_lips_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530A2FE434FF00B86E4F /* sticker_lips_0.png */; };
+		CB5C53472FE434FF00B86E4F /* sticker_bird_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BE2FE434FF00B86E4F /* sticker_bird_11_thumb.png */; };
+		CB5C53482FE434FF00B86E4F /* sticker_love_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532B2FE434FF00B86E4F /* sticker_love_5.png */; };
+		CB5C53492FE434FF00B86E4F /* sticker_baloon_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52942FE434FF00B86E4F /* sticker_baloon_7_thumb.png */; };
+		CB5C534A2FE434FF00B86E4F /* sticker_baloon_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52922FE434FF00B86E4F /* sticker_baloon_5_thumb.png */; };
+		CB5C534B2FE434FF00B86E4F /* sticker_love_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53262FE434FF00B86E4F /* sticker_love_0.png */; };
+		CB5C534C2FE434FF00B86E4F /* sticker_flower_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E62FE434FF00B86E4F /* sticker_flower_11_thumb.png */; };
+		CB5C534D2FE434FF00B86E4F /* sticker_baloon_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C528F2FE434FF00B86E4F /* sticker_baloon_2_thumb.png */; };
+		CB5C534E2FE434FF00B86E4F /* sticker_bird_15.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AD2FE434FF00B86E4F /* sticker_bird_15.png */; };
+		CB5C534F2FE434FF00B86E4F /* sticker_baloon_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52912FE434FF00B86E4F /* sticker_baloon_4_thumb.png */; };
+		CB5C53502FE434FF00B86E4F /* sticker_gift_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F22FE434FF00B86E4F /* sticker_gift_4.png */; };
+		CB5C53512FE434FF00B86E4F /* sticker_bird_10_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BD2FE434FF00B86E4F /* sticker_bird_10_thumb.png */; };
+		CB5C53522FE434FF00B86E4F /* sticker_gift_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F62FE434FF00B86E4F /* sticker_gift_8.png */; };
+		CB5C53532FE434FF00B86E4F /* sticker_love_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532D2FE434FF00B86E4F /* sticker_love_7.png */; };
+		CB5C53542FE434FF00B86E4F /* sticker_love_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53362FE434FF00B86E4F /* sticker_love_6_thumb.png */; };
+		CB5C53552FE434FF00B86E4F /* sticker_category_flower.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52EC2FE434FF00B86E4F /* sticker_category_flower.png */; };
+		CB5C53562FE434FF00B86E4F /* sticker_gift_9_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53042FE434FF00B86E4F /* sticker_gift_9_thumb.png */; };
+		CB5C53572FE434FF00B86E4F /* sticker_baloon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C527F2FE434FF00B86E4F /* sticker_baloon_1.png */; };
+		CB5C53582FE434FF00B86E4F /* sticker_baloon_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52902FE434FF00B86E4F /* sticker_baloon_3_thumb.png */; };
+		CB5C53592FE434FF00B86E4F /* sticker_flower_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E12FE434FF00B86E4F /* sticker_flower_6_thumb.png */; };
+		CB5C535A2FE434FF00B86E4F /* sticker_bird_13.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AB2FE434FF00B86E4F /* sticker_bird_13.png */; };
+		CB5C535B2FE434FF00B86E4F /* sticker_love_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53292FE434FF00B86E4F /* sticker_love_3.png */; };
+		CB5C535C2FE434FF00B86E4F /* sticker_flower_10_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E52FE434FF00B86E4F /* sticker_flower_10_thumb.png */; };
+		CB5C535D2FE434FF00B86E4F /* sticker_baloon_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52832FE434FF00B86E4F /* sticker_baloon_5.png */; };
+		CB5C535E2FE434FF00B86E4F /* sticker_baloon_12.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C528A2FE434FF00B86E4F /* sticker_baloon_12.png */; };
+		CB5C535F2FE434FF00B86E4F /* sticker_love_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532A2FE434FF00B86E4F /* sticker_love_4.png */; };
+		CB5C53602FE434FF00B86E4F /* sticker_baloon_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52952FE434FF00B86E4F /* sticker_baloon_8_thumb.png */; };
+		CB5C53612FE434FF00B86E4F /* sticker_baloon_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52822FE434FF00B86E4F /* sticker_baloon_4.png */; };
+		CB5C53622FE434FF00B86E4F /* sticker_flower_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D22FE434FF00B86E4F /* sticker_flower_8.png */; };
+		CB5C53632FE434FF00B86E4F /* sticker_baloon_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52802FE434FF00B86E4F /* sticker_baloon_2.png */; };
+		CB5C53642FE434FF00B86E4F /* sticker_flower_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CF2FE434FF00B86E4F /* sticker_flower_5.png */; };
+		CB5C53652FE434FF00B86E4F /* sticker_bird_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B62FE434FF00B86E4F /* sticker_bird_3_thumb.png */; };
+		CB5C53662FE434FF00B86E4F /* sticker_love_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53272FE434FF00B86E4F /* sticker_love_1.png */; };
+		CB5C53672FE434FF00B86E4F /* sticker_love_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53332FE434FF00B86E4F /* sticker_love_3_thumb.png */; };
+		CB5C53682FE434FF00B86E4F /* sticker_lips_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530F2FE434FF00B86E4F /* sticker_lips_5.png */; };
+		CB5C53692FE434FF00B86E4F /* sticker_baloon_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52882FE434FF00B86E4F /* sticker_baloon_10.png */; };
+		CB5C536A2FE434FF00B86E4F /* sticker_flower_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D02FE434FF00B86E4F /* sticker_flower_6.png */; };
+		CB5C536B2FE434FF00B86E4F /* sticker_bird_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A52FE434FF00B86E4F /* sticker_bird_7.png */; };
+		CB5C536C2FE434FF00B86E4F /* sticker_lips_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531A2FE434FF00B86E4F /* sticker_lips_3_thumb.png */; };
+		CB5C536D2FE434FF00B86E4F /* sticker_lips_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530B2FE434FF00B86E4F /* sticker_lips_1.png */; };
+		CB5C536E2FE434FF00B86E4F /* sticker_bird_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B32FE434FF00B86E4F /* sticker_bird_0_thumb.png */; };
+		CB5C536F2FE434FF00B86E4F /* sticker_lips_9_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53202FE434FF00B86E4F /* sticker_lips_9_thumb.png */; };
+		CB5C53702FE434FF00B86E4F /* sticker_love_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53302FE434FF00B86E4F /* sticker_love_0_thumb.png */; };
+		CB5C53712FE434FF00B86E4F /* sticker_lips_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531D2FE434FF00B86E4F /* sticker_lips_6_thumb.png */; };
+		CB5C53722FE434FF00B86E4F /* sticker_lips_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531F2FE434FF00B86E4F /* sticker_lips_8_thumb.png */; };
+		CB5C53732FE434FF00B86E4F /* sticker_baloon_9_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52962FE434FF00B86E4F /* sticker_baloon_9_thumb.png */; };
+		CB5C53742FE434FF00B86E4F /* sticker_bird_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C529F2FE434FF00B86E4F /* sticker_bird_1.png */; };
+		CB5C53752FE434FF00B86E4F /* sticker_flower_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CD2FE434FF00B86E4F /* sticker_flower_3.png */; };
+		CB5C53762FE434FF00B86E4F /* sticker_flower_12.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D62FE434FF00B86E4F /* sticker_flower_12.png */; };
+		CB5C53772FE434FF00B86E4F /* sticker_flower_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52DE2FE434FF00B86E4F /* sticker_flower_3_thumb.png */; };
+		CB5C53782FE434FF00B86E4F /* sticker_category_love.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C533A2FE434FF00B86E4F /* sticker_category_love.png */; };
+		CB5C53792FE434FF00B86E4F /* sticker_lips_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531E2FE434FF00B86E4F /* sticker_lips_7_thumb.png */; };
+		CB5C537A2FE434FF00B86E4F /* sticker_bird_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A42FE434FF00B86E4F /* sticker_bird_6.png */; };
+		CB5C537B2FE434FF00B86E4F /* sticker_flower_14_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E92FE434FF00B86E4F /* sticker_flower_14_thumb.png */; };
+		CB5C537C2FE434FF00B86E4F /* sticker_lips_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53172FE434FF00B86E4F /* sticker_lips_0_thumb.png */; };
+		CB5C537D2FE434FF00B86E4F /* sticker_bird_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BA2FE434FF00B86E4F /* sticker_bird_7_thumb.png */; };
+		CB5C537E2FE434FF00B86E4F /* sticker_lips_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530E2FE434FF00B86E4F /* sticker_lips_4.png */; };
+		CB5C537F2FE434FF00B86E4F /* sticker_flower_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E02FE434FF00B86E4F /* sticker_flower_5_thumb.png */; };
+		CB5C53802FE434FF00B86E4F /* sticker_baloon_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52852FE434FF00B86E4F /* sticker_baloon_7.png */; };
+		CB5C53812FE434FF00B86E4F /* sticker_love_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53322FE434FF00B86E4F /* sticker_love_2_thumb.png */; };
+		CB5C53822FE434FF00B86E4F /* sticker_love_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53312FE434FF00B86E4F /* sticker_love_1_thumb.png */; };
+		CB5C53832FE434FF00B86E4F /* sticker_flower_15.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D92FE434FF00B86E4F /* sticker_flower_15.png */; };
+		CB5C53842FE434FF00B86E4F /* sticker_baloon_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C528D2FE434FF00B86E4F /* sticker_baloon_0_thumb.png */; };
+		CB5C53852FE434FF00B86E4F /* sticker_baloon_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52842FE434FF00B86E4F /* sticker_baloon_6.png */; };
+		CB5C53862FE434FF00B86E4F /* sticker_baloon_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52982FE434FF00B86E4F /* sticker_baloon_11_thumb.png */; };
+		CB5C53872FE434FF00B86E4F /* sticker_flower_9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D32FE434FF00B86E4F /* sticker_flower_9.png */; };
+		CB5C53882FE434FF00B86E4F /* sticker_lips_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530C2FE434FF00B86E4F /* sticker_lips_2.png */; };
+		CB5C53892FE434FF00B86E4F /* sticker_gift_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F52FE434FF00B86E4F /* sticker_gift_7.png */; };
+		CB5C538A2FE434FF00B86E4F /* sticker_lips_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53182FE434FF00B86E4F /* sticker_lips_1_thumb.png */; };
+		CB5C538B2FE434FF00B86E4F /* sticker_bird_14_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C12FE434FF00B86E4F /* sticker_bird_14_thumb.png */; };
+		CB5C538C2FE434FF00B86E4F /* sticker_flower_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52DC2FE434FF00B86E4F /* sticker_flower_1_thumb.png */; };
+		CB5C538D2FE434FF00B86E4F /* sticker_flower_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52DF2FE434FF00B86E4F /* sticker_flower_4_thumb.png */; };
+		CB5C538E2FE434FF00B86E4F /* sticker_gift_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52FD2FE434FF00B86E4F /* sticker_gift_2_thumb.png */; };
+		CB5C538F2FE434FF00B86E4F /* sticker_flower_15_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52EA2FE434FF00B86E4F /* sticker_flower_15_thumb.png */; };
+		CB5C53902FE434FF00B86E4F /* sticker_lips_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53152FE434FF00B86E4F /* sticker_lips_11.png */; };
+		CB5C53912FE434FF00B86E4F /* sticker_gift_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52FC2FE434FF00B86E4F /* sticker_gift_1_thumb.png */; };
+		CB5C53922FE434FF00B86E4F /* sticker_gift_10_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53052FE434FF00B86E4F /* sticker_gift_10_thumb.png */; };
+		CB5C53932FE434FF00B86E4F /* sticker_bird_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B82FE434FF00B86E4F /* sticker_bird_5_thumb.png */; };
+		CB5C53942FE434FF00B86E4F /* sticker_gift_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F12FE434FF00B86E4F /* sticker_gift_3.png */; };
+		CB5C53952FE434FF00B86E4F /* sticker_category_bird.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C82FE434FF00B86E4F /* sticker_category_bird.png */; };
+		CB5C53962FE434FF00B86E4F /* sticker_bird_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A92FE434FF00B86E4F /* sticker_bird_11.png */; };
+		CB5C53972FE434FF00B86E4F /* sticker_bird_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B52FE434FF00B86E4F /* sticker_bird_2_thumb.png */; };
+		CB5C53982FE434FF00B86E4F /* sticker_bird_15_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C22FE434FF00B86E4F /* sticker_bird_15_thumb.png */; };
+		CB5C53992FE434FF00B86E4F /* sticker_gift_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53012FE434FF00B86E4F /* sticker_gift_6_thumb.png */; };
+		CB5C539A2FE434FF00B86E4F /* sticker_love_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53382FE434FF00B86E4F /* sticker_love_8_thumb.png */; };
+		CB5C539B2FE434FF00B86E4F /* sticker_bird_18.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B02FE434FF00B86E4F /* sticker_bird_18.png */; };
+		CB5C539C2FE434FF00B86E4F /* sticker_lips_10_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53212FE434FF00B86E4F /* sticker_lips_10_thumb.png */; };
+		CB5C539D2FE434FF00B86E4F /* sticker_lips_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53142FE434FF00B86E4F /* sticker_lips_10.png */; };
+		CB5C539E2FE434FF00B86E4F /* StickerImagesInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB5C533C2FE434FF00B86E4F /* StickerImagesInfo.plist */; };
+		CB5C539F2FE434FF00B86E4F /* sticker_love_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53372FE434FF00B86E4F /* sticker_love_7_thumb.png */; };
+		CB5C53A02FE434FF00B86E4F /* sticker_flower_14.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D82FE434FF00B86E4F /* sticker_flower_14.png */; };
+		CB5C53A12FE434FF00B86E4F /* sticker_category_baloon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C529C2FE434FF00B86E4F /* sticker_category_baloon.png */; };
+		CB5C53A22FE434FF00B86E4F /* sticker_gift_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53022FE434FF00B86E4F /* sticker_gift_7_thumb.png */; };
+		CB5C53A32FE434FF00B86E4F /* sticker_baloon_12_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52992FE434FF00B86E4F /* sticker_baloon_12_thumb.png */; };
+		CB5C53A42FE434FF00B86E4F /* sticker_flower_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D52FE434FF00B86E4F /* sticker_flower_11.png */; };
+		CB5C53A52FE434FF00B86E4F /* sticker_flower_7_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E22FE434FF00B86E4F /* sticker_flower_7_thumb.png */; };
+		CB5C53A62FE434FF00B86E4F /* sticker_category_gift.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53082FE434FF00B86E4F /* sticker_category_gift.png */; };
+		CB5C53A72FE434FF00B86E4F /* sticker_gift_9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F72FE434FF00B86E4F /* sticker_gift_9.png */; };
+		CB5C53A82FE434FF00B86E4F /* sticker_bird_17.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AF2FE434FF00B86E4F /* sticker_bird_17.png */; };
+		CB5C53A92FE434FF00B86E4F /* sticker_bird_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B42FE434FF00B86E4F /* sticker_bird_1_thumb.png */; };
+		CB5C53AA2FE434FF00B86E4F /* sticker_bird_18_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C52FE434FF00B86E4F /* sticker_bird_18_thumb.png */; };
+		CB5C53AB2FE434FF00B86E4F /* sticker_bird_14.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AC2FE434FF00B86E4F /* sticker_bird_14.png */; };
+		CB5C53AC2FE434FF00B86E4F /* sticker_lips_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53192FE434FF00B86E4F /* sticker_lips_2_thumb.png */; };
+		CB5C53AD2FE434FF00B86E4F /* sticker_gift_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F42FE434FF00B86E4F /* sticker_gift_6.png */; };
+		CB5C53AE2FE434FF00B86E4F /* sticker_gift_3_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52FE2FE434FF00B86E4F /* sticker_gift_3_thumb.png */; };
+		CB5C53AF2FE434FF00B86E4F /* sticker_love_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53342FE434FF00B86E4F /* sticker_love_4_thumb.png */; };
+		CB5C53B02FE434FF00B86E4F /* sticker_lips_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53112FE434FF00B86E4F /* sticker_lips_7.png */; };
+		CB5C53B12FE434FF00B86E4F /* sticker_flower_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D42FE434FF00B86E4F /* sticker_flower_10.png */; };
+		CB5C53B22FE434FF00B86E4F /* sticker_gift_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F32FE434FF00B86E4F /* sticker_gift_5.png */; };
+		CB5C53B32FE434FF00B86E4F /* sticker_baloon_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C527E2FE434FF00B86E4F /* sticker_baloon_0.png */; };
+		CB5C53B42FE434FF00B86E4F /* sticker_bird_16.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AE2FE434FF00B86E4F /* sticker_bird_16.png */; };
+		CB5C53B52FE434FF00B86E4F /* sticker_bird_12_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BF2FE434FF00B86E4F /* sticker_bird_12_thumb.png */; };
+		CB5C53B62FE434FF00B86E4F /* sticker_love_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532E2FE434FF00B86E4F /* sticker_love_8.png */; };
+		CB5C53B72FE434FF00B86E4F /* sticker_baloon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52812FE434FF00B86E4F /* sticker_baloon_3.png */; };
+		CB5C53B82FE434FF00B86E4F /* StickerAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */; };
+		CB5C53B92FE434FF00B86E4F /* sticker_baloon_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52892FE434FF00B86E4F /* sticker_baloon_11.png */; };
+		CB5C53BA2FE434FF00B86E4F /* sticker_bird_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B72FE434FF00B86E4F /* sticker_bird_4_thumb.png */; };
+		CB5C53BB2FE434FF00B86E4F /* sticker_gift_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53062FE434FF00B86E4F /* sticker_gift_11_thumb.png */; };
+		CB5C53BC2FE434FF00B86E4F /* sticker_lips_9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53132FE434FF00B86E4F /* sticker_lips_9.png */; };
+		CB5C53BD2FE434FF00B86E4F /* sticker_gift_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53002FE434FF00B86E4F /* sticker_gift_5_thumb.png */; };
+		CB5C53BE2FE434FF00B86E4F /* sticker_baloon_9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52872FE434FF00B86E4F /* sticker_baloon_9.png */; };
+		CB5C53BF2FE434FF00B86E4F /* sticker_love_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53282FE434FF00B86E4F /* sticker_love_2.png */; };
+		CB5C53C02FE434FF00B86E4F /* sticker_flower_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52DB2FE434FF00B86E4F /* sticker_flower_0_thumb.png */; };
+		CB5C53C12FE434FF00B86E4F /* sticker_flower_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CB2FE434FF00B86E4F /* sticker_flower_1.png */; };
+		CB5C53C22FE434FF00B86E4F /* sticker_bird_9.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A72FE434FF00B86E4F /* sticker_bird_9.png */; };
+		CB5C53C32FE434FF00B86E4F /* sticker_bird_5.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A32FE434FF00B86E4F /* sticker_bird_5.png */; };
+		CB5C53C42FE434FF00B86E4F /* sticker_lips_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53102FE434FF00B86E4F /* sticker_lips_6.png */; };
+		CB5C53C52FE434FF00B86E4F /* sticker_bird_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A62FE434FF00B86E4F /* sticker_bird_8.png */; };
+		CB5C53C62FE434FF00B86E4F /* sticker_flower_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E32FE434FF00B86E4F /* sticker_flower_8_thumb.png */; };
+		CB5C53C72FE434FF00B86E4F /* sticker_lips_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531C2FE434FF00B86E4F /* sticker_lips_5_thumb.png */; };
+		CB5C53C82FE434FF00B86E4F /* sticker_flower_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CC2FE434FF00B86E4F /* sticker_flower_2.png */; };
+		CB5C53C92FE434FF00B86E4F /* sticker_bird_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BB2FE434FF00B86E4F /* sticker_bird_8_thumb.png */; };
+		CB5C53CA2FE434FF00B86E4F /* sticker_bird_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A82FE434FF00B86E4F /* sticker_bird_10.png */; };
+		CB5C53CB2FE434FF00B86E4F /* sticker_baloon_6_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52932FE434FF00B86E4F /* sticker_baloon_6_thumb.png */; };
+		CB5C53CC2FE434FF00B86E4F /* sticker_gift_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F92FE434FF00B86E4F /* sticker_gift_11.png */; };
+		CB5C53CD2FE434FF00B86E4F /* sticker_gift_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F02FE434FF00B86E4F /* sticker_gift_2.png */; };
+		CB5C53CE2FE434FF00B86E4F /* sticker_lips_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C531B2FE434FF00B86E4F /* sticker_lips_4_thumb.png */; };
+		CB5C53CF2FE434FF00B86E4F /* sticker_flower_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CA2FE434FF00B86E4F /* sticker_flower_0.png */; };
+		CB5C53D02FE434FF00B86E4F /* sticker_baloon_1_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C528E2FE434FF00B86E4F /* sticker_baloon_1_thumb.png */; };
+		CB5C53D12FE434FF00B86E4F /* sticker_lips_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53222FE434FF00B86E4F /* sticker_lips_11_thumb.png */; };
+		CB5C53D22FE434FF00B86E4F /* sticker_bird_2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A02FE434FF00B86E4F /* sticker_bird_2.png */; };
+		CB5C53D32FE434FF00B86E4F /* sticker_lips_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C530D2FE434FF00B86E4F /* sticker_lips_3.png */; };
+		CB5C53D42FE434FF00B86E4F /* sticker_bird_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A22FE434FF00B86E4F /* sticker_bird_4.png */; };
+		CB5C53D52FE434FF00B86E4F /* sticker_baloon_13_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C529A2FE434FF00B86E4F /* sticker_baloon_13_thumb.png */; };
+		CB5C53D62FE434FF00B86E4F /* sticker_flower_2_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52DD2FE434FF00B86E4F /* sticker_flower_2_thumb.png */; };
+		CB5C53D72FE434FF00B86E4F /* sticker_gift_1.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52EF2FE434FF00B86E4F /* sticker_gift_1.png */; };
+		CB5C53D82FE434FF00B86E4F /* sticker_bird_9_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BC2FE434FF00B86E4F /* sticker_bird_9_thumb.png */; };
+		CB5C53D92FE434FF00B86E4F /* sticker_flower_12_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E72FE434FF00B86E4F /* sticker_flower_12_thumb.png */; };
+		CB5C53DA2FE434FF00B86E4F /* sticker_bird_17_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C42FE434FF00B86E4F /* sticker_bird_17_thumb.png */; };
+		CB5C53DB2FE434FF00B86E4F /* sticker_bird_13_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C02FE434FF00B86E4F /* sticker_bird_13_thumb.png */; };
+		CB5C53DC2FE434FF00B86E4F /* sticker_flower_13.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D72FE434FF00B86E4F /* sticker_flower_13.png */; };
+		CB5C53DD2FE434FF00B86E4F /* sticker_gift_8_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53032FE434FF00B86E4F /* sticker_gift_8_thumb.png */; };
+		CB5C53DE2FE434FF00B86E4F /* sticker_baloon_10_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52972FE434FF00B86E4F /* sticker_baloon_10_thumb.png */; };
+		CB5C53DF2FE434FF00B86E4F /* sticker_category_lips.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53242FE434FF00B86E4F /* sticker_category_lips.png */; };
+		CB5C53E02FE434FF00B86E4F /* sticker_flower_13_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E82FE434FF00B86E4F /* sticker_flower_13_thumb.png */; };
+		CB5C53E12FE434FF00B86E4F /* sticker_love_5_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53352FE434FF00B86E4F /* sticker_love_5_thumb.png */; };
+		CB5C53E22FE434FF00B86E4F /* sticker_lips_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53122FE434FF00B86E4F /* sticker_lips_8.png */; };
+		CB5C53E32FE434FF00B86E4F /* sticker_bird_19_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C62FE434FF00B86E4F /* sticker_bird_19_thumb.png */; };
+		CB5C53E42FE434FF00B86E4F /* sticker_bird_16_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52C32FE434FF00B86E4F /* sticker_bird_16_thumb.png */; };
+		CB5C53E52FE434FF00B86E4F /* sticker_flower_7.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52D12FE434FF00B86E4F /* sticker_flower_7.png */; };
+		CB5C53E62FE434FF00B86E4F /* sticker_baloon_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52862FE434FF00B86E4F /* sticker_baloon_8.png */; };
+		CB5C53E72FE434FF00B86E4F /* sticker_flower_9_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52E42FE434FF00B86E4F /* sticker_flower_9_thumb.png */; };
+		CB5C53E82FE434FF00B86E4F /* sticker_flower_4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52CE2FE434FF00B86E4F /* sticker_flower_4.png */; };
+		CB5C53E92FE434FF00B86E4F /* sticker_gift_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52FF2FE434FF00B86E4F /* sticker_gift_4_thumb.png */; };
+		CB5C53EA2FE434FF00B86E4F /* sticker_love_6.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532C2FE434FF00B86E4F /* sticker_love_6.png */; };
+		CB5C53EB2FE434FF00B86E4F /* sticker_gift_0_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52FB2FE434FF00B86E4F /* sticker_gift_0_thumb.png */; };
+		CB5C53EC2FE434FF00B86E4F /* sticker_bird_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52A12FE434FF00B86E4F /* sticker_bird_3.png */; };
+		CB5C53ED2FE434FF00B86E4F /* sticker_bird_0.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C529E2FE434FF00B86E4F /* sticker_bird_0.png */; };
+		CB5C53EE2FE434FF00B86E4F /* sticker_baloon_13.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C528B2FE434FF00B86E4F /* sticker_baloon_13.png */; };
+		CB5C53EF2FE434FF00B86E4F /* sticker_bird_12.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52AA2FE434FF00B86E4F /* sticker_bird_12.png */; };
+		CB5C53F02FE434FF00B86E4F /* sticker_bird_19.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B12FE434FF00B86E4F /* sticker_bird_19.png */; };
+		CB5C53F12FE434FF00B86E4F /* sticker_gift_10.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52F82FE434FF00B86E4F /* sticker_gift_10.png */; };
+		CB5C53F72FE4354B00B86E4F /* SimpleTopMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C53F52FE4354B00B86E4F /* SimpleTopMenuBar.swift */; };
+		CB5C53F82FE4354B00B86E4F /* menubar-tick-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53F32FE4354B00B86E4F /* menubar-tick-button.png */; };
+		CB5C53F92FE4354B00B86E4F /* menubar-back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53F22FE4354B00B86E4F /* menubar-back-button.png */; };
 		CB6F93F02FAA16C5005BF98C /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */; };
 		CB6F93F12FAA16C5005BF98C /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F93EE2FAA16C5005BF98C /* CanvasView.swift */; };
 		CB83475F2FADFF34005EC518 /* Rario9x16.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475B2FADFF34005EC518 /* Rario9x16.png */; };
@@ -62,6 +242,186 @@
 		985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0620562FDDBA7D00341CDE /* OrientationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationMenuView.swift; sourceTree = "<group>"; };
 		CB0620572FDDBA7D00341CDE /* OrientationMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrientationMenuView.xib; sourceTree = "<group>"; };
+		CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStickerView.swift; sourceTree = "<group>"; };
+		CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StickerAsset.xcassets; sourceTree = "<group>"; };
+		CB5C527E2FE434FF00B86E4F /* sticker_baloon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_0.png; sourceTree = "<group>"; };
+		CB5C527F2FE434FF00B86E4F /* sticker_baloon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_1.png; sourceTree = "<group>"; };
+		CB5C52802FE434FF00B86E4F /* sticker_baloon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_2.png; sourceTree = "<group>"; };
+		CB5C52812FE434FF00B86E4F /* sticker_baloon_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_3.png; sourceTree = "<group>"; };
+		CB5C52822FE434FF00B86E4F /* sticker_baloon_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_4.png; sourceTree = "<group>"; };
+		CB5C52832FE434FF00B86E4F /* sticker_baloon_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_5.png; sourceTree = "<group>"; };
+		CB5C52842FE434FF00B86E4F /* sticker_baloon_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_6.png; sourceTree = "<group>"; };
+		CB5C52852FE434FF00B86E4F /* sticker_baloon_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_7.png; sourceTree = "<group>"; };
+		CB5C52862FE434FF00B86E4F /* sticker_baloon_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_8.png; sourceTree = "<group>"; };
+		CB5C52872FE434FF00B86E4F /* sticker_baloon_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_9.png; sourceTree = "<group>"; };
+		CB5C52882FE434FF00B86E4F /* sticker_baloon_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_10.png; sourceTree = "<group>"; };
+		CB5C52892FE434FF00B86E4F /* sticker_baloon_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_11.png; sourceTree = "<group>"; };
+		CB5C528A2FE434FF00B86E4F /* sticker_baloon_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_12.png; sourceTree = "<group>"; };
+		CB5C528B2FE434FF00B86E4F /* sticker_baloon_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_13.png; sourceTree = "<group>"; };
+		CB5C528D2FE434FF00B86E4F /* sticker_baloon_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_0_thumb.png; sourceTree = "<group>"; };
+		CB5C528E2FE434FF00B86E4F /* sticker_baloon_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_1_thumb.png; sourceTree = "<group>"; };
+		CB5C528F2FE434FF00B86E4F /* sticker_baloon_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_2_thumb.png; sourceTree = "<group>"; };
+		CB5C52902FE434FF00B86E4F /* sticker_baloon_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_3_thumb.png; sourceTree = "<group>"; };
+		CB5C52912FE434FF00B86E4F /* sticker_baloon_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_4_thumb.png; sourceTree = "<group>"; };
+		CB5C52922FE434FF00B86E4F /* sticker_baloon_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_5_thumb.png; sourceTree = "<group>"; };
+		CB5C52932FE434FF00B86E4F /* sticker_baloon_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_6_thumb.png; sourceTree = "<group>"; };
+		CB5C52942FE434FF00B86E4F /* sticker_baloon_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_7_thumb.png; sourceTree = "<group>"; };
+		CB5C52952FE434FF00B86E4F /* sticker_baloon_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_8_thumb.png; sourceTree = "<group>"; };
+		CB5C52962FE434FF00B86E4F /* sticker_baloon_9_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_9_thumb.png; sourceTree = "<group>"; };
+		CB5C52972FE434FF00B86E4F /* sticker_baloon_10_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_10_thumb.png; sourceTree = "<group>"; };
+		CB5C52982FE434FF00B86E4F /* sticker_baloon_11_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_11_thumb.png; sourceTree = "<group>"; };
+		CB5C52992FE434FF00B86E4F /* sticker_baloon_12_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_12_thumb.png; sourceTree = "<group>"; };
+		CB5C529A2FE434FF00B86E4F /* sticker_baloon_13_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_13_thumb.png; sourceTree = "<group>"; };
+		CB5C529C2FE434FF00B86E4F /* sticker_category_baloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_baloon.png; sourceTree = "<group>"; };
+		CB5C529E2FE434FF00B86E4F /* sticker_bird_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_0.png; sourceTree = "<group>"; };
+		CB5C529F2FE434FF00B86E4F /* sticker_bird_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_1.png; sourceTree = "<group>"; };
+		CB5C52A02FE434FF00B86E4F /* sticker_bird_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_2.png; sourceTree = "<group>"; };
+		CB5C52A12FE434FF00B86E4F /* sticker_bird_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_3.png; sourceTree = "<group>"; };
+		CB5C52A22FE434FF00B86E4F /* sticker_bird_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_4.png; sourceTree = "<group>"; };
+		CB5C52A32FE434FF00B86E4F /* sticker_bird_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_5.png; sourceTree = "<group>"; };
+		CB5C52A42FE434FF00B86E4F /* sticker_bird_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_6.png; sourceTree = "<group>"; };
+		CB5C52A52FE434FF00B86E4F /* sticker_bird_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_7.png; sourceTree = "<group>"; };
+		CB5C52A62FE434FF00B86E4F /* sticker_bird_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_8.png; sourceTree = "<group>"; };
+		CB5C52A72FE434FF00B86E4F /* sticker_bird_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_9.png; sourceTree = "<group>"; };
+		CB5C52A82FE434FF00B86E4F /* sticker_bird_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_10.png; sourceTree = "<group>"; };
+		CB5C52A92FE434FF00B86E4F /* sticker_bird_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_11.png; sourceTree = "<group>"; };
+		CB5C52AA2FE434FF00B86E4F /* sticker_bird_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_12.png; sourceTree = "<group>"; };
+		CB5C52AB2FE434FF00B86E4F /* sticker_bird_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_13.png; sourceTree = "<group>"; };
+		CB5C52AC2FE434FF00B86E4F /* sticker_bird_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_14.png; sourceTree = "<group>"; };
+		CB5C52AD2FE434FF00B86E4F /* sticker_bird_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_15.png; sourceTree = "<group>"; };
+		CB5C52AE2FE434FF00B86E4F /* sticker_bird_16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_16.png; sourceTree = "<group>"; };
+		CB5C52AF2FE434FF00B86E4F /* sticker_bird_17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_17.png; sourceTree = "<group>"; };
+		CB5C52B02FE434FF00B86E4F /* sticker_bird_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_18.png; sourceTree = "<group>"; };
+		CB5C52B12FE434FF00B86E4F /* sticker_bird_19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_19.png; sourceTree = "<group>"; };
+		CB5C52B32FE434FF00B86E4F /* sticker_bird_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_0_thumb.png; sourceTree = "<group>"; };
+		CB5C52B42FE434FF00B86E4F /* sticker_bird_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_1_thumb.png; sourceTree = "<group>"; };
+		CB5C52B52FE434FF00B86E4F /* sticker_bird_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_2_thumb.png; sourceTree = "<group>"; };
+		CB5C52B62FE434FF00B86E4F /* sticker_bird_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_3_thumb.png; sourceTree = "<group>"; };
+		CB5C52B72FE434FF00B86E4F /* sticker_bird_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_4_thumb.png; sourceTree = "<group>"; };
+		CB5C52B82FE434FF00B86E4F /* sticker_bird_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_5_thumb.png; sourceTree = "<group>"; };
+		CB5C52B92FE434FF00B86E4F /* sticker_bird_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_6_thumb.png; sourceTree = "<group>"; };
+		CB5C52BA2FE434FF00B86E4F /* sticker_bird_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_7_thumb.png; sourceTree = "<group>"; };
+		CB5C52BB2FE434FF00B86E4F /* sticker_bird_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_8_thumb.png; sourceTree = "<group>"; };
+		CB5C52BC2FE434FF00B86E4F /* sticker_bird_9_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_9_thumb.png; sourceTree = "<group>"; };
+		CB5C52BD2FE434FF00B86E4F /* sticker_bird_10_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_10_thumb.png; sourceTree = "<group>"; };
+		CB5C52BE2FE434FF00B86E4F /* sticker_bird_11_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_11_thumb.png; sourceTree = "<group>"; };
+		CB5C52BF2FE434FF00B86E4F /* sticker_bird_12_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_12_thumb.png; sourceTree = "<group>"; };
+		CB5C52C02FE434FF00B86E4F /* sticker_bird_13_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_13_thumb.png; sourceTree = "<group>"; };
+		CB5C52C12FE434FF00B86E4F /* sticker_bird_14_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_14_thumb.png; sourceTree = "<group>"; };
+		CB5C52C22FE434FF00B86E4F /* sticker_bird_15_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_15_thumb.png; sourceTree = "<group>"; };
+		CB5C52C32FE434FF00B86E4F /* sticker_bird_16_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_16_thumb.png; sourceTree = "<group>"; };
+		CB5C52C42FE434FF00B86E4F /* sticker_bird_17_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_17_thumb.png; sourceTree = "<group>"; };
+		CB5C52C52FE434FF00B86E4F /* sticker_bird_18_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_18_thumb.png; sourceTree = "<group>"; };
+		CB5C52C62FE434FF00B86E4F /* sticker_bird_19_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_bird_19_thumb.png; sourceTree = "<group>"; };
+		CB5C52C82FE434FF00B86E4F /* sticker_category_bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_bird.png; sourceTree = "<group>"; };
+		CB5C52CA2FE434FF00B86E4F /* sticker_flower_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_0.png; sourceTree = "<group>"; };
+		CB5C52CB2FE434FF00B86E4F /* sticker_flower_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_1.png; sourceTree = "<group>"; };
+		CB5C52CC2FE434FF00B86E4F /* sticker_flower_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_2.png; sourceTree = "<group>"; };
+		CB5C52CD2FE434FF00B86E4F /* sticker_flower_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_3.png; sourceTree = "<group>"; };
+		CB5C52CE2FE434FF00B86E4F /* sticker_flower_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_4.png; sourceTree = "<group>"; };
+		CB5C52CF2FE434FF00B86E4F /* sticker_flower_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_5.png; sourceTree = "<group>"; };
+		CB5C52D02FE434FF00B86E4F /* sticker_flower_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_6.png; sourceTree = "<group>"; };
+		CB5C52D12FE434FF00B86E4F /* sticker_flower_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_7.png; sourceTree = "<group>"; };
+		CB5C52D22FE434FF00B86E4F /* sticker_flower_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_8.png; sourceTree = "<group>"; };
+		CB5C52D32FE434FF00B86E4F /* sticker_flower_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_9.png; sourceTree = "<group>"; };
+		CB5C52D42FE434FF00B86E4F /* sticker_flower_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_10.png; sourceTree = "<group>"; };
+		CB5C52D52FE434FF00B86E4F /* sticker_flower_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_11.png; sourceTree = "<group>"; };
+		CB5C52D62FE434FF00B86E4F /* sticker_flower_12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_12.png; sourceTree = "<group>"; };
+		CB5C52D72FE434FF00B86E4F /* sticker_flower_13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_13.png; sourceTree = "<group>"; };
+		CB5C52D82FE434FF00B86E4F /* sticker_flower_14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_14.png; sourceTree = "<group>"; };
+		CB5C52D92FE434FF00B86E4F /* sticker_flower_15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_15.png; sourceTree = "<group>"; };
+		CB5C52DB2FE434FF00B86E4F /* sticker_flower_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_0_thumb.png; sourceTree = "<group>"; };
+		CB5C52DC2FE434FF00B86E4F /* sticker_flower_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_1_thumb.png; sourceTree = "<group>"; };
+		CB5C52DD2FE434FF00B86E4F /* sticker_flower_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_2_thumb.png; sourceTree = "<group>"; };
+		CB5C52DE2FE434FF00B86E4F /* sticker_flower_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_3_thumb.png; sourceTree = "<group>"; };
+		CB5C52DF2FE434FF00B86E4F /* sticker_flower_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_4_thumb.png; sourceTree = "<group>"; };
+		CB5C52E02FE434FF00B86E4F /* sticker_flower_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_5_thumb.png; sourceTree = "<group>"; };
+		CB5C52E12FE434FF00B86E4F /* sticker_flower_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_6_thumb.png; sourceTree = "<group>"; };
+		CB5C52E22FE434FF00B86E4F /* sticker_flower_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_7_thumb.png; sourceTree = "<group>"; };
+		CB5C52E32FE434FF00B86E4F /* sticker_flower_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_8_thumb.png; sourceTree = "<group>"; };
+		CB5C52E42FE434FF00B86E4F /* sticker_flower_9_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_9_thumb.png; sourceTree = "<group>"; };
+		CB5C52E52FE434FF00B86E4F /* sticker_flower_10_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_10_thumb.png; sourceTree = "<group>"; };
+		CB5C52E62FE434FF00B86E4F /* sticker_flower_11_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_11_thumb.png; sourceTree = "<group>"; };
+		CB5C52E72FE434FF00B86E4F /* sticker_flower_12_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_12_thumb.png; sourceTree = "<group>"; };
+		CB5C52E82FE434FF00B86E4F /* sticker_flower_13_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_13_thumb.png; sourceTree = "<group>"; };
+		CB5C52E92FE434FF00B86E4F /* sticker_flower_14_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_14_thumb.png; sourceTree = "<group>"; };
+		CB5C52EA2FE434FF00B86E4F /* sticker_flower_15_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_flower_15_thumb.png; sourceTree = "<group>"; };
+		CB5C52EC2FE434FF00B86E4F /* sticker_category_flower.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_flower.png; sourceTree = "<group>"; };
+		CB5C52EE2FE434FF00B86E4F /* sticker_gift_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_0.png; sourceTree = "<group>"; };
+		CB5C52EF2FE434FF00B86E4F /* sticker_gift_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_1.png; sourceTree = "<group>"; };
+		CB5C52F02FE434FF00B86E4F /* sticker_gift_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_2.png; sourceTree = "<group>"; };
+		CB5C52F12FE434FF00B86E4F /* sticker_gift_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_3.png; sourceTree = "<group>"; };
+		CB5C52F22FE434FF00B86E4F /* sticker_gift_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_4.png; sourceTree = "<group>"; };
+		CB5C52F32FE434FF00B86E4F /* sticker_gift_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_5.png; sourceTree = "<group>"; };
+		CB5C52F42FE434FF00B86E4F /* sticker_gift_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_6.png; sourceTree = "<group>"; };
+		CB5C52F52FE434FF00B86E4F /* sticker_gift_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_7.png; sourceTree = "<group>"; };
+		CB5C52F62FE434FF00B86E4F /* sticker_gift_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_8.png; sourceTree = "<group>"; };
+		CB5C52F72FE434FF00B86E4F /* sticker_gift_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_9.png; sourceTree = "<group>"; };
+		CB5C52F82FE434FF00B86E4F /* sticker_gift_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_10.png; sourceTree = "<group>"; };
+		CB5C52F92FE434FF00B86E4F /* sticker_gift_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_11.png; sourceTree = "<group>"; };
+		CB5C52FB2FE434FF00B86E4F /* sticker_gift_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_0_thumb.png; sourceTree = "<group>"; };
+		CB5C52FC2FE434FF00B86E4F /* sticker_gift_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_1_thumb.png; sourceTree = "<group>"; };
+		CB5C52FD2FE434FF00B86E4F /* sticker_gift_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_2_thumb.png; sourceTree = "<group>"; };
+		CB5C52FE2FE434FF00B86E4F /* sticker_gift_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_3_thumb.png; sourceTree = "<group>"; };
+		CB5C52FF2FE434FF00B86E4F /* sticker_gift_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_4_thumb.png; sourceTree = "<group>"; };
+		CB5C53002FE434FF00B86E4F /* sticker_gift_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_5_thumb.png; sourceTree = "<group>"; };
+		CB5C53012FE434FF00B86E4F /* sticker_gift_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_6_thumb.png; sourceTree = "<group>"; };
+		CB5C53022FE434FF00B86E4F /* sticker_gift_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_7_thumb.png; sourceTree = "<group>"; };
+		CB5C53032FE434FF00B86E4F /* sticker_gift_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_8_thumb.png; sourceTree = "<group>"; };
+		CB5C53042FE434FF00B86E4F /* sticker_gift_9_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_9_thumb.png; sourceTree = "<group>"; };
+		CB5C53052FE434FF00B86E4F /* sticker_gift_10_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_10_thumb.png; sourceTree = "<group>"; };
+		CB5C53062FE434FF00B86E4F /* sticker_gift_11_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_gift_11_thumb.png; sourceTree = "<group>"; };
+		CB5C53082FE434FF00B86E4F /* sticker_category_gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_gift.png; sourceTree = "<group>"; };
+		CB5C530A2FE434FF00B86E4F /* sticker_lips_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_0.png; sourceTree = "<group>"; };
+		CB5C530B2FE434FF00B86E4F /* sticker_lips_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_1.png; sourceTree = "<group>"; };
+		CB5C530C2FE434FF00B86E4F /* sticker_lips_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_2.png; sourceTree = "<group>"; };
+		CB5C530D2FE434FF00B86E4F /* sticker_lips_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_3.png; sourceTree = "<group>"; };
+		CB5C530E2FE434FF00B86E4F /* sticker_lips_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_4.png; sourceTree = "<group>"; };
+		CB5C530F2FE434FF00B86E4F /* sticker_lips_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_5.png; sourceTree = "<group>"; };
+		CB5C53102FE434FF00B86E4F /* sticker_lips_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_6.png; sourceTree = "<group>"; };
+		CB5C53112FE434FF00B86E4F /* sticker_lips_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_7.png; sourceTree = "<group>"; };
+		CB5C53122FE434FF00B86E4F /* sticker_lips_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_8.png; sourceTree = "<group>"; };
+		CB5C53132FE434FF00B86E4F /* sticker_lips_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_9.png; sourceTree = "<group>"; };
+		CB5C53142FE434FF00B86E4F /* sticker_lips_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_10.png; sourceTree = "<group>"; };
+		CB5C53152FE434FF00B86E4F /* sticker_lips_11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_11.png; sourceTree = "<group>"; };
+		CB5C53172FE434FF00B86E4F /* sticker_lips_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_0_thumb.png; sourceTree = "<group>"; };
+		CB5C53182FE434FF00B86E4F /* sticker_lips_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_1_thumb.png; sourceTree = "<group>"; };
+		CB5C53192FE434FF00B86E4F /* sticker_lips_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_2_thumb.png; sourceTree = "<group>"; };
+		CB5C531A2FE434FF00B86E4F /* sticker_lips_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_3_thumb.png; sourceTree = "<group>"; };
+		CB5C531B2FE434FF00B86E4F /* sticker_lips_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_4_thumb.png; sourceTree = "<group>"; };
+		CB5C531C2FE434FF00B86E4F /* sticker_lips_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_5_thumb.png; sourceTree = "<group>"; };
+		CB5C531D2FE434FF00B86E4F /* sticker_lips_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_6_thumb.png; sourceTree = "<group>"; };
+		CB5C531E2FE434FF00B86E4F /* sticker_lips_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_7_thumb.png; sourceTree = "<group>"; };
+		CB5C531F2FE434FF00B86E4F /* sticker_lips_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_8_thumb.png; sourceTree = "<group>"; };
+		CB5C53202FE434FF00B86E4F /* sticker_lips_9_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_9_thumb.png; sourceTree = "<group>"; };
+		CB5C53212FE434FF00B86E4F /* sticker_lips_10_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_10_thumb.png; sourceTree = "<group>"; };
+		CB5C53222FE434FF00B86E4F /* sticker_lips_11_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_lips_11_thumb.png; sourceTree = "<group>"; };
+		CB5C53242FE434FF00B86E4F /* sticker_category_lips.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_lips.png; sourceTree = "<group>"; };
+		CB5C53262FE434FF00B86E4F /* sticker_love_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_0.png; sourceTree = "<group>"; };
+		CB5C53272FE434FF00B86E4F /* sticker_love_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_1.png; sourceTree = "<group>"; };
+		CB5C53282FE434FF00B86E4F /* sticker_love_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_2.png; sourceTree = "<group>"; };
+		CB5C53292FE434FF00B86E4F /* sticker_love_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_3.png; sourceTree = "<group>"; };
+		CB5C532A2FE434FF00B86E4F /* sticker_love_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_4.png; sourceTree = "<group>"; };
+		CB5C532B2FE434FF00B86E4F /* sticker_love_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_5.png; sourceTree = "<group>"; };
+		CB5C532C2FE434FF00B86E4F /* sticker_love_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_6.png; sourceTree = "<group>"; };
+		CB5C532D2FE434FF00B86E4F /* sticker_love_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_7.png; sourceTree = "<group>"; };
+		CB5C532E2FE434FF00B86E4F /* sticker_love_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_8.png; sourceTree = "<group>"; };
+		CB5C53302FE434FF00B86E4F /* sticker_love_0_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_0_thumb.png; sourceTree = "<group>"; };
+		CB5C53312FE434FF00B86E4F /* sticker_love_1_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_1_thumb.png; sourceTree = "<group>"; };
+		CB5C53322FE434FF00B86E4F /* sticker_love_2_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_2_thumb.png; sourceTree = "<group>"; };
+		CB5C53332FE434FF00B86E4F /* sticker_love_3_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_3_thumb.png; sourceTree = "<group>"; };
+		CB5C53342FE434FF00B86E4F /* sticker_love_4_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_4_thumb.png; sourceTree = "<group>"; };
+		CB5C53352FE434FF00B86E4F /* sticker_love_5_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_5_thumb.png; sourceTree = "<group>"; };
+		CB5C53362FE434FF00B86E4F /* sticker_love_6_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_6_thumb.png; sourceTree = "<group>"; };
+		CB5C53372FE434FF00B86E4F /* sticker_love_7_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_7_thumb.png; sourceTree = "<group>"; };
+		CB5C53382FE434FF00B86E4F /* sticker_love_8_thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_love_8_thumb.png; sourceTree = "<group>"; };
+		CB5C533A2FE434FF00B86E4F /* sticker_category_love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_category_love.png; sourceTree = "<group>"; };
+		CB5C533C2FE434FF00B86E4F /* StickerImagesInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = StickerImagesInfo.plist; sourceTree = "<group>"; };
+		CB5C533E2FE434FF00B86E4F /* StickerCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerCategoryView.swift; sourceTree = "<group>"; };
+		CB5C533F2FE434FF00B86E4F /* StickerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickerMenuView.swift; sourceTree = "<group>"; };
+		CB5C53F22FE4354B00B86E4F /* menubar-back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-back-button.png"; sourceTree = "<group>"; };
+		CB5C53F32FE4354B00B86E4F /* menubar-tick-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menubar-tick-button.png"; sourceTree = "<group>"; };
+		CB5C53F52FE4354B00B86E4F /* SimpleTopMenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTopMenuBar.swift; sourceTree = "<group>"; };
 		CB6F93EE2FAA16C5005BF98C /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
 		CB8347522FADFF34005EC518 /* Rario1x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario1x2.png; sourceTree = "<group>"; };
@@ -143,6 +503,9 @@
 		CB19E2D32F98BFCA003CAB54 /* MenuViews */ = {
 			isa = PBXGroup;
 			children = (
+				CB5C53F62FE4354B00B86E4F /* SimpleTopMenuBar */,
+				CB5C527D2FE434FF00B86E4F /* ImageStickerView */,
+				CB5C53402FE434FF00B86E4F /* StrickerMenuView */,
 				CBFFC0072FA8D85900B96C58 /* SampleMenu */,
 				CB0620582FDDBA7D00341CDE /* OrientationMenu */,
 				CB19E2D72F98C02A003CAB54 /* Canvas */,
@@ -158,6 +521,367 @@
 				CB6F93EF2FAA16C5005BF98C /* CanvasView.xib */,
 			);
 			path = Canvas;
+			sourceTree = "<group>";
+		};
+		CB5C527D2FE434FF00B86E4F /* ImageStickerView */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */,
+				CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */,
+			);
+			path = ImageStickerView;
+			sourceTree = "<group>";
+		};
+		CB5C528C2FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C527E2FE434FF00B86E4F /* sticker_baloon_0.png */,
+				CB5C527F2FE434FF00B86E4F /* sticker_baloon_1.png */,
+				CB5C52802FE434FF00B86E4F /* sticker_baloon_2.png */,
+				CB5C52812FE434FF00B86E4F /* sticker_baloon_3.png */,
+				CB5C52822FE434FF00B86E4F /* sticker_baloon_4.png */,
+				CB5C52832FE434FF00B86E4F /* sticker_baloon_5.png */,
+				CB5C52842FE434FF00B86E4F /* sticker_baloon_6.png */,
+				CB5C52852FE434FF00B86E4F /* sticker_baloon_7.png */,
+				CB5C52862FE434FF00B86E4F /* sticker_baloon_8.png */,
+				CB5C52872FE434FF00B86E4F /* sticker_baloon_9.png */,
+				CB5C52882FE434FF00B86E4F /* sticker_baloon_10.png */,
+				CB5C52892FE434FF00B86E4F /* sticker_baloon_11.png */,
+				CB5C528A2FE434FF00B86E4F /* sticker_baloon_12.png */,
+				CB5C528B2FE434FF00B86E4F /* sticker_baloon_13.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C529B2FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C528D2FE434FF00B86E4F /* sticker_baloon_0_thumb.png */,
+				CB5C528E2FE434FF00B86E4F /* sticker_baloon_1_thumb.png */,
+				CB5C528F2FE434FF00B86E4F /* sticker_baloon_2_thumb.png */,
+				CB5C52902FE434FF00B86E4F /* sticker_baloon_3_thumb.png */,
+				CB5C52912FE434FF00B86E4F /* sticker_baloon_4_thumb.png */,
+				CB5C52922FE434FF00B86E4F /* sticker_baloon_5_thumb.png */,
+				CB5C52932FE434FF00B86E4F /* sticker_baloon_6_thumb.png */,
+				CB5C52942FE434FF00B86E4F /* sticker_baloon_7_thumb.png */,
+				CB5C52952FE434FF00B86E4F /* sticker_baloon_8_thumb.png */,
+				CB5C52962FE434FF00B86E4F /* sticker_baloon_9_thumb.png */,
+				CB5C52972FE434FF00B86E4F /* sticker_baloon_10_thumb.png */,
+				CB5C52982FE434FF00B86E4F /* sticker_baloon_11_thumb.png */,
+				CB5C52992FE434FF00B86E4F /* sticker_baloon_12_thumb.png */,
+				CB5C529A2FE434FF00B86E4F /* sticker_baloon_13_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C529D2FE434FF00B86E4F /* baloon */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C528C2FE434FF00B86E4F /* Full */,
+				CB5C529B2FE434FF00B86E4F /* Thumb */,
+				CB5C529C2FE434FF00B86E4F /* sticker_category_baloon.png */,
+			);
+			path = baloon;
+			sourceTree = "<group>";
+		};
+		CB5C52B22FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C529E2FE434FF00B86E4F /* sticker_bird_0.png */,
+				CB5C529F2FE434FF00B86E4F /* sticker_bird_1.png */,
+				CB5C52A02FE434FF00B86E4F /* sticker_bird_2.png */,
+				CB5C52A12FE434FF00B86E4F /* sticker_bird_3.png */,
+				CB5C52A22FE434FF00B86E4F /* sticker_bird_4.png */,
+				CB5C52A32FE434FF00B86E4F /* sticker_bird_5.png */,
+				CB5C52A42FE434FF00B86E4F /* sticker_bird_6.png */,
+				CB5C52A52FE434FF00B86E4F /* sticker_bird_7.png */,
+				CB5C52A62FE434FF00B86E4F /* sticker_bird_8.png */,
+				CB5C52A72FE434FF00B86E4F /* sticker_bird_9.png */,
+				CB5C52A82FE434FF00B86E4F /* sticker_bird_10.png */,
+				CB5C52A92FE434FF00B86E4F /* sticker_bird_11.png */,
+				CB5C52AA2FE434FF00B86E4F /* sticker_bird_12.png */,
+				CB5C52AB2FE434FF00B86E4F /* sticker_bird_13.png */,
+				CB5C52AC2FE434FF00B86E4F /* sticker_bird_14.png */,
+				CB5C52AD2FE434FF00B86E4F /* sticker_bird_15.png */,
+				CB5C52AE2FE434FF00B86E4F /* sticker_bird_16.png */,
+				CB5C52AF2FE434FF00B86E4F /* sticker_bird_17.png */,
+				CB5C52B02FE434FF00B86E4F /* sticker_bird_18.png */,
+				CB5C52B12FE434FF00B86E4F /* sticker_bird_19.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C52C72FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52B32FE434FF00B86E4F /* sticker_bird_0_thumb.png */,
+				CB5C52B42FE434FF00B86E4F /* sticker_bird_1_thumb.png */,
+				CB5C52B52FE434FF00B86E4F /* sticker_bird_2_thumb.png */,
+				CB5C52B62FE434FF00B86E4F /* sticker_bird_3_thumb.png */,
+				CB5C52B72FE434FF00B86E4F /* sticker_bird_4_thumb.png */,
+				CB5C52B82FE434FF00B86E4F /* sticker_bird_5_thumb.png */,
+				CB5C52B92FE434FF00B86E4F /* sticker_bird_6_thumb.png */,
+				CB5C52BA2FE434FF00B86E4F /* sticker_bird_7_thumb.png */,
+				CB5C52BB2FE434FF00B86E4F /* sticker_bird_8_thumb.png */,
+				CB5C52BC2FE434FF00B86E4F /* sticker_bird_9_thumb.png */,
+				CB5C52BD2FE434FF00B86E4F /* sticker_bird_10_thumb.png */,
+				CB5C52BE2FE434FF00B86E4F /* sticker_bird_11_thumb.png */,
+				CB5C52BF2FE434FF00B86E4F /* sticker_bird_12_thumb.png */,
+				CB5C52C02FE434FF00B86E4F /* sticker_bird_13_thumb.png */,
+				CB5C52C12FE434FF00B86E4F /* sticker_bird_14_thumb.png */,
+				CB5C52C22FE434FF00B86E4F /* sticker_bird_15_thumb.png */,
+				CB5C52C32FE434FF00B86E4F /* sticker_bird_16_thumb.png */,
+				CB5C52C42FE434FF00B86E4F /* sticker_bird_17_thumb.png */,
+				CB5C52C52FE434FF00B86E4F /* sticker_bird_18_thumb.png */,
+				CB5C52C62FE434FF00B86E4F /* sticker_bird_19_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C52C92FE434FF00B86E4F /* bird */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52B22FE434FF00B86E4F /* Full */,
+				CB5C52C72FE434FF00B86E4F /* Thumb */,
+				CB5C52C82FE434FF00B86E4F /* sticker_category_bird.png */,
+			);
+			path = bird;
+			sourceTree = "<group>";
+		};
+		CB5C52DA2FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52CA2FE434FF00B86E4F /* sticker_flower_0.png */,
+				CB5C52CB2FE434FF00B86E4F /* sticker_flower_1.png */,
+				CB5C52CC2FE434FF00B86E4F /* sticker_flower_2.png */,
+				CB5C52CD2FE434FF00B86E4F /* sticker_flower_3.png */,
+				CB5C52CE2FE434FF00B86E4F /* sticker_flower_4.png */,
+				CB5C52CF2FE434FF00B86E4F /* sticker_flower_5.png */,
+				CB5C52D02FE434FF00B86E4F /* sticker_flower_6.png */,
+				CB5C52D12FE434FF00B86E4F /* sticker_flower_7.png */,
+				CB5C52D22FE434FF00B86E4F /* sticker_flower_8.png */,
+				CB5C52D32FE434FF00B86E4F /* sticker_flower_9.png */,
+				CB5C52D42FE434FF00B86E4F /* sticker_flower_10.png */,
+				CB5C52D52FE434FF00B86E4F /* sticker_flower_11.png */,
+				CB5C52D62FE434FF00B86E4F /* sticker_flower_12.png */,
+				CB5C52D72FE434FF00B86E4F /* sticker_flower_13.png */,
+				CB5C52D82FE434FF00B86E4F /* sticker_flower_14.png */,
+				CB5C52D92FE434FF00B86E4F /* sticker_flower_15.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C52EB2FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52DB2FE434FF00B86E4F /* sticker_flower_0_thumb.png */,
+				CB5C52DC2FE434FF00B86E4F /* sticker_flower_1_thumb.png */,
+				CB5C52DD2FE434FF00B86E4F /* sticker_flower_2_thumb.png */,
+				CB5C52DE2FE434FF00B86E4F /* sticker_flower_3_thumb.png */,
+				CB5C52DF2FE434FF00B86E4F /* sticker_flower_4_thumb.png */,
+				CB5C52E02FE434FF00B86E4F /* sticker_flower_5_thumb.png */,
+				CB5C52E12FE434FF00B86E4F /* sticker_flower_6_thumb.png */,
+				CB5C52E22FE434FF00B86E4F /* sticker_flower_7_thumb.png */,
+				CB5C52E32FE434FF00B86E4F /* sticker_flower_8_thumb.png */,
+				CB5C52E42FE434FF00B86E4F /* sticker_flower_9_thumb.png */,
+				CB5C52E52FE434FF00B86E4F /* sticker_flower_10_thumb.png */,
+				CB5C52E62FE434FF00B86E4F /* sticker_flower_11_thumb.png */,
+				CB5C52E72FE434FF00B86E4F /* sticker_flower_12_thumb.png */,
+				CB5C52E82FE434FF00B86E4F /* sticker_flower_13_thumb.png */,
+				CB5C52E92FE434FF00B86E4F /* sticker_flower_14_thumb.png */,
+				CB5C52EA2FE434FF00B86E4F /* sticker_flower_15_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C52ED2FE434FF00B86E4F /* flower */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52DA2FE434FF00B86E4F /* Full */,
+				CB5C52EB2FE434FF00B86E4F /* Thumb */,
+				CB5C52EC2FE434FF00B86E4F /* sticker_category_flower.png */,
+			);
+			path = flower;
+			sourceTree = "<group>";
+		};
+		CB5C52FA2FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52EE2FE434FF00B86E4F /* sticker_gift_0.png */,
+				CB5C52EF2FE434FF00B86E4F /* sticker_gift_1.png */,
+				CB5C52F02FE434FF00B86E4F /* sticker_gift_2.png */,
+				CB5C52F12FE434FF00B86E4F /* sticker_gift_3.png */,
+				CB5C52F22FE434FF00B86E4F /* sticker_gift_4.png */,
+				CB5C52F32FE434FF00B86E4F /* sticker_gift_5.png */,
+				CB5C52F42FE434FF00B86E4F /* sticker_gift_6.png */,
+				CB5C52F52FE434FF00B86E4F /* sticker_gift_7.png */,
+				CB5C52F62FE434FF00B86E4F /* sticker_gift_8.png */,
+				CB5C52F72FE434FF00B86E4F /* sticker_gift_9.png */,
+				CB5C52F82FE434FF00B86E4F /* sticker_gift_10.png */,
+				CB5C52F92FE434FF00B86E4F /* sticker_gift_11.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C53072FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52FB2FE434FF00B86E4F /* sticker_gift_0_thumb.png */,
+				CB5C52FC2FE434FF00B86E4F /* sticker_gift_1_thumb.png */,
+				CB5C52FD2FE434FF00B86E4F /* sticker_gift_2_thumb.png */,
+				CB5C52FE2FE434FF00B86E4F /* sticker_gift_3_thumb.png */,
+				CB5C52FF2FE434FF00B86E4F /* sticker_gift_4_thumb.png */,
+				CB5C53002FE434FF00B86E4F /* sticker_gift_5_thumb.png */,
+				CB5C53012FE434FF00B86E4F /* sticker_gift_6_thumb.png */,
+				CB5C53022FE434FF00B86E4F /* sticker_gift_7_thumb.png */,
+				CB5C53032FE434FF00B86E4F /* sticker_gift_8_thumb.png */,
+				CB5C53042FE434FF00B86E4F /* sticker_gift_9_thumb.png */,
+				CB5C53052FE434FF00B86E4F /* sticker_gift_10_thumb.png */,
+				CB5C53062FE434FF00B86E4F /* sticker_gift_11_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C53092FE434FF00B86E4F /* gift */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C52FA2FE434FF00B86E4F /* Full */,
+				CB5C53072FE434FF00B86E4F /* Thumb */,
+				CB5C53082FE434FF00B86E4F /* sticker_category_gift.png */,
+			);
+			path = gift;
+			sourceTree = "<group>";
+		};
+		CB5C53162FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C530A2FE434FF00B86E4F /* sticker_lips_0.png */,
+				CB5C530B2FE434FF00B86E4F /* sticker_lips_1.png */,
+				CB5C530C2FE434FF00B86E4F /* sticker_lips_2.png */,
+				CB5C530D2FE434FF00B86E4F /* sticker_lips_3.png */,
+				CB5C530E2FE434FF00B86E4F /* sticker_lips_4.png */,
+				CB5C530F2FE434FF00B86E4F /* sticker_lips_5.png */,
+				CB5C53102FE434FF00B86E4F /* sticker_lips_6.png */,
+				CB5C53112FE434FF00B86E4F /* sticker_lips_7.png */,
+				CB5C53122FE434FF00B86E4F /* sticker_lips_8.png */,
+				CB5C53132FE434FF00B86E4F /* sticker_lips_9.png */,
+				CB5C53142FE434FF00B86E4F /* sticker_lips_10.png */,
+				CB5C53152FE434FF00B86E4F /* sticker_lips_11.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C53232FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53172FE434FF00B86E4F /* sticker_lips_0_thumb.png */,
+				CB5C53182FE434FF00B86E4F /* sticker_lips_1_thumb.png */,
+				CB5C53192FE434FF00B86E4F /* sticker_lips_2_thumb.png */,
+				CB5C531A2FE434FF00B86E4F /* sticker_lips_3_thumb.png */,
+				CB5C531B2FE434FF00B86E4F /* sticker_lips_4_thumb.png */,
+				CB5C531C2FE434FF00B86E4F /* sticker_lips_5_thumb.png */,
+				CB5C531D2FE434FF00B86E4F /* sticker_lips_6_thumb.png */,
+				CB5C531E2FE434FF00B86E4F /* sticker_lips_7_thumb.png */,
+				CB5C531F2FE434FF00B86E4F /* sticker_lips_8_thumb.png */,
+				CB5C53202FE434FF00B86E4F /* sticker_lips_9_thumb.png */,
+				CB5C53212FE434FF00B86E4F /* sticker_lips_10_thumb.png */,
+				CB5C53222FE434FF00B86E4F /* sticker_lips_11_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C53252FE434FF00B86E4F /* lips */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53162FE434FF00B86E4F /* Full */,
+				CB5C53232FE434FF00B86E4F /* Thumb */,
+				CB5C53242FE434FF00B86E4F /* sticker_category_lips.png */,
+			);
+			path = lips;
+			sourceTree = "<group>";
+		};
+		CB5C532F2FE434FF00B86E4F /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53262FE434FF00B86E4F /* sticker_love_0.png */,
+				CB5C53272FE434FF00B86E4F /* sticker_love_1.png */,
+				CB5C53282FE434FF00B86E4F /* sticker_love_2.png */,
+				CB5C53292FE434FF00B86E4F /* sticker_love_3.png */,
+				CB5C532A2FE434FF00B86E4F /* sticker_love_4.png */,
+				CB5C532B2FE434FF00B86E4F /* sticker_love_5.png */,
+				CB5C532C2FE434FF00B86E4F /* sticker_love_6.png */,
+				CB5C532D2FE434FF00B86E4F /* sticker_love_7.png */,
+				CB5C532E2FE434FF00B86E4F /* sticker_love_8.png */,
+			);
+			path = Full;
+			sourceTree = "<group>";
+		};
+		CB5C53392FE434FF00B86E4F /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53302FE434FF00B86E4F /* sticker_love_0_thumb.png */,
+				CB5C53312FE434FF00B86E4F /* sticker_love_1_thumb.png */,
+				CB5C53322FE434FF00B86E4F /* sticker_love_2_thumb.png */,
+				CB5C53332FE434FF00B86E4F /* sticker_love_3_thumb.png */,
+				CB5C53342FE434FF00B86E4F /* sticker_love_4_thumb.png */,
+				CB5C53352FE434FF00B86E4F /* sticker_love_5_thumb.png */,
+				CB5C53362FE434FF00B86E4F /* sticker_love_6_thumb.png */,
+				CB5C53372FE434FF00B86E4F /* sticker_love_7_thumb.png */,
+				CB5C53382FE434FF00B86E4F /* sticker_love_8_thumb.png */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		CB5C533B2FE434FF00B86E4F /* love */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C532F2FE434FF00B86E4F /* Full */,
+				CB5C53392FE434FF00B86E4F /* Thumb */,
+				CB5C533A2FE434FF00B86E4F /* sticker_category_love.png */,
+			);
+			path = love;
+			sourceTree = "<group>";
+		};
+		CB5C533D2FE434FF00B86E4F /* Sticker-Images */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C529D2FE434FF00B86E4F /* baloon */,
+				CB5C52C92FE434FF00B86E4F /* bird */,
+				CB5C52ED2FE434FF00B86E4F /* flower */,
+				CB5C53092FE434FF00B86E4F /* gift */,
+				CB5C53252FE434FF00B86E4F /* lips */,
+				CB5C533B2FE434FF00B86E4F /* love */,
+				CB5C533C2FE434FF00B86E4F /* StickerImagesInfo.plist */,
+			);
+			path = "Sticker-Images";
+			sourceTree = "<group>";
+		};
+		CB5C53402FE434FF00B86E4F /* StrickerMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C533D2FE434FF00B86E4F /* Sticker-Images */,
+				CB5C533E2FE434FF00B86E4F /* StickerCategoryView.swift */,
+				CB5C533F2FE434FF00B86E4F /* StickerMenuView.swift */,
+			);
+			path = StrickerMenuView;
+			sourceTree = "<group>";
+		};
+		CB5C53F42FE4354B00B86E4F /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53F22FE4354B00B86E4F /* menubar-back-button.png */,
+				CB5C53F32FE4354B00B86E4F /* menubar-tick-button.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		CB5C53F62FE4354B00B86E4F /* SimpleTopMenuBar */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C53F42FE4354B00B86E4F /* icons */,
+				CB5C53F52FE4354B00B86E4F /* SimpleTopMenuBar.swift */,
+			);
+			path = SimpleTopMenuBar;
 			sourceTree = "<group>";
 		};
 		CB83475E2FADFF34005EC518 /* Ratio Images */ = {
@@ -382,6 +1106,182 @@
 				CB8600DC2FDFB85200424AC8 /* CapsuleImage.png in Resources */,
 				CB8347652FADFF34005EC518 /* Rario1x3.png in Resources */,
 				CB8347662FADFF34005EC518 /* Rario2x3.png in Resources */,
+				CB5C53442FE434FF00B86E4F /* sticker_bird_6_thumb.png in Resources */,
+				CB5C53452FE434FF00B86E4F /* sticker_gift_0.png in Resources */,
+				CB5C53462FE434FF00B86E4F /* sticker_lips_0.png in Resources */,
+				CB5C53472FE434FF00B86E4F /* sticker_bird_11_thumb.png in Resources */,
+				CB5C53482FE434FF00B86E4F /* sticker_love_5.png in Resources */,
+				CB5C53492FE434FF00B86E4F /* sticker_baloon_7_thumb.png in Resources */,
+				CB5C534A2FE434FF00B86E4F /* sticker_baloon_5_thumb.png in Resources */,
+				CB5C534B2FE434FF00B86E4F /* sticker_love_0.png in Resources */,
+				CB5C534C2FE434FF00B86E4F /* sticker_flower_11_thumb.png in Resources */,
+				CB5C534D2FE434FF00B86E4F /* sticker_baloon_2_thumb.png in Resources */,
+				CB5C534E2FE434FF00B86E4F /* sticker_bird_15.png in Resources */,
+				CB5C534F2FE434FF00B86E4F /* sticker_baloon_4_thumb.png in Resources */,
+				CB5C53502FE434FF00B86E4F /* sticker_gift_4.png in Resources */,
+				CB5C53512FE434FF00B86E4F /* sticker_bird_10_thumb.png in Resources */,
+				CB5C53522FE434FF00B86E4F /* sticker_gift_8.png in Resources */,
+				CB5C53532FE434FF00B86E4F /* sticker_love_7.png in Resources */,
+				CB5C53542FE434FF00B86E4F /* sticker_love_6_thumb.png in Resources */,
+				CB5C53552FE434FF00B86E4F /* sticker_category_flower.png in Resources */,
+				CB5C53562FE434FF00B86E4F /* sticker_gift_9_thumb.png in Resources */,
+				CB5C53572FE434FF00B86E4F /* sticker_baloon_1.png in Resources */,
+				CB5C53582FE434FF00B86E4F /* sticker_baloon_3_thumb.png in Resources */,
+				CB5C53592FE434FF00B86E4F /* sticker_flower_6_thumb.png in Resources */,
+				CB5C535A2FE434FF00B86E4F /* sticker_bird_13.png in Resources */,
+				CB5C535B2FE434FF00B86E4F /* sticker_love_3.png in Resources */,
+				CB5C535C2FE434FF00B86E4F /* sticker_flower_10_thumb.png in Resources */,
+				CB5C535D2FE434FF00B86E4F /* sticker_baloon_5.png in Resources */,
+				CB5C535E2FE434FF00B86E4F /* sticker_baloon_12.png in Resources */,
+				CB5C535F2FE434FF00B86E4F /* sticker_love_4.png in Resources */,
+				CB5C53602FE434FF00B86E4F /* sticker_baloon_8_thumb.png in Resources */,
+				CB5C53612FE434FF00B86E4F /* sticker_baloon_4.png in Resources */,
+				CB5C53622FE434FF00B86E4F /* sticker_flower_8.png in Resources */,
+				CB5C53632FE434FF00B86E4F /* sticker_baloon_2.png in Resources */,
+				CB5C53642FE434FF00B86E4F /* sticker_flower_5.png in Resources */,
+				CB5C53652FE434FF00B86E4F /* sticker_bird_3_thumb.png in Resources */,
+				CB5C53662FE434FF00B86E4F /* sticker_love_1.png in Resources */,
+				CB5C53672FE434FF00B86E4F /* sticker_love_3_thumb.png in Resources */,
+				CB5C53682FE434FF00B86E4F /* sticker_lips_5.png in Resources */,
+				CB5C53692FE434FF00B86E4F /* sticker_baloon_10.png in Resources */,
+				CB5C536A2FE434FF00B86E4F /* sticker_flower_6.png in Resources */,
+				CB5C536B2FE434FF00B86E4F /* sticker_bird_7.png in Resources */,
+				CB5C536C2FE434FF00B86E4F /* sticker_lips_3_thumb.png in Resources */,
+				CB5C536D2FE434FF00B86E4F /* sticker_lips_1.png in Resources */,
+				CB5C536E2FE434FF00B86E4F /* sticker_bird_0_thumb.png in Resources */,
+				CB5C536F2FE434FF00B86E4F /* sticker_lips_9_thumb.png in Resources */,
+				CB5C53702FE434FF00B86E4F /* sticker_love_0_thumb.png in Resources */,
+				CB5C53712FE434FF00B86E4F /* sticker_lips_6_thumb.png in Resources */,
+				CB5C53722FE434FF00B86E4F /* sticker_lips_8_thumb.png in Resources */,
+				CB5C53732FE434FF00B86E4F /* sticker_baloon_9_thumb.png in Resources */,
+				CB5C53742FE434FF00B86E4F /* sticker_bird_1.png in Resources */,
+				CB5C53752FE434FF00B86E4F /* sticker_flower_3.png in Resources */,
+				CB5C53F82FE4354B00B86E4F /* menubar-tick-button.png in Resources */,
+				CB5C53F92FE4354B00B86E4F /* menubar-back-button.png in Resources */,
+				CB5C53762FE434FF00B86E4F /* sticker_flower_12.png in Resources */,
+				CB5C53772FE434FF00B86E4F /* sticker_flower_3_thumb.png in Resources */,
+				CB5C53782FE434FF00B86E4F /* sticker_category_love.png in Resources */,
+				CB5C53792FE434FF00B86E4F /* sticker_lips_7_thumb.png in Resources */,
+				CB5C537A2FE434FF00B86E4F /* sticker_bird_6.png in Resources */,
+				CB5C537B2FE434FF00B86E4F /* sticker_flower_14_thumb.png in Resources */,
+				CB5C537C2FE434FF00B86E4F /* sticker_lips_0_thumb.png in Resources */,
+				CB5C537D2FE434FF00B86E4F /* sticker_bird_7_thumb.png in Resources */,
+				CB5C537E2FE434FF00B86E4F /* sticker_lips_4.png in Resources */,
+				CB5C537F2FE434FF00B86E4F /* sticker_flower_5_thumb.png in Resources */,
+				CB5C53802FE434FF00B86E4F /* sticker_baloon_7.png in Resources */,
+				CB5C53812FE434FF00B86E4F /* sticker_love_2_thumb.png in Resources */,
+				CB5C53822FE434FF00B86E4F /* sticker_love_1_thumb.png in Resources */,
+				CB5C53832FE434FF00B86E4F /* sticker_flower_15.png in Resources */,
+				CB5C53842FE434FF00B86E4F /* sticker_baloon_0_thumb.png in Resources */,
+				CB5C53852FE434FF00B86E4F /* sticker_baloon_6.png in Resources */,
+				CB5C53862FE434FF00B86E4F /* sticker_baloon_11_thumb.png in Resources */,
+				CB5C53872FE434FF00B86E4F /* sticker_flower_9.png in Resources */,
+				CB5C53882FE434FF00B86E4F /* sticker_lips_2.png in Resources */,
+				CB5C53892FE434FF00B86E4F /* sticker_gift_7.png in Resources */,
+				CB5C538A2FE434FF00B86E4F /* sticker_lips_1_thumb.png in Resources */,
+				CB5C538B2FE434FF00B86E4F /* sticker_bird_14_thumb.png in Resources */,
+				CB5C538C2FE434FF00B86E4F /* sticker_flower_1_thumb.png in Resources */,
+				CB5C538D2FE434FF00B86E4F /* sticker_flower_4_thumb.png in Resources */,
+				CB5C538E2FE434FF00B86E4F /* sticker_gift_2_thumb.png in Resources */,
+				CB5C538F2FE434FF00B86E4F /* sticker_flower_15_thumb.png in Resources */,
+				CB5C53902FE434FF00B86E4F /* sticker_lips_11.png in Resources */,
+				CB5C53912FE434FF00B86E4F /* sticker_gift_1_thumb.png in Resources */,
+				CB5C53922FE434FF00B86E4F /* sticker_gift_10_thumb.png in Resources */,
+				CB5C53932FE434FF00B86E4F /* sticker_bird_5_thumb.png in Resources */,
+				CB5C53942FE434FF00B86E4F /* sticker_gift_3.png in Resources */,
+				CB5C53952FE434FF00B86E4F /* sticker_category_bird.png in Resources */,
+				CB5C53962FE434FF00B86E4F /* sticker_bird_11.png in Resources */,
+				CB5C53972FE434FF00B86E4F /* sticker_bird_2_thumb.png in Resources */,
+				CB5C53982FE434FF00B86E4F /* sticker_bird_15_thumb.png in Resources */,
+				CB5C53992FE434FF00B86E4F /* sticker_gift_6_thumb.png in Resources */,
+				CB5C539A2FE434FF00B86E4F /* sticker_love_8_thumb.png in Resources */,
+				CB5C539B2FE434FF00B86E4F /* sticker_bird_18.png in Resources */,
+				CB5C539C2FE434FF00B86E4F /* sticker_lips_10_thumb.png in Resources */,
+				CB5C539D2FE434FF00B86E4F /* sticker_lips_10.png in Resources */,
+				CB5C539E2FE434FF00B86E4F /* StickerImagesInfo.plist in Resources */,
+				CB5C539F2FE434FF00B86E4F /* sticker_love_7_thumb.png in Resources */,
+				CB5C53A02FE434FF00B86E4F /* sticker_flower_14.png in Resources */,
+				CB5C53A12FE434FF00B86E4F /* sticker_category_baloon.png in Resources */,
+				CB5C53A22FE434FF00B86E4F /* sticker_gift_7_thumb.png in Resources */,
+				CB5C53A32FE434FF00B86E4F /* sticker_baloon_12_thumb.png in Resources */,
+				CB5C53A42FE434FF00B86E4F /* sticker_flower_11.png in Resources */,
+				CB5C53A52FE434FF00B86E4F /* sticker_flower_7_thumb.png in Resources */,
+				CB5C53A62FE434FF00B86E4F /* sticker_category_gift.png in Resources */,
+				CB5C53A72FE434FF00B86E4F /* sticker_gift_9.png in Resources */,
+				CB5C53A82FE434FF00B86E4F /* sticker_bird_17.png in Resources */,
+				CB5C53A92FE434FF00B86E4F /* sticker_bird_1_thumb.png in Resources */,
+				CB5C53AA2FE434FF00B86E4F /* sticker_bird_18_thumb.png in Resources */,
+				CB5C53AB2FE434FF00B86E4F /* sticker_bird_14.png in Resources */,
+				CB5C53AC2FE434FF00B86E4F /* sticker_lips_2_thumb.png in Resources */,
+				CB5C53AD2FE434FF00B86E4F /* sticker_gift_6.png in Resources */,
+				CB5C53AE2FE434FF00B86E4F /* sticker_gift_3_thumb.png in Resources */,
+				CB5C53AF2FE434FF00B86E4F /* sticker_love_4_thumb.png in Resources */,
+				CB5C53B02FE434FF00B86E4F /* sticker_lips_7.png in Resources */,
+				CB5C53B12FE434FF00B86E4F /* sticker_flower_10.png in Resources */,
+				CB5C53B22FE434FF00B86E4F /* sticker_gift_5.png in Resources */,
+				CB5C53B32FE434FF00B86E4F /* sticker_baloon_0.png in Resources */,
+				CB5C53B42FE434FF00B86E4F /* sticker_bird_16.png in Resources */,
+				CB5C53B52FE434FF00B86E4F /* sticker_bird_12_thumb.png in Resources */,
+				CB5C53B62FE434FF00B86E4F /* sticker_love_8.png in Resources */,
+				CB5C53B72FE434FF00B86E4F /* sticker_baloon_3.png in Resources */,
+				CB5C53B82FE434FF00B86E4F /* StickerAsset.xcassets in Resources */,
+				CB5C53B92FE434FF00B86E4F /* sticker_baloon_11.png in Resources */,
+				CB5C53BA2FE434FF00B86E4F /* sticker_bird_4_thumb.png in Resources */,
+				CB5C53BB2FE434FF00B86E4F /* sticker_gift_11_thumb.png in Resources */,
+				CB5C53BC2FE434FF00B86E4F /* sticker_lips_9.png in Resources */,
+				CB5C53BD2FE434FF00B86E4F /* sticker_gift_5_thumb.png in Resources */,
+				CB5C53BE2FE434FF00B86E4F /* sticker_baloon_9.png in Resources */,
+				CB5C53BF2FE434FF00B86E4F /* sticker_love_2.png in Resources */,
+				CB5C53C02FE434FF00B86E4F /* sticker_flower_0_thumb.png in Resources */,
+				CB5C53C12FE434FF00B86E4F /* sticker_flower_1.png in Resources */,
+				CB5C53C22FE434FF00B86E4F /* sticker_bird_9.png in Resources */,
+				CB5C53C32FE434FF00B86E4F /* sticker_bird_5.png in Resources */,
+				CB5C53C42FE434FF00B86E4F /* sticker_lips_6.png in Resources */,
+				CB5C53C52FE434FF00B86E4F /* sticker_bird_8.png in Resources */,
+				CB5C53C62FE434FF00B86E4F /* sticker_flower_8_thumb.png in Resources */,
+				CB5C53C72FE434FF00B86E4F /* sticker_lips_5_thumb.png in Resources */,
+				CB5C53C82FE434FF00B86E4F /* sticker_flower_2.png in Resources */,
+				CB5C53C92FE434FF00B86E4F /* sticker_bird_8_thumb.png in Resources */,
+				CB5C53CA2FE434FF00B86E4F /* sticker_bird_10.png in Resources */,
+				CB5C53CB2FE434FF00B86E4F /* sticker_baloon_6_thumb.png in Resources */,
+				CB5C53CC2FE434FF00B86E4F /* sticker_gift_11.png in Resources */,
+				CB5C53CD2FE434FF00B86E4F /* sticker_gift_2.png in Resources */,
+				CB5C53CE2FE434FF00B86E4F /* sticker_lips_4_thumb.png in Resources */,
+				CB5C53CF2FE434FF00B86E4F /* sticker_flower_0.png in Resources */,
+				CB5C53D02FE434FF00B86E4F /* sticker_baloon_1_thumb.png in Resources */,
+				CB5C53D12FE434FF00B86E4F /* sticker_lips_11_thumb.png in Resources */,
+				CB5C53D22FE434FF00B86E4F /* sticker_bird_2.png in Resources */,
+				CB5C53D32FE434FF00B86E4F /* sticker_lips_3.png in Resources */,
+				CB5C53D42FE434FF00B86E4F /* sticker_bird_4.png in Resources */,
+				CB5C53D52FE434FF00B86E4F /* sticker_baloon_13_thumb.png in Resources */,
+				CB5C53D62FE434FF00B86E4F /* sticker_flower_2_thumb.png in Resources */,
+				CB5C53D72FE434FF00B86E4F /* sticker_gift_1.png in Resources */,
+				CB5C53D82FE434FF00B86E4F /* sticker_bird_9_thumb.png in Resources */,
+				CB5C53D92FE434FF00B86E4F /* sticker_flower_12_thumb.png in Resources */,
+				CB5C53DA2FE434FF00B86E4F /* sticker_bird_17_thumb.png in Resources */,
+				CB5C53DB2FE434FF00B86E4F /* sticker_bird_13_thumb.png in Resources */,
+				CB5C53DC2FE434FF00B86E4F /* sticker_flower_13.png in Resources */,
+				CB5C53DD2FE434FF00B86E4F /* sticker_gift_8_thumb.png in Resources */,
+				CB5C53DE2FE434FF00B86E4F /* sticker_baloon_10_thumb.png in Resources */,
+				CB5C53DF2FE434FF00B86E4F /* sticker_category_lips.png in Resources */,
+				CB5C53E02FE434FF00B86E4F /* sticker_flower_13_thumb.png in Resources */,
+				CB5C53E12FE434FF00B86E4F /* sticker_love_5_thumb.png in Resources */,
+				CB5C53E22FE434FF00B86E4F /* sticker_lips_8.png in Resources */,
+				CB5C53E32FE434FF00B86E4F /* sticker_bird_19_thumb.png in Resources */,
+				CB5C53E42FE434FF00B86E4F /* sticker_bird_16_thumb.png in Resources */,
+				CB5C53E52FE434FF00B86E4F /* sticker_flower_7.png in Resources */,
+				CB5C53E62FE434FF00B86E4F /* sticker_baloon_8.png in Resources */,
+				CB5C53E72FE434FF00B86E4F /* sticker_flower_9_thumb.png in Resources */,
+				CB5C53E82FE434FF00B86E4F /* sticker_flower_4.png in Resources */,
+				CB5C53E92FE434FF00B86E4F /* sticker_gift_4_thumb.png in Resources */,
+				CB5C53EA2FE434FF00B86E4F /* sticker_love_6.png in Resources */,
+				CB5C53EB2FE434FF00B86E4F /* sticker_gift_0_thumb.png in Resources */,
+				CB5C53EC2FE434FF00B86E4F /* sticker_bird_3.png in Resources */,
+				CB5C53ED2FE434FF00B86E4F /* sticker_bird_0.png in Resources */,
+				CB5C53EE2FE434FF00B86E4F /* sticker_baloon_13.png in Resources */,
+				CB5C53EF2FE434FF00B86E4F /* sticker_bird_12.png in Resources */,
+				CB5C53F02FE434FF00B86E4F /* sticker_bird_19.png in Resources */,
+				CB5C53F12FE434FF00B86E4F /* sticker_gift_10.png in Resources */,
 				CB06205A2FDDBA7D00341CDE /* OrientationMenuView.xib in Resources */,
 				CB8347672FADFF34005EC518 /* Rario16x9.png in Resources */,
 				CB8347682FADFF34005EC518 /* Rario4x3.png in Resources */,
@@ -448,6 +1348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5C53412FE434FF00B86E4F /* StickerCategoryView.swift in Sources */,
+				CB5C53422FE434FF00B86E4F /* StickerMenuView.swift in Sources */,
+				CB5C53432FE434FF00B86E4F /* ImageStickerView.swift in Sources */,
 				CBE345622F9334B8004BD70B /* CommonMethods.swift in Sources */,
 				CBE345712F93C297004BD70B /* BottomMenuBar.swift in Sources */,
 				CB6F93F12FAA16C5005BF98C /* CanvasView.swift in Sources */,
@@ -459,6 +1362,7 @@
 				CBE3456F2F93972E004BD70B /* EditPageVC.swift in Sources */,
 				CBD324A92FA1BF5C00DD6811 /* GlobalConstant.swift in Sources */,
 				CBF449AB2F926B930098C788 /* AppDelegate.swift in Sources */,
+				CB5C53F72FE4354B00B86E4F /* SimpleTopMenuBar.swift in Sources */,
 				CBF449AC2F926B930098C788 /* SceneDelegate.swift in Sources */,
 				CB0620592FDDBA7D00341CDE /* OrientationMenuView.swift in Sources */,
 				CBF449AD2F926B930098C788 /* LandingPageVC.swift in Sources */,
