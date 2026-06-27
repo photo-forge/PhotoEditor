@@ -43,12 +43,12 @@ class SimpleTopMenuBar: UIView {
         backButton.imageView?.contentMode = .scaleAspectFit
         backButton.addTarget(self, action: #selector(self.backButtonTapped), for: .touchUpInside)
         
-        // Tick Button
-        let tickButton = UIButton(frame: CGRect(x: frame.width-frame.height, y: 0, width: frame.height, height: frame.height))
-        self.addSubview(tickButton)
-        tickButton.setImage(CommonMethods.ins.uiImageWithName(named: "menubar-tick-button"), for: UIControl.State())
-        tickButton.imageView?.contentMode = .scaleAspectFit
-        tickButton.addTarget(self, action: #selector(self.tickButtonTapped), for: .touchUpInside)
+//        // Tick Button
+//        let tickButton = UIButton(frame: CGRect(x: frame.width-frame.height, y: 0, width: frame.height, height: frame.height))
+//        self.addSubview(tickButton)
+//        tickButton.setImage(CommonMethods.ins.uiImageWithName(named: "menubar-tick-button"), for: UIControl.State())
+//        tickButton.imageView?.contentMode = .scaleAspectFit
+//        tickButton.addTarget(self, action: #selector(self.tickButtonTapped), for: .touchUpInside)
         
     }
     

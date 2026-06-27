@@ -10,6 +10,8 @@
 		C2CE3CE86A977B3FB21B08CA /* Pods_PhotoEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */; };
 		CB0620592FDDBA7D00341CDE /* OrientationMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0620562FDDBA7D00341CDE /* OrientationMenuView.swift */; };
 		CB06205A2FDDBA7D00341CDE /* OrientationMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB0620572FDDBA7D00341CDE /* OrientationMenuView.xib */; };
+		CB5359F22FE846570003C194 /* StickerCrossIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5359F12FE846570003C194 /* StickerCrossIcon.png */; };
+		CB5359F42FE846630003C194 /* StickerScaleIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5359F32FE846630003C194 /* StickerScaleIcon.png */; };
 		CB5C53412FE434FF00B86E4F /* StickerCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C533E2FE434FF00B86E4F /* StickerCategoryView.swift */; };
 		CB5C53422FE434FF00B86E4F /* StickerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C533F2FE434FF00B86E4F /* StickerMenuView.swift */; };
 		CB5C53432FE434FF00B86E4F /* ImageStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */; };
@@ -129,7 +131,6 @@
 		CB5C53B52FE434FF00B86E4F /* sticker_bird_12_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52BF2FE434FF00B86E4F /* sticker_bird_12_thumb.png */; };
 		CB5C53B62FE434FF00B86E4F /* sticker_love_8.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C532E2FE434FF00B86E4F /* sticker_love_8.png */; };
 		CB5C53B72FE434FF00B86E4F /* sticker_baloon_3.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52812FE434FF00B86E4F /* sticker_baloon_3.png */; };
-		CB5C53B82FE434FF00B86E4F /* StickerAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */; };
 		CB5C53B92FE434FF00B86E4F /* sticker_baloon_11.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52892FE434FF00B86E4F /* sticker_baloon_11.png */; };
 		CB5C53BA2FE434FF00B86E4F /* sticker_bird_4_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C52B72FE434FF00B86E4F /* sticker_bird_4_thumb.png */; };
 		CB5C53BB2FE434FF00B86E4F /* sticker_gift_11_thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = CB5C53062FE434FF00B86E4F /* sticker_gift_11_thumb.png */; };
@@ -242,8 +243,9 @@
 		985218C6ACBF05303BEBE63A /* Pods_PhotoEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB0620562FDDBA7D00341CDE /* OrientationMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationMenuView.swift; sourceTree = "<group>"; };
 		CB0620572FDDBA7D00341CDE /* OrientationMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrientationMenuView.xib; sourceTree = "<group>"; };
+		CB5359F12FE846570003C194 /* StickerCrossIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StickerCrossIcon.png; sourceTree = "<group>"; };
+		CB5359F32FE846630003C194 /* StickerScaleIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StickerScaleIcon.png; sourceTree = "<group>"; };
 		CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStickerView.swift; sourceTree = "<group>"; };
-		CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = StickerAsset.xcassets; sourceTree = "<group>"; };
 		CB5C527E2FE434FF00B86E4F /* sticker_baloon_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_0.png; sourceTree = "<group>"; };
 		CB5C527F2FE434FF00B86E4F /* sticker_baloon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_1.png; sourceTree = "<group>"; };
 		CB5C52802FE434FF00B86E4F /* sticker_baloon_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sticker_baloon_2.png; sourceTree = "<group>"; };
@@ -526,8 +528,8 @@
 		CB5C527D2FE434FF00B86E4F /* ImageStickerView */ = {
 			isa = PBXGroup;
 			children = (
+				CBC3D90C2FE8E80600848E25 /* Button */,
 				CB5C527B2FE434FF00B86E4F /* ImageStickerView.swift */,
-				CB5C527C2FE434FF00B86E4F /* StickerAsset.xcassets */,
 			);
 			path = ImageStickerView;
 			sourceTree = "<group>";
@@ -904,6 +906,15 @@
 			path = "Ratio Images";
 			sourceTree = "<group>";
 		};
+		CBC3D90C2FE8E80600848E25 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				CB5359F32FE846630003C194 /* StickerScaleIcon.png */,
+				CB5359F12FE846570003C194 /* StickerCrossIcon.png */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
 		CBDAC0F72FDE48C700A59203 /* OM images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1116,7 @@
 				CB8347642FADFF34005EC518 /* Rario3x2.png in Resources */,
 				CB8600DC2FDFB85200424AC8 /* CapsuleImage.png in Resources */,
 				CB8347652FADFF34005EC518 /* Rario1x3.png in Resources */,
+				CB5359F42FE846630003C194 /* StickerScaleIcon.png in Resources */,
 				CB8347662FADFF34005EC518 /* Rario2x3.png in Resources */,
 				CB5C53442FE434FF00B86E4F /* sticker_bird_6_thumb.png in Resources */,
 				CB5C53452FE434FF00B86E4F /* sticker_gift_0.png in Resources */,
@@ -1146,6 +1158,7 @@
 				CB5C53692FE434FF00B86E4F /* sticker_baloon_10.png in Resources */,
 				CB5C536A2FE434FF00B86E4F /* sticker_flower_6.png in Resources */,
 				CB5C536B2FE434FF00B86E4F /* sticker_bird_7.png in Resources */,
+				CB5359F22FE846570003C194 /* StickerCrossIcon.png in Resources */,
 				CB5C536C2FE434FF00B86E4F /* sticker_lips_3_thumb.png in Resources */,
 				CB5C536D2FE434FF00B86E4F /* sticker_lips_1.png in Resources */,
 				CB5C536E2FE434FF00B86E4F /* sticker_bird_0_thumb.png in Resources */,
@@ -1224,7 +1237,6 @@
 				CB5C53B52FE434FF00B86E4F /* sticker_bird_12_thumb.png in Resources */,
 				CB5C53B62FE434FF00B86E4F /* sticker_love_8.png in Resources */,
 				CB5C53B72FE434FF00B86E4F /* sticker_baloon_3.png in Resources */,
-				CB5C53B82FE434FF00B86E4F /* StickerAsset.xcassets in Resources */,
 				CB5C53B92FE434FF00B86E4F /* sticker_baloon_11.png in Resources */,
 				CB5C53BA2FE434FF00B86E4F /* sticker_bird_4_thumb.png in Resources */,
 				CB5C53BB2FE434FF00B86E4F /* sticker_gift_11_thumb.png in Resources */,

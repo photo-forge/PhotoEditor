@@ -25,6 +25,9 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     @IBOutlet weak var bgView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var overlayImageView: UIImageView!
+    @IBOutlet weak var frameImageView: UIImageView!
+    
     var screenBound : CGRect!
     
     var mainImage: UIImage!
@@ -49,12 +52,13 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         
         // BG View
         bgView.contentMode = .scaleAspectFill
-        bgView.backgroundColor = .white
+        bgView.backgroundColor = .green
+        bgView.isUserInteractionEnabled = true
         
         // Image View
 //        imageView.contentMode = .scaleAspectFit
         imageView.image = mainImage
-        imageView.backgroundColor = .red
+//        imageView.backgroundColor = .red
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
                         
@@ -430,6 +434,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         imageSticker.delegate = self
         imageSticker.select()
         stickerArray.add(imageSticker)
+        print("StickerCount: \(stickerArray.count)")
     }
     
     
@@ -448,14 +453,14 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     func imageStickerView_Deselected() {
         
     }
-    func imageStickerView_Deleted() {
-        
+    func imageStickerView_Deleted(sticker: ImageStickerView) {
+        stickerArray.remove(sticker)
+        print("StickerCount: \(stickerArray.count)")
     }
     
     
     // Tap
     @objc func handleTapGesture(_ sender: UITapGestureRecognizer) {
-        
         deselectAllStickers()
     }
     

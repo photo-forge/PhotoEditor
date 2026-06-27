@@ -12,10 +12,10 @@ public protocol ImageStickerViewDelegate {
     func imageStickerView_WillBeDeselected()
     func imageStickerView_Selected()
     func imageStickerView_Deselected()
-    func imageStickerView_Deleted()
+    func imageStickerView_Deleted(sticker:ImageStickerView)
 }
 
-class ImageStickerView: UIView, UIGestureRecognizerDelegate {
+public class ImageStickerView: UIView, UIGestureRecognizerDelegate {
     
     var delegate: ImageStickerViewDelegate?
     
@@ -23,9 +23,9 @@ class ImageStickerView: UIView, UIGestureRecognizerDelegate {
     
     var borderView: UIView!
     var imageView: UIImageView!
-    var imageInset:CGFloat = 18
+    var imageInset:CGFloat = 60
     
-    var crossButton:UIButton!
+    var crossButton:UIImageView!
     var scaleButton:UIImageView!
     var isScaleButtonPanning = false
     
@@ -75,7 +75,7 @@ class ImageStickerView: UIView, UIGestureRecognizerDelegate {
         borderView = UIView(frame: self.getBorderFrame(frame: imageFrame))
         borderView.center = CGPoint(x: self.frame.width/2, y: self.frame.height/2)
         self.addSubview(borderView)
-        borderView.layer.borderWidth = 1
+        borderView.layer.borderWidth = 6
         borderView.layer.borderColor = UIColor.lightGray.cgColor
         borderView.backgroundColor = .clear
         
@@ -86,15 +86,21 @@ class ImageStickerView: UIView, UIGestureRecognizerDelegate {
         imageView.image = image
         imageView.backgroundColor = .clear
         
-        // Cross Button
-        crossButton = UIButton(frame: self.getCrossButtonFrame())
+        // Cross Button (Button)
+        crossButton = UIImageView(frame: self.getCrossButtonFrame())
         self.addSubview(crossButton)
         crossButton.backgroundColor = .clear
-        crossButton.setImage(UIImage(named:"StickerCrossIcon"), for: UIControl.State())
-        crossButton.imageView?.contentMode = .scaleAspectFit
-        crossButton.addTarget(self, action: #selector(self.crossButtonTapped), for: .touchUpInside)
+        crossButton.image = UIImage(named:"StickerCrossIcon")
+        crossButton.contentMode = .scaleAspectFit
+        crossButton.isUserInteractionEnabled = true
+//        crossButton.addTarget(self, action: #selector(self.crossButtonTapped), for: .touchUpInside)
         
-        // Scale Button
+        // Tap Gesture
+        let tapGestureOnCrossButton = UITapGestureRecognizer(target: self, action: #selector(crossButtonTapped(_:)))
+        tapGestureOnCrossButton.delegate = self
+        crossButton.addGestureRecognizer(tapGestureOnCrossButton)
+        
+        // Scale Button (UIImage)
         scaleButton = UIImageView(frame: self.getScaleButtonFrame())
         self.addSubview(scaleButton)
         scaleButton.backgroundColor = .clear
@@ -156,16 +162,16 @@ class ImageStickerView: UIView, UIGestureRecognizerDelegate {
     }
     
     // Cross Button
-    @objc func crossButtonTapped() {
+    @objc func crossButtonTapped(_ sender: UITapGestureRecognizer) {
         self.removeFromSuperview()
         if (delegate != nil) {
-            delegate?.imageStickerView_Deleted()
+            delegate?.imageStickerView_Deleted(sticker:self)
         }
     }
     
     
     // MARK: - Gestures
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
             return true
     }
     
@@ -255,7 +261,7 @@ class ImageStickerView: UIView, UIGestureRecognizerDelegate {
         if (delegate != nil) {
             delegate?.imageStickerView_WillBeSelected()
         }
-        borderView.layer.borderWidth = 1
+        borderView.layer.borderWidth = 6
         crossButton.isHidden = false
         scaleButton.isHidden = false
         if (delegate != nil) {
