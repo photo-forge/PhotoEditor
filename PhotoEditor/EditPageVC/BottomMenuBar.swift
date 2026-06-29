@@ -13,6 +13,8 @@ import UIKit
     @objc optional func bottomMenuBar_BGGalleryButtonTapped()
     @objc optional func bottomMenuBar_CanvasButtonTapped()
     @objc optional func bottomMenuBar_FilterButtonTapped()
+    @objc optional func bottomMenuBar_TransformButtonTapped()
+    @objc optional func bottomMenuBar_FrameButtonTapped()
     @objc optional func bottomMenuBar_OverlayButtonTapped()
     @objc optional func bottomMenuBar_StickerButtonTapped()
     @objc optional func bottomMenuBar_TextButtonTapped()
@@ -24,6 +26,8 @@ enum BottomMenuBarType: Int {
     case _BGGallery
     case _Canvas
     case _Filter
+    case _Transform
+    case _Frame
     case _Overlay
     case _Sticker
     case _Text
@@ -36,8 +40,8 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     
     var collectionView: UICollectionView!
     
-    let menuItems = [BottomMenuBarType._FGGallery, ._BGGallery, ._Canvas, ._Filter, ._Overlay, ._Sticker, ._Text]
-    let menuItemNames = ["GalleryButton", "BGButton", "CanvasButton", "FilterButton", "OverlayButton", "StickerButton", "TextButton"]
+    let menuItems = [BottomMenuBarType._FGGallery, ._BGGallery, ._Canvas, ._Filter, ._Transform, ._Frame, ._Overlay, ._Sticker, ._Text, ._Doodle]
+    let menuItemNames = ["GalleryButton", "BGButton", "CanvasButton", "FilterButton", "TransformButton", "FrameButton", "OverlayButton", "StickerButton", "TextButton", "DoodleButton"]
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -61,7 +65,7 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
             layout.minimumLineSpacing = lineSpacing
             layout.itemSize = CGSize(width: cellSize, height: cellSize)
         } else {
-            layout.sectionInset = UIEdgeInsets(top: inset, left: inset*3, bottom: inset, right: inset)
+            layout.sectionInset = UIEdgeInsets(top: inset*2, left: inset*6, bottom: inset, right: inset*6)
             layout.minimumInteritemSpacing = inset * 4
             layout.minimumLineSpacing = inset * 4
             layout.itemSize = CGSize(width: cellSize, height: cellSize)
@@ -99,8 +103,12 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
                 delegate.bottomMenuBar_CanvasButtonTapped?()
             case ._Filter:
                 delegate.bottomMenuBar_FilterButtonTapped?()
+            case ._Transform:
+                delegate.bottomMenuBar_TransformButtonTapped?()
             case ._Sticker:
                 delegate.bottomMenuBar_StickerButtonTapped?()
+            case ._Frame:
+                delegate.bottomMenuBar_FrameButtonTapped?()
             case ._Overlay:
                 delegate.bottomMenuBar_OverlayButtonTapped?()
             case ._Text:

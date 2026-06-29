@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="SampleMenuView" id="iN0-l3-epB" customClass="OrientationMenuView" customModule="PhotoEditor" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="TransformMenuView" id="iN0-l3-epB" customClass="TransformMenuView" customModule="PhotoEditor" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -36,7 +36,7 @@
                                 <action selector="backButtonTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="lMe-yX-C44"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orientation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4H-KC-dr4">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transform" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4H-KC-dr4">
                             <rect key="frame" x="137.66666666666666" y="11.666666666666664" width="100" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="acs-9m-ZNZ"/>

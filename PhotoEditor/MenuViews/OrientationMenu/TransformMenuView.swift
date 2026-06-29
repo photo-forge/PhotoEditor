@@ -7,26 +7,26 @@
 
 import UIKit
 
-@objc protocol OrientationMenuViewDelegate {
+@objc protocol TransformMenuViewDelegate {
     
-//    @objc optional func orientationMenuView_TickButtonTapped()
-    @objc optional func orientationMenuView_CrossButtonTapped()
-    @objc optional func orientationMenuView_Appeared()
+//    @objc optional func transformMenuView_TickButtonTapped()
+    @objc optional func transformMenuView_CrossButtonTapped()
+    @objc optional func transformMenuView_Appeared()
     
-    @objc optional func orientationMenuView_HFlipButtonAction()
-    @objc optional func orientationMenuView_VFlipButtonAction()
+    @objc optional func transformMenuView_HFlipButtonAction()
+    @objc optional func transformMenuView_VFlipButtonAction()
     
-    @objc optional func orientationMenuView_RotateBackwardButtonAction()
-    @objc optional func orientationMenuView_RotateForwardButtonAction()
+    @objc optional func transformMenuView_RotateBackwardButtonAction()
+    @objc optional func transformMenuView_RotateForwardButtonAction()
     
-    @objc optional func orientationMenuView_ScaleSliderAction(scaleValue:CGFloat)
-    @objc optional func orientationMenuView_RotationSliderAction(rotateValue:CGFloat)
+    @objc optional func transformMenuView_ScaleSliderAction(scaleValue:CGFloat)
+    @objc optional func transformMenuView_RotationSliderAction(rotateValue:CGFloat)
 }
 
 
-class OrientationMenuView: UIView {
+class TransformMenuView: UIView {
     
-    var delegate:OrientationMenuViewDelegate!
+    var delegate:TransformMenuViewDelegate!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -48,46 +48,46 @@ class OrientationMenuView: UIView {
     @IBAction func backButtonTapped(_ sender: UIButton) {
         
         if (delegate != nil) {
-            delegate.orientationMenuView_CrossButtonTapped?()
+            delegate.transformMenuView_CrossButtonTapped?()
         }
     }
     
     
     @IBAction func hFlipButtonTapped(_ sender: UIButton) {
         if (delegate != nil) {
-            delegate.orientationMenuView_HFlipButtonAction?()
+            delegate.transformMenuView_HFlipButtonAction?()
         }
     }
     
     @IBAction func vFlipButtonTapped(_ sender: UIButton) {
         if (delegate != nil) {
-            delegate.orientationMenuView_VFlipButtonAction?()
+            delegate.transformMenuView_VFlipButtonAction?()
         }
     }
     
     @IBAction func rotateBackwardButtonTapped(_ sender: UIButton) {
         if (delegate != nil) {
-            delegate.orientationMenuView_RotateBackwardButtonAction?()
+            delegate.transformMenuView_RotateBackwardButtonAction?()
         }
     }
     
     @IBAction func rotateForwardButtonTapped(_ sender: UIButton) {
         if (delegate != nil) {
-            delegate.orientationMenuView_RotateForwardButtonAction?()
+            delegate.transformMenuView_RotateForwardButtonAction?()
         }
     }
     
     @IBAction func scaleSliderValueChanged(_ sender: UISlider) {
         if (delegate != nil) {
             let scaleValue:CGFloat = CGFloat(sender.value)
-            delegate.orientationMenuView_ScaleSliderAction?(scaleValue: scaleValue)
+            delegate.transformMenuView_ScaleSliderAction?(scaleValue: scaleValue)
         }
     }
     
     @IBAction func rotationSliderValueChanged(_ sender: UISlider) {
         if (delegate != nil) {
             let rotateValue:CGFloat = CGFloat(sender.value)
-            delegate.orientationMenuView_RotationSliderAction?(rotateValue: rotateValue)
+            delegate.transformMenuView_RotationSliderAction?(rotateValue: rotateValue)
         }
     }
     

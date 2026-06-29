@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate, OrientationMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -36,7 +36,8 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     // Menus
     var sampleMenuView: SampleMenuView!
     var canvasMenuView: CanvasView!
-    var orientationMenuView: OrientationMenuView!
+    var transformMenuView: TransformMenuView!
+    var frameMenuView: FrameMenuView!
     
     var stickerMenuView : StickerMenuView? = nil
     var stickerArray = NSMutableArray()
@@ -96,9 +97,16 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     func bottomMenuBar_FilterButtonTapped() {
         print("Filter")
     }
+    func bottomMenuBar_TransformButtonTapped() {
+        print("Transform")
+        appearTransformMenuView()
+    }
+    func bottomMenuBar_FrameButtonTapped() {
+        print("Frame")
+        appearFrameMenuView()
+    }
     func bottomMenuBar_OverlayButtonTapped() {
         print("Overlay")
-        appearOrientationMenuView()
     }
     func bottomMenuBar_StickerButtonTapped() {
         print("Sticker")
@@ -299,37 +307,37 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     
     
-    // MARK: Orientation Menu View and Delegates
+    // MARK: Transform Menu View and Delegates
     
-    func appearOrientationMenuView() {
+    func appearTransformMenuView() {
         
         // Create View
         let viewHeight: CGFloat = 200
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
-        if orientationMenuView == nil {
-            orientationMenuView = Bundle.main.loadNibNamed("OrientationMenuView", owner: nil, options: nil)?.first as? OrientationMenuView
-            orientationMenuView?.delegate = self
+        if transformMenuView == nil {
+            transformMenuView = Bundle.main.loadNibNamed("TransformMenuView", owner: nil, options: nil)?.first as? TransformMenuView
+            transformMenuView?.delegate = self
         }
-        orientationMenuView?.frame = viewFrame
-        orientationMenuView.layoutIfNeeded()
+        transformMenuView?.frame = viewFrame
+        transformMenuView.layoutIfNeeded()
         
         // Show Menu View
-        showMenuView(view: orientationMenuView!, height: viewHeight)
+        showMenuView(view: transformMenuView!, height: viewHeight)
     }
     
-    func orientationMenuView_Appeared() {
+    func transformMenuView_Appeared() {
         
     }
     
-    func orientationMenuView_CrossButtonTapped() {
-        print("OrientationMenuView_CrossButtonTapped")
-        hideMenuView(view: orientationMenuView!) {
+    func transformMenuView_CrossButtonTapped() {
+        print("TransformMenuView_CrossButtonTapped")
+        hideMenuView(view: transformMenuView!) {
         }
     }
     
     var scaleValueOfImageView: CGFloat = 1
     var isHFlipped = false
-    func orientationMenuView_HFlipButtonAction() {
+    func transformMenuView_HFlipButtonAction() {
         print("HFlip")
         isHFlipped.toggle()
         if isHFlipped {
@@ -343,7 +351,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     
     var isVFlipped = false
-    func orientationMenuView_VFlipButtonAction() {
+    func transformMenuView_VFlipButtonAction() {
         print("VFlip")
         isVFlipped.toggle()
         if isVFlipped {
@@ -358,7 +366,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 //    var rotationValue: CGFloat = 0
     var rotateDegree: CGFloat = 0
     var rotationDegree: CGFloat = 0
-    func orientationMenuView_RotateForwardButtonAction() {
+    func transformMenuView_RotateForwardButtonAction() {
         rotationDegree += 90;
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
         imageView.image = tiltedImage
@@ -367,7 +375,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 //        imageView.transform = CGAffineTransform(rotationAngle: rotationValue)
     }
     
-    func orientationMenuView_RotateBackwardButtonAction() {
+    func transformMenuView_RotateBackwardButtonAction() {
         print("RotateBackward")
         rotationDegree -= 90;
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
@@ -377,18 +385,48 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 //        imageView.transform = CGAffineTransform(rotationAngle: rotationValue)
     }
     
-    func orientationMenuView_ScaleSliderAction(scaleValue: CGFloat) {
+    func transformMenuView_ScaleSliderAction(scaleValue: CGFloat) {
         print("ScaleValue: \(scaleValue)")
         scaleValueOfImageView = 1 + (scaleValue-0.15)*4
         imageView.transform = CGAffineTransform(scaleX: scaleValueOfImageView, y: scaleValueOfImageView)
     }
     
-    func orientationMenuView_RotationSliderAction(rotateValue: CGFloat) {
+    func transformMenuView_RotationSliderAction(rotateValue: CGFloat) {
         print("RotateValue: \(rotateValue)")
         rotateDegree  = (rotateValue - 0.5)*360
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
         imageView.image = tiltedImage
     }
+    
+    
+    // MARK: FRAME View and Delegates
+    
+    func appearFrameMenuView() {
+        
+        // Create View
+        let viewHeight: CGFloat = 150
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+        if frameMenuView == nil {
+            frameMenuView = Bundle.main.loadNibNamed("FrameMenuView", owner: nil, options: nil)?.first as? FrameMenuView
+            frameMenuView?.delegate = self
+        }
+        frameMenuView?.frame = viewFrame
+        frameMenuView.layoutIfNeeded()
+        
+        // Show Menu View
+        showMenuView(view: frameMenuView!, height: viewHeight)
+    }
+    
+    func frameMenuView_CrossButtonTapped() {
+        hideMenuView(view: frameMenuView!) {
+            
+        }
+    }
+    
+    func frameMenuView_didSelectStickerName(stickerName: String) {
+        
+    }
+    
     
     // MARK: Sticker View and Delegates
     

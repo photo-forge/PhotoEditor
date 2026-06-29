@@ -9,7 +9,7 @@ import UIKit
 
 
 public protocol StickerMenuViewDelegate {
-    func stickerMenuView_didSelectStickerName(stickerName:String);
+    func stickerMenuView_didSelectStickerName(stickerName:String)
     func stickerMenuView_BackButtonTapped()
     func stickerMenuView_TickButtonTapped()
 }
