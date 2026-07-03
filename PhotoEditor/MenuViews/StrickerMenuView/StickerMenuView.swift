@@ -14,14 +14,6 @@ public protocol StickerMenuViewDelegate {
     func stickerMenuView_TickButtonTapped()
 }
 
-//enum StickerCategory {
-//    case baloon
-//    case bird
-//    case flower
-//    case gift
-//    case lips
-//    case love
-//}
 
 class StickerMenuView: UIView, StickerTopMenuBarDelegate, StickerCategoryViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
     var delegate:StickerMenuViewDelegate!
@@ -31,19 +23,6 @@ class StickerMenuView: UIView, StickerTopMenuBarDelegate, StickerCategoryViewDel
     
     var collectionView: UICollectionView!
     var initialFrame : CGRect!
-    
-    let numberOfBaloons : Int = 14;
-    let numberOfBirds : Int = 20;
-    let numberOfFlowers : Int = 16;
-    let numberOfGifts : Int = 12;
-    let numberOfLips : Int = 12;
-    let numberOfLoves : Int = 9;
-    
-    var numberOfSelectedSticker : Int = 14;
-    var stickerName = "sticker_baloon_0"
-    
-//    var stickerNamePrefix = "sticker_baloon_"
-//    var selectedStickerCategory : StickerCategory = .baloon
 
     
     required init?(coder aDecoder: NSCoder) {
@@ -71,7 +50,6 @@ class StickerMenuView: UIView, StickerTopMenuBarDelegate, StickerCategoryViewDel
             stickerInfoDic = NSDictionary(contentsOfFile: path ?? "") as NSDictionary?
         }
         stickerNamesDic = stickerInfoDic?["StickerItems"] as? NSDictionary
-        
         stickerNames = stickerNamesDic?["sticker_category_baloon"] as? NSArray
     }
     
@@ -111,7 +89,8 @@ class StickerMenuView: UIView, StickerTopMenuBarDelegate, StickerCategoryViewDel
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(StickerMenuStickerCell.self, forCellWithReuseIdentifier: "StickerCell")
-        
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
     }
     
     // MARK: Top Bar

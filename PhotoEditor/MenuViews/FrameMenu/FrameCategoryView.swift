@@ -8,24 +8,25 @@
 import UIKit
 
 public protocol FrameCategoryViewDelegate {
-    func strickerCategoryView_didSelectAt(frameCategoryName:String)
+    func frameCategoryView_didSelectAt(frameCategoryName:String)
 }
 
 class FrameCategoryView: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var delegate:FrameCategoryViewDelegate!
-
+    
     var collectionView: UICollectionView!
     
     var categoryNames: [String] = []
     
     required init?(coder: NSCoder) {
+        super.init(coder: coder)
         fatalError("init(coder:) has not been implemented")
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.clear
+        self.backgroundColor = .clear
         
         // Populate category array from plist
         var frameInfoDic: NSDictionary?
@@ -61,10 +62,12 @@ class FrameCategoryView: UIView, UICollectionViewDataSource, UICollectionViewDel
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(FrameMenuCategoryCell.self, forCellWithReuseIdentifier: "CategoryCell")
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+//        }
         
     }
     
@@ -81,7 +84,7 @@ class FrameCategoryView: UIView, UICollectionViewDataSource, UICollectionViewDel
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (delegate != nil) {
-            delegate.strickerCategoryView_didSelectAt(frameCategoryName:categoryNames[indexPath.row])
+            delegate.frameCategoryView_didSelectAt(frameCategoryName:categoryNames[indexPath.row])
         }
     }
     

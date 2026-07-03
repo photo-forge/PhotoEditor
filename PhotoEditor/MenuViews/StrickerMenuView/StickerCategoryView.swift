@@ -61,10 +61,11 @@ class StickerCategoryView: UIView, UICollectionViewDataSource, UICollectionViewD
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(StickerMenuCategoryCell.self, forCellWithReuseIdentifier: "CategoryCell")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
-        }
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+//            self.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+//        }
         
     }
     

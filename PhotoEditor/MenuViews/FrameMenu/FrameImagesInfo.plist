@@ -4,16 +4,16 @@
 <dict>
 	<key>Categories</key>
 	<array>
-		<string>frame_category_wood</string>
-		<string>frame_category_glitter</string>
-		<string>frame_category_pattern</string>
-		<string>frame_category_heart</string>
-		<string>frame_category_aqua</string>
-		<string>frame_category_gradient</string>
+		<string>frame-category-wood</string>
+		<string>frame-category-glitter</string>
+		<string>frame-category-pattern</string>
+		<string>frame-category-heart</string>
+		<string>frame-category-aqua</string>
+		<string>frame-category-gradient</string>
 	</array>
-	<key>Frame Items</key>
+	<key>FrameItems</key>
 	<dict>
-		<key>frame_category_wood</key>
+		<key>frame-category-wood</key>
 		<array>
 			<string>FrameWood-0</string>
 			<string>FrameWood-1</string>
@@ -27,7 +27,7 @@
 			<string>FrameWood-9</string>
 			<string>FrameWood-10</string>
 		</array>
-		<key>frame_category_glitter</key>
+		<key>frame-category-glitter</key>
 		<array>
 			<string>FrameGlitter-0</string>
 			<string>FrameGlitter-1</string>
@@ -40,7 +40,7 @@
 			<string>FrameGlitter-8</string>
 			<string>FrameGlitter-9</string>
 		</array>
-		<key>frame_category_pattern</key>
+		<key>frame-category-pattern</key>
 		<array>
 			<string>FramePattern-0</string>
 			<string>FramePattern-1</string>
@@ -52,7 +52,7 @@
 			<string>FramePattern-7</string>
 			<string>FramePattern-8</string>
 		</array>
-		<key>frame_category_heart</key>
+		<key>frame-category-heart</key>
 		<array>
 			<string>FrameHeart-0</string>
 			<string>FrameHeart-1</string>
@@ -62,7 +62,7 @@
 			<string>FrameHeart-5</string>
 			<string>FrameHeart-6</string>
 		</array>
-		<key>frame_category_aqua</key>
+		<key>frame-category-aqua</key>
 		<array>
 			<string>FrameAqua-0</string>
 			<string>FrameAqua-1</string>
@@ -73,7 +73,7 @@
 			<string>FrameAqua-6</string>
 			<string>FrameAqua-7</string>
 		</array>
-		<key>frame_category_gradient</key>
+		<key>frame-category-gradient</key>
 		<array>
 			<string>FrameGradient-0</string>
 			<string>FrameGradient-1</string>

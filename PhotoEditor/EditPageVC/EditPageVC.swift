@@ -404,7 +404,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     func appearFrameMenuView() {
         
         // Create View
-        let viewHeight: CGFloat = 150
+        let viewHeight: CGFloat = 180
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if frameMenuView == nil {
             frameMenuView = Bundle.main.loadNibNamed("FrameMenuView", owner: nil, options: nil)?.first as? FrameMenuView
@@ -423,8 +423,8 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         }
     }
     
-    func frameMenuView_didSelectStickerName(stickerName: String) {
-        
+    func frameMenuView_didSelectFrameName(frameName: String) {
+        frameImageView.image = UIImage(named: frameName)
     }
     
     

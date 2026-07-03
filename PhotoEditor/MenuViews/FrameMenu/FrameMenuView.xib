@@ -61,31 +61,36 @@
                         <constraint firstAttribute="trailing" secondItem="bdo-c1-yxE" secondAttribute="trailing" id="wr4-4o-9Tc"/>
                     </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZcJ-iU-UCy">
-                    <rect key="frame" x="0.0" y="44" width="393" height="109"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIi-MG-Jlc" userLabel="CategoryView">
+                    <rect key="frame" x="0.0" y="44" width="393" height="55"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="GPD-vL-WvP">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="V1L-oo-EyM"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVE-2q-IcL">
+                    <rect key="frame" x="0.0" y="99" width="393" height="54"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="RVE-2q-IcL" firstAttribute="top" secondItem="fIi-MG-Jlc" secondAttribute="bottom" id="9HB-kL-mjB"/>
+                <constraint firstItem="fIi-MG-Jlc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CGC-ri-3aC"/>
+                <constraint firstItem="RVE-2q-IcL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mje-cr-f0v"/>
                 <constraint firstItem="xFc-4b-85e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QtB-gh-CAA"/>
-                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RiA-n5-z9v"/>
-                <constraint firstAttribute="trailing" secondItem="ZcJ-iU-UCy" secondAttribute="trailing" id="a6z-3Z-qIX"/>
-                <constraint firstAttribute="bottom" secondItem="ZcJ-iU-UCy" secondAttribute="bottom" id="fH0-V9-X11"/>
+                <constraint firstAttribute="trailing" secondItem="fIi-MG-Jlc" secondAttribute="trailing" id="Wlv-he-Y28"/>
                 <constraint firstItem="xFc-4b-85e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gog-DH-LA0"/>
-                <constraint firstItem="ZcJ-iU-UCy" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="bottom" id="hRg-qz-6PM"/>
+                <constraint firstItem="fIi-MG-Jlc" firstAttribute="top" secondItem="xFc-4b-85e" secondAttribute="bottom" id="kJ4-1Y-ZfZ"/>
                 <constraint firstAttribute="trailing" secondItem="xFc-4b-85e" secondAttribute="trailing" id="rd3-wS-Gtj"/>
+                <constraint firstAttribute="trailing" secondItem="RVE-2q-IcL" secondAttribute="trailing" id="tbp-De-Y7M"/>
+                <constraint firstAttribute="bottom" secondItem="RVE-2q-IcL" secondAttribute="bottom" id="xSf-zd-HTi"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="collectionView" destination="ZcJ-iU-UCy" id="qYC-xe-gqD"/>
+                <outlet property="categoryViewContainer" destination="fIi-MG-Jlc" id="7H1-mG-bVW"/>
+                <outlet property="collectionViewContainer" destination="RVE-2q-IcL" id="4eP-XG-q89"/>
             </connections>
             <point key="canvasLocation" x="14.503816793893129" y="340.49295774647891"/>
         </view>
