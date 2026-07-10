@@ -930,11 +930,11 @@
 			isa = PBXGroup;
 			children = (
 				CB5C53F62FE4354B00B86E4F /* SimpleTopMenuBar */,
+				CBFFC0072FA8D85900B96C58 /* SampleMenu */,
 				CB5B7DB12FF9617400D68D8E /* BGMenu */,
 				CB5C527D2FE434FF00B86E4F /* ImageStickerView */,
 				CB5C53402FE434FF00B86E4F /* StrickerMenuView */,
 				CB3CE05C2FF2B138003B1E7A /* FrameMenu */,
-				CBFFC0072FA8D85900B96C58 /* SampleMenu */,
 				CB0620582FDDBA7D00341CDE /* OrientationMenu */,
 				CB19E2D72F98C02A003CAB54 /* Canvas */,
 			);

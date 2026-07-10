@@ -214,6 +214,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             canvasMenuView?.delegate = self
         }
         canvasMenuView?.frame = viewFrame
+        canvasMenuView.originalCanvasSize = canvasSize
         canvasMenuView.layoutIfNeeded()
         
         // Show Menu View
@@ -235,7 +236,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     var previousCanvasSize: CGSize!
     
     func canvasView_ItemSelectedWithSize(size: CGSize) {
-        print("Canvas", size.width, size.height)
+        print("Canvas Size: ", size.width, size.height)
         
         loopCount = 30
         

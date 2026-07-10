@@ -86,7 +86,26 @@ class TransformMenuView: UIView {
     
     @IBAction func rotationSliderValueChanged(_ sender: UISlider) {
         if (delegate != nil) {
-            let rotateValue:CGFloat = CGFloat(sender.value)
+            var rotateValue:CGFloat = CGFloat(sender.value)
+            
+            let threshold:CGFloat = 0.001
+            if (rotateValue > 0.0-threshold && rotateValue < 0.0+threshold) {
+                rotateValue = 0.0
+            }
+            if (rotateValue > 0.25-threshold && rotateValue < 0.25+threshold) {
+                rotateValue = 0.25
+            }
+            if (rotateValue > 0.50-threshold && rotateValue < 0.50+threshold) {
+                rotateValue = 0.50
+            }
+            if (rotateValue > 0.75-threshold && rotateValue < 0.75+threshold) {
+                rotateValue = 0.75
+            }
+            if (rotateValue > 1.0-threshold && rotateValue < 1.0+threshold) {
+                rotateValue = 1.0
+            }
+            
+            
             delegate.transformMenuView_RotationSliderAction?(rotateValue: rotateValue)
         }
     }

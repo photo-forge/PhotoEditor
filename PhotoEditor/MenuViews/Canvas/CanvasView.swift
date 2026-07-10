@@ -126,11 +126,12 @@ class CanvasView: UIView, UICollectionViewDataSource, UICollectionViewDelegate, 
         return cell
     }
     
+    var originalCanvasSize:CGSize = CGSize(width: 1024, height: 1024)
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (delegate != nil) {
             switch menuItems[indexPath.row] {
             case .RarioOriginal:
-                delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1024, height: 1024))
+                delegate.canvasView_ItemSelectedWithSize?(size: originalCanvasSize)
             case .RarioSquare:
                 delegate.canvasView_ItemSelectedWithSize?(size: CGSize(width: 1024, height: 1024))
             case .Rario9x16:

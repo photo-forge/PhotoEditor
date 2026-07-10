@@ -46,7 +46,16 @@ class LandingPageVC: UIViewController, PEImagePickerVCDelegate {
         let editPageVC = self.storyboard?.instantiateViewController(withIdentifier: "EditPageVC") as! EditPageVC
         editPageVC.modalPresentationStyle = .fullScreen
         editPageVC.mainImage = image
+        if image.size.width > image.size.height {
+            editPageVC.canvasSize = .init(width: 1000*image.size.width/image.size.height, height: 1000)
+        } else {
+            editPageVC.canvasSize = .init(width: 1000, height: 1000*image.size.height/image.size.width)
+        }
         self.present(editPageVC, animated: true, completion: nil)
+    }
+    
+    func imagePickerCancelled() {
+        
     }
     
 }
