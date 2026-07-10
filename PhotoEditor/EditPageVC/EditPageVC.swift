@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -32,16 +32,6 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     var mainImage: UIImage!
     var canvasSize: CGSize = CGSize(width: 1024, height: 1920)
-    
-    // Menus
-    var sampleMenuView: SampleMenuView!
-    var canvasMenuView: CanvasView!
-    var transformMenuView: TransformMenuView!
-    var frameMenuView: FrameMenuView!
-    
-    var stickerMenuView : StickerMenuView? = nil
-    var stickerArray = NSMutableArray()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +79,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     func bottomMenuBar_BGGalleryButtonTapped() {
         print("BG")
+        appearBGMenuView()
     }
     func bottomMenuBar_CanvasButtonTapped() {
         print("Canvas - Appear")
@@ -184,6 +175,8 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     // MARK: Sample Menu View and Delegates
     
+    var sampleMenuView: SampleMenuView!
+    
     func createSampleMenuView() {
         
         // Create View
@@ -208,6 +201,8 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     
     // MARK: Canvas View and Delegates
+    
+    var canvasMenuView: CanvasView!
     
     func appearCanvasView() {
         
@@ -306,8 +301,51 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 //        return min(scaleX, scaleY)
     }
     
+    // MARK: BG Menu View and Delegates
+    
+    var bgMenuView: BGMenuView!
+    
+    func appearBGMenuView() {
+        
+        let viewHeight: CGFloat = 200
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+        if bgMenuView == nil {
+            bgMenuView = Bundle.main.loadNibNamed("BGMenuView", owner: nil, options: nil )?.first as? BGMenuView
+            bgMenuView.delegate = self
+        }
+        bgMenuView?.frame = viewFrame
+        
+        
+        bgMenuView.layoutIfNeeded()
+        
+        // Show Menu View
+        showMenuView(view: bgMenuView!, height: viewHeight)
+    }
+    
+    func bgMenuView_Appeared() {
+        
+    }
+    
+    func bgMenuView_TickButtonTapped() {
+        
+    }
+    
+    func bgMenuView_CrossButtonTapped() {
+        print("TransformMenuView_CrossButtonTapped")
+        hideMenuView(view: bgMenuView!) {
+        }
+    }
+    
+    func bgMenuView_didSelectBGName(bgName: String) {
+        bgView.image = UIImage(named: bgName)
+    }
+    
+    
+    
     
     // MARK: Transform Menu View and Delegates
+    
+    var transformMenuView: TransformMenuView!
     
     func appearTransformMenuView() {
         
@@ -401,6 +439,8 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     // MARK: FRAME View and Delegates
     
+    var frameMenuView: FrameMenuView!
+
     func appearFrameMenuView() {
         
         // Create View
@@ -430,14 +470,15 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     // MARK: Sticker View and Delegates
     
+    var stickerMenuView : StickerMenuView? = nil
+    var stickerArray = NSMutableArray()
+    
     func appearStickerMenuView() {
         
         if stickerMenuView == nil {
             let viewHeight: CGFloat = 300
             let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
             stickerMenuView = StickerMenuView(frame: viewFrame)
-//            view.addSubview(stickerMenuView!)
-//            stickerMenuView!.isUserInteractionEnabled = true
             stickerMenuView!.delegate = self;
             
             // Tap Gesture

@@ -78,7 +78,6 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.register(BottomMenuBarCell.self, forCellWithReuseIdentifier: "MenuItemCell")
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
