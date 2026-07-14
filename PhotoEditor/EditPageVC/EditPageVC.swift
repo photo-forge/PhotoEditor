@@ -85,6 +85,9 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         print("Canvas - Appear")
         appearCanvasView()
     }
+    func bottomMenuBar_CropButtonTapped() {
+        print("Crop")
+    }
     func bottomMenuBar_FilterButtonTapped() {
         print("Filter")
     }

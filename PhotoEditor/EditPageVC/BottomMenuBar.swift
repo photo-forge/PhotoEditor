@@ -12,6 +12,7 @@ import UIKit
     @objc optional func bottomMenuBar_FGGalleryButtonTapped()
     @objc optional func bottomMenuBar_BGGalleryButtonTapped()
     @objc optional func bottomMenuBar_CanvasButtonTapped()
+    @objc optional func bottomMenuBar_CropButtonTapped()
     @objc optional func bottomMenuBar_FilterButtonTapped()
     @objc optional func bottomMenuBar_TransformButtonTapped()
     @objc optional func bottomMenuBar_FrameButtonTapped()
@@ -22,9 +23,10 @@ import UIKit
 }
 
 enum BottomMenuBarType: Int {
-    case _FGGallery = 0
-    case _BGGallery
+    case _PhotoGallery = 0
     case _Canvas
+    case _Crop
+    case _Background
     case _Filter
     case _Transform
     case _Frame
@@ -40,8 +42,8 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     
     var collectionView: UICollectionView!
     
-    let menuItems = [BottomMenuBarType._FGGallery, ._BGGallery, ._Canvas, ._Filter, ._Transform, ._Frame, ._Overlay, ._Sticker, ._Text, ._Doodle]
-    let menuItemNames = ["GalleryButton", "BGButton", "CanvasButton", "FilterButton", "TransformButton", "FrameButton", "OverlayButton", "StickerButton", "TextButton", "DoodleButton"]
+    let menuItems = [BottomMenuBarType._PhotoGallery, ._Canvas, ._Crop, ._Background, ._Filter, ._Transform, ._Frame, ._Overlay, ._Sticker, ._Text, ._Doodle]
+    let menuItemNames = ["GalleryButton", "CanvasButton", "CropButton", "BGButton", "FilterButton", "TransformButton", "FrameButton", "OverlayButton", "StickerButton", "TextButton", "DoodleButton"]
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -94,12 +96,14 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (delegate != nil) {
             switch menuItems[indexPath.row] {
-            case ._FGGallery:
+            case ._PhotoGallery:
                 delegate.bottomMenuBar_FGGalleryButtonTapped?()
-            case ._BGGallery:
-                delegate.bottomMenuBar_BGGalleryButtonTapped?()
             case ._Canvas:
                 delegate.bottomMenuBar_CanvasButtonTapped?()
+            case ._Crop:
+                delegate.bottomMenuBar_CropButtonTapped?()
+            case ._Background:
+                delegate.bottomMenuBar_BGGalleryButtonTapped?()
             case ._Filter:
                 delegate.bottomMenuBar_FilterButtonTapped?()
             case ._Transform:
@@ -115,7 +119,6 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
             default:
                 delegate.bottomMenuBar_FGGalleryButtonTapped?()
             }
-            
         }
     }
     
