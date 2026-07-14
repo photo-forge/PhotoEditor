@@ -45,7 +45,7 @@ class PEImagePickerTopBar: UIView {
         crossButton.center = CGPoint(x: 8+buttonWidth/2, y: sHeight/2)
         barView.addSubview(crossButton)
         crossButton.backgroundColor = UIColor.clear
-        crossButton.setImage(UIImage(named:"ev_down_normal"), for: .normal)
+        crossButton.setImage(UIImage(named:"ev_cross_button"), for: .normal)
         crossButton.imageView?.contentMode = .scaleAspectFit
         crossButton.addTarget(self, action: #selector(self.downButtonTapped), for: .touchUpInside)
         
@@ -58,7 +58,7 @@ class PEImagePickerTopBar: UIView {
         searchButton.center = CGPoint(x: sWidth/2, y: sHeight/2)
         barView.addSubview(searchButton)
         searchButton.backgroundColor = UIColor.clear
-        searchButton.setImage(UIImage(named:"ev_undo_button"), for: .normal)
+        searchButton.setImage(UIImage(named:"PEI-SearchButton"), for: .normal)
         searchButton.imageView?.contentMode = .scaleAspectFit
         searchButton.addTarget(self, action: #selector(self.searchButtonTapped), for: .touchUpInside)
         searchButton.isEnabled = true

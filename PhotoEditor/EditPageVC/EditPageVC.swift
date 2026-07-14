@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -75,7 +75,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func bottomMenuBar_FGGalleryButtonTapped() {
         print("Gallery")
-        createSampleMenuView()
+        presentPickerVC()
     }
     func bottomMenuBar_BGGalleryButtonTapped() {
         print("BG")
@@ -111,6 +111,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     func bottomMenuBar_DoodleButtonTapped() {
         print("Doodle")
+        createSampleMenuView()
     }
     
     // MARK: Animations & Transitions
@@ -202,6 +203,25 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         }
     }
     
+    //MARK: Image Picker View & Delegates
+    
+    func presentPickerVC() {
+        let imgPickerVC = self.storyboard?.instantiateViewController(identifier: "IMAGE_PICKER") as! PEImagePickerVC
+        imgPickerVC.fromForGround = true
+        imgPickerVC.delegate = self
+        self.present(imgPickerVC, animated: true, completion: nil)
+    }
+    
+    func imagePicked(fileName: String, fromFG: Bool) {
+        
+        let image = Utils.getImageWithName(fileName:fileName as NSString)
+        mainImage = image
+        imageView.image = mainImage
+    }
+    
+    func imagePickerCancelled() {
+        
+    }
     
     // MARK: Canvas View and Delegates
     
@@ -217,7 +237,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             canvasMenuView?.delegate = self
         }
         canvasMenuView?.frame = viewFrame
-        canvasMenuView.originalCanvasSize = canvasSize
+        canvasMenuView.originalCanvasSize = mainImage.size
         canvasMenuView.layoutIfNeeded()
         
         // Show Menu View
