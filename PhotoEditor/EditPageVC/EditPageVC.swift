@@ -229,7 +229,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func appearCanvasView() {
         
-        // Create View
+        // Instantiate View
         let viewHeight: CGFloat = 150
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if canvasMenuView == nil {
@@ -240,7 +240,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         canvasMenuView.originalCanvasSize = mainImage.size
         canvasMenuView.layoutIfNeeded()
         
-        // Show Menu View
+        // Show View
         showMenuView(view: canvasMenuView!, height: viewHeight)
     }
     
@@ -331,6 +331,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func appearBGMenuView() {
         
+        // Instantiate View
         let viewHeight: CGFloat = 200
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if bgMenuView == nil {
@@ -342,7 +343,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         
         bgMenuView.layoutIfNeeded()
         
-        // Show Menu View
+        // Show View
         showMenuView(view: bgMenuView!, height: viewHeight)
     }
     
@@ -383,7 +384,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         transformMenuView?.frame = viewFrame
         transformMenuView.layoutIfNeeded()
         
-        // Show Menu View
+        // Show View
         showMenuView(view: transformMenuView!, height: viewHeight)
     }
     
@@ -467,7 +468,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 
     func appearFrameMenuView() {
         
-        // Create View
+        // Instantiate View
         let viewHeight: CGFloat = 180
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if frameMenuView == nil {
@@ -477,7 +478,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         frameMenuView?.frame = viewFrame
         frameMenuView.layoutIfNeeded()
         
-        // Show Menu View
+        // Show View
         showMenuView(view: frameMenuView!, height: viewHeight)
     }
     
@@ -499,6 +500,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func appearStickerMenuView() {
         
+        // Instantiate View
         if stickerMenuView == nil {
             let viewHeight: CGFloat = 300
             let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
@@ -511,7 +513,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             bgView.addGestureRecognizer(tapGesture)
         }
         
-        // Show Menu View
+        // Show View
         showMenuView(view: stickerMenuView!, height: stickerMenuView!.bounds.height)
     }
     
