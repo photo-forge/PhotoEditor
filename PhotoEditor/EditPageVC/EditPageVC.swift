@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Mantis
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate, CropViewControllerDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -43,7 +44,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         
         // BG View
         bgView.contentMode = .scaleAspectFill
-        bgView.backgroundColor = .green
+        bgView.backgroundColor = .white
         bgView.isUserInteractionEnabled = true
         
         // Image View
@@ -87,6 +88,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     func bottomMenuBar_CropButtonTapped() {
         print("Crop")
+        appearCropVC()
     }
     func bottomMenuBar_FilterButtonTapped() {
         print("Filter")
@@ -324,6 +326,27 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
 //        print("Scale .....", scaleX, scaleY)
 //        return min(scaleX, scaleY)
     }
+    
+    //MARK: Crop View and Delegates
+    func appearCropVC() {
+        let cropViewController = Mantis.cropViewController(image: mainImage)
+            cropViewController.delegate = self
+        cropViewController.modalPresentationStyle = .fullScreen
+        
+        self.present(cropViewController, animated: true)
+    }
+    
+    //MARK:: CropViewDelegates
+    func cropViewControllerDidCrop(_ cropViewController: CropViewController, cropped: UIImage, transformation: Transformation) {
+        imageView.image = cropped
+        cropViewController.dismiss(animated: true) {
+        }
+    }
+    
+    func cropViewControllerDidCancel(_ cropViewController: CropViewController, original: UIImage) {
+        cropViewController.dismiss(animated: true, completion: nil)
+    }
+
     
     // MARK: BG Menu View and Delegates
     

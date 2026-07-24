@@ -184,11 +184,11 @@ class PEImagePickerVC: UIViewController, PEImagePickerTopBarDelegate, UICollecti
         }
         else if sender.tag == 12 {
             if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-                let imag = UIImagePickerController()
-                imag.delegate = self
-                imag.sourceType = UIImagePickerController.SourceType.photoLibrary;
-                imag.allowsEditing = false
-                self.present(imag, animated: true, completion: nil)
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.delegate = self
+                imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary;
+                imagePickerController.allowsEditing = false
+                self.present(imagePickerController, animated: true, completion: nil)
             }
         }
         else if sender.tag == 13 {
