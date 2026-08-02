@@ -384,11 +384,14 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         }
     }
     
+    func bgMenuView_didSelectBGColor(bgColor: UIColor) {
+        bgView.image = nil
+        bgView.backgroundColor = bgColor
+    }
+    
     func bgMenuView_didSelectBGName(bgName: String) {
         bgView.image = UIImage(named: bgName)
     }
-    
-    
     
     
     // MARK: Transform Menu View and Delegates

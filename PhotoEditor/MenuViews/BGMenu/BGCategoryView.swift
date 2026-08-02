@@ -17,7 +17,8 @@ class BGCategoryView: UIView, UICollectionViewDataSource, UICollectionViewDelega
     
     var collectionView: UICollectionView!
     
-    var categoryNames: [String] = []
+    var
+    categoryNames: [String] = []
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
