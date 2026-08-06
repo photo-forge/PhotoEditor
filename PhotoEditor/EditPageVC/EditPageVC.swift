@@ -355,7 +355,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     func appearBGMenuView() {
         
         // Instantiate View
-        let viewHeight: CGFloat = 200
+        let viewHeight: CGFloat = 250
         let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
         if bgMenuView == nil {
             bgMenuView = Bundle.main.loadNibNamed("BGMenuView", owner: nil, options: nil )?.first as? BGMenuView

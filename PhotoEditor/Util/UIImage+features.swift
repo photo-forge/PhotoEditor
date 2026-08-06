@@ -14,6 +14,11 @@ extension UIColor {
     convenience init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet(charactersIn: "#"))
         let rgbValue = UInt32(hex, radix: 16)
+        
+        if rgbValue == nil {
+            self.init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            return
+        }
         let r = Double((rgbValue! & 0xFF0000) >> 16) / 255
         let g = Double((rgbValue! & 0x00FF00) >> 8) / 255
         let b = Double(rgbValue! & 0x0000FF) / 255

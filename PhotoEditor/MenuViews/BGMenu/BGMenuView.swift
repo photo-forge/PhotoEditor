@@ -38,7 +38,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         super.init(frame: frame)
         commonInit()
     }
-
+    
     private func commonInit() {
         self.backgroundColor = .clear
         
@@ -46,7 +46,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         perform(#selector(self.createInterface), with: nil, afterDelay: 0.1)
 //        createInterface()
         
-//        printColorCodes()
+        printColorCodes()
     }
     
     func populateBGInfo() {
@@ -72,7 +72,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         
         // Collection View
         let cvFrame = collectionViewContainer.bounds
-        let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: cvFrame, numberOfCells: 6)
+        let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: cvFrame, numberOfCells: 4)
         collectionView = UICollectionView(frame: cvFrame, collectionViewLayout: layout)
         collectionViewContainer.addSubview(collectionView)
         collectionView.backgroundColor = UIColor.clear
@@ -103,17 +103,20 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
     func bgCategoryView_didSelectAt(bgCategoryName: String) {
         print(bgCategoryName)
         
-        bgNames.removeAllObjects()
-//        collectionView.reloadData()
-        return
+        bgNames = NSMutableArray()
+        bgNames.add("GradientImage0")
+        print("count: " + bgNames.count.description)
+        bgCategory = "bgGradient"
+        collectionView.reloadData()
+        
         bgCategory = bgCategoryName
         bgNames = bgNamesDic?[bgCategoryName] as? NSMutableArray
         
         if bgCategoryName == "bgColor" {
-            let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 3)
+            let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 5)
             collectionView.setCollectionViewLayout(layout, animated: false)
         } else {
-            let layout: UICollectionViewFlowLayout = cvLayout(inset: 8.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 1)
+            let layout: UICollectionViewFlowLayout = cvLayout(inset: 8.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 2)
             collectionView.setCollectionViewLayout(layout, animated: false)
         }
         collectionView.reloadData()
@@ -128,6 +131,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StickerCell", for: indexPath) as! StickerMenuStickerCell
         
         cell.backgroundColor = .lightGray
+        cell.imageView.frame = cell.bounds
         let name = bgNames?[indexPath.row] as! String
         if bgCategory == "bgColor" {
             let color = UIColor(hex: name)
@@ -156,10 +160,10 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
     
     
     func printColorCodes() {
-               
+        var count:Int = 0
         for i in 0..<6 {
-            for j in 0..<6 {
-                for k in 0..<6 {
+            for j in 0..<5 {
+                for k in 0..<4 {
                     
                     var oneStr:String!
                     var twoStr:String!
@@ -167,17 +171,17 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
                     
                     switch i {
                     case 0:
-                        oneStr = "00"
-                    case 1:
-                        oneStr = "33"
-                    case 2:
-                        oneStr = "66"
-                    case 3:
-                        oneStr = "99"
-                    case 4:
-                        oneStr = "cc"
-                    case 5:
                         oneStr = "ff"
+                    case 1:
+                        oneStr = "cc"
+                    case 2:
+                        oneStr = "99"
+                    case 3:
+                        oneStr = "66"
+                    case 4:
+                        oneStr = "33"
+                    case 5:
+                        oneStr = "00"
                     default:
                         oneStr = "00"
                     }
@@ -186,14 +190,12 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
                     case 0:
                         twoStr = "00"
                     case 1:
-                        twoStr = "33"
+                        twoStr = "3f"
                     case 2:
-                        twoStr = "66"
+                        twoStr = "7f"
                     case 3:
-                        twoStr = "99"
+                        twoStr = "bf"
                     case 4:
-                        twoStr = "cc"
-                    case 5:
                         twoStr = "ff"
                     default:
                         twoStr = "00"
@@ -203,20 +205,17 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
                     case 0:
                         threeStr = "00"
                     case 1:
-                        threeStr = "33"
+                        threeStr = "54"
                     case 2:
-                        threeStr = "66"
+                        threeStr = "a7"
                     case 3:
-                        threeStr = "99"
-                    case 4:
-                        threeStr = "cc"
-                    case 5:
                         threeStr = "ff"
                     default:
                         threeStr = "00"
                     }
                     
-                    print("#" + twoStr + threeStr + oneStr)
+                    count += 1
+                    print(String(count)+": " + oneStr + twoStr + threeStr)
                 }
             }
         }
