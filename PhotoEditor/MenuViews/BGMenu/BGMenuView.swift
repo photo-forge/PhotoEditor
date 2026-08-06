@@ -46,7 +46,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         perform(#selector(self.createInterface), with: nil, afterDelay: 0.1)
 //        createInterface()
         
-        printColorCodes()
+//        printColorCodes()
     }
     
     func populateBGInfo() {
@@ -113,7 +113,7 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
         bgNames = bgNamesDic?[bgCategoryName] as? NSMutableArray
         
         if bgCategoryName == "bgColor" {
-            let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 5)
+            let layout: UICollectionViewFlowLayout = cvLayout(inset: 4.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 4)
             collectionView.setCollectionViewLayout(layout, animated: false)
         } else {
             let layout: UICollectionViewFlowLayout = cvLayout(inset: 8.0, cvFrame: collectionViewContainer.bounds, numberOfCells: 2)
