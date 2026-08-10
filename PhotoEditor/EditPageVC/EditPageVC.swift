@@ -23,7 +23,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     @IBOutlet weak var editViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var editView: UIView!
-    @IBOutlet weak var bgView: UIImageView!
+    @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var overlayImageView: UIImageView!
@@ -43,14 +43,17 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         bottomMenuBar.delegate = self
         
         // BG View
-        bgView.contentMode = .scaleAspectFill
-        bgView.backgroundColor = .white
-        bgView.isUserInteractionEnabled = true
+        bgImageView.contentMode = .scaleAspectFill
+        bgImageView.backgroundColor = .white
+        bgImageView.isUserInteractionEnabled = true
         
         // Image View
 //        imageView.contentMode = .scaleAspectFit
         imageView.image = mainImage
 //        imageView.backgroundColor = .red
+        
+        // Frame Image View
+        frameImageView.contentMode = .scaleToFill
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.0) { [self] in
                         
@@ -217,6 +220,11 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     func imagePicked(fileName: String, fromFG: Bool) {
         
         let image = Utils.getImageWithName(fileName:fileName as NSString)
+        
+        if isBGMenuViewShown {
+            bgImageView.image = image
+            return
+        }
         mainImage = image
         imageView.image = mainImage
     }
@@ -351,6 +359,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     // MARK: BG Menu View and Delegates
     
     var bgMenuView: BGMenuView!
+    var isBGMenuViewShown: Bool = false
     
     func appearBGMenuView() {
         
@@ -362,11 +371,10 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             bgMenuView.delegate = self
         }
         bgMenuView?.frame = viewFrame
-        
-        
         bgMenuView.layoutIfNeeded()
         
         // Show View
+        isBGMenuViewShown = true
         showMenuView(view: bgMenuView!, height: viewHeight)
     }
     
@@ -380,17 +388,23 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func bgMenuView_CrossButtonTapped() {
         print("TransformMenuView_CrossButtonTapped")
-        hideMenuView(view: bgMenuView!) {
+        hideMenuView(view: bgMenuView!) { [self] in
+            isBGMenuViewShown = false
         }
     }
     
     func bgMenuView_didSelectBGColor(bgColor: UIColor) {
-        bgView.image = nil
-        bgView.backgroundColor = bgColor
+        bgImageView.image = nil
+        bgImageView.backgroundColor = bgColor
     }
     
     func bgMenuView_didSelectBGName(bgName: String) {
-        bgView.image = UIImage(named: bgName)
+        bgImageView.image = UIImage(named: bgName)
+    }
+    
+    func bgMenuView_didSelectPhotoButton() {
+        
+        presentPickerVC()
     }
     
     
@@ -536,7 +550,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             // Tap Gesture
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
             tapGesture.delegate = self
-            bgView.addGestureRecognizer(tapGesture)
+            bgImageView.addGestureRecognizer(tapGesture)
         }
         
         // Show View

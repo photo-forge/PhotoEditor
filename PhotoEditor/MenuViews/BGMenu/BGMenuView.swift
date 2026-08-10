@@ -14,6 +14,7 @@ import SwiftUI
     @objc optional func bgMenuView_Appeared()
     @objc optional func bgMenuView_didSelectBGName(bgName:String)
     @objc optional func bgMenuView_didSelectBGColor(bgColor:UIColor)
+    @objc optional func bgMenuView_didSelectPhotoButton()
 }
 
 
@@ -150,10 +151,14 @@ class BGMenuView: UIView, BGCategoryViewDelegate, UICollectionViewDataSource, UI
                 let name = bgNames?[indexPath.row] as! String
                 delegate.bgMenuView_didSelectBGColor?(bgColor:UIColor(hex: name))
             } else {
-                let name = bgNames?[indexPath.row] as! String
-                delegate.bgMenuView_didSelectBGName?(bgName: name)
+                
+                if bgCategory == "bgPhoto" && indexPath.item == 0 {
+                    delegate.bgMenuView_didSelectPhotoButton?()
+                } else {
+                    let name = bgNames?[indexPath.row] as! String
+                    delegate.bgMenuView_didSelectBGName?(bgName: name)
+                }
             }
-            
         }
     }
     
