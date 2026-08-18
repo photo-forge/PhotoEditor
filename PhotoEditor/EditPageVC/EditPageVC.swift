@@ -315,6 +315,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
             }
         }
         
+        updateFrameImageView()
     }
     
     
@@ -505,6 +506,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     // MARK: FRAME View and Delegates
     
     var frameMenuView: FrameMenuView!
+    var frameImageName: String?
 
     func appearFrameMenuView() {
         
@@ -529,7 +531,32 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     
     func frameMenuView_didSelectFrameName(frameName: String) {
-        frameImageView.image = UIImage(named: frameName)
+        frameImageName = frameName
+        updateFrameImageView()
+    }
+    
+    func updateFrameImageView() {
+        
+        if let frameImageName = self.frameImageName {
+            
+            var image = UIImage(named: frameImageName)
+            
+            if image == nil {
+                let hwRatio: CGFloat = frameImageView.frame.width / frameImageView.frame.height
+                if hwRatio > 1.39 { // LandScape
+                    print("LandScape")
+                    image = UIImage(named: "\(frameImageName)_Landscape")
+                } else if hwRatio < 0.78 {
+                    print("Portrait")
+                    image = UIImage(named: "\(frameImageName)_Portrait")
+                } else {
+                    print("Square")
+                    image = UIImage(named: "\(frameImageName)_Square")
+                }
+            }
+            
+            frameImageView.image = image
+        }
     }
     
     
