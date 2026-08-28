@@ -8,7 +8,7 @@
 import UIKit
 import Mantis
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate, CropViewControllerDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate, OverlayMenuViewDelegate, CropViewControllerDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -106,6 +106,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     func bottomMenuBar_OverlayButtonTapped() {
         print("Overlay")
+        appearOverlayMenuView()
     }
     func bottomMenuBar_StickerButtonTapped() {
         print("Sticker")
@@ -481,7 +482,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     
     func transformMenuView_RotateBackwardButtonAction() {
         print("RotateBackward")
-        rotationDegree -= 90;
+        rotationDegree -= 90
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
         imageView.image = tiltedImage
         
@@ -502,6 +503,35 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         imageView.image = tiltedImage
     }
     
+    // MARK: OVERLAY View and Delegates
+    var overlayMenuView: OverlayMenuView!
+    
+    func appearOverlayMenuView() {
+        
+        let viewHeight: CGFloat = 180
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+        if overlayMenuView == nil {
+            overlayMenuView = Bundle.main.loadNibNamed("OverlayMenuView", owner: nil, options: nil)?.first as? OverlayMenuView
+            overlayMenuView?.delegate = self
+        }
+        overlayMenuView?.frame = viewFrame
+        overlayMenuView.layoutIfNeeded()
+        
+        // Show View
+        showMenuView(view: overlayMenuView!, height: viewHeight)
+    }
+    
+    func overlayMenuView_CrossButtonTapped() {
+        hideMenuView(view: overlayMenuView!) {
+            
+        }
+    }
+    
+    func overlayMenuView_didSelectOverlayName(overlayName: String) {
+        print("Overlay Name: \(overlayName)")
+        let image = UIImage(named: overlayName)
+        frameImageView.image = image
+    }
     
     // MARK: FRAME View and Delegates
     

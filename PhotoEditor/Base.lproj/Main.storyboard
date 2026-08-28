@@ -250,7 +250,7 @@
                                             <action selector="backButtonAction:" destination="gj8-ud-mJm" eventType="touchUpInside" id="vQd-hW-G53"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-ZJ-IqA">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6dM-ZJ-IqA" userLabel="ShareButton">
                                         <rect key="frame" x="331.33333333333331" y="0.0" width="61.666666666666686" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="6dM-ZJ-IqA" secondAttribute="height" multiplier="7:5" id="6bQ-6q-q4u"/>
@@ -269,7 +269,6 @@
                                     <constraint firstAttribute="bottom" secondItem="u1M-0S-zaY" secondAttribute="bottom" id="Kom-G8-xCM"/>
                                     <constraint firstAttribute="trailing" secondItem="6dM-ZJ-IqA" secondAttribute="trailing" id="N69-G6-QcC"/>
                                     <constraint firstAttribute="height" constant="44" id="Neb-Ym-AGI"/>
-                                    <constraint firstItem="6dM-ZJ-IqA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="u1M-0S-zaY" secondAttribute="trailing" constant="8" symbolic="YES" id="Y8P-Er-YBg"/>
                                     <constraint firstAttribute="bottom" secondItem="6dM-ZJ-IqA" secondAttribute="bottom" id="fuL-6g-eJu"/>
                                     <constraint firstItem="u1M-0S-zaY" firstAttribute="leading" secondItem="ebC-ge-1Ej" secondAttribute="leading" id="qz3-sU-mW7"/>
                                 </constraints>
@@ -337,6 +336,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egg-AM-ArH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1576.3358778625955" y="136.61971830985917"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Rpw-pa-nmg">
+            <objects>
+                <viewController id="y16-0X-fOf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bTx-C5-veX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySj-Fl-oKM" userLabel="TopBarView">
+                                <rect key="frame" x="0.0" y="44" width="393" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7MB-Ki-7rm" userLabel="BackButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="7MB-Ki-7rm" secondAttribute="height" multiplier="27:22" id="tQz-jC-PJA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="menubar-back-button"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-hX-cPv">
+                                        <rect key="frame" x="175" y="12" width="47" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.21960784310000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7MB-Ki-7rm" firstAttribute="leading" secondItem="ySj-Fl-oKM" secondAttribute="leading" id="7gr-TX-ywW"/>
+                                    <constraint firstAttribute="bottom" secondItem="7MB-Ki-7rm" secondAttribute="bottom" id="K7E-ny-zgp"/>
+                                    <constraint firstAttribute="height" constant="44" id="iC9-gg-lNf"/>
+                                    <constraint firstItem="7MB-Ki-7rm" firstAttribute="top" secondItem="ySj-Fl-oKM" secondAttribute="top" id="v2L-uG-T11"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c7q-66-hsC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ySj-Fl-oKM" secondAttribute="trailing" id="49J-KO-u2g"/>
+                            <constraint firstItem="ySj-Fl-oKM" firstAttribute="top" secondItem="bTx-C5-veX" secondAttribute="top" constant="44" id="Gaf-Xj-fjx"/>
+                            <constraint firstItem="ySj-Fl-oKM" firstAttribute="leading" secondItem="bTx-C5-veX" secondAttribute="leading" id="L54-Ib-ZrJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFm-gV-JKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2300" y="137"/>
         </scene>
     </scenes>
     <resources>
