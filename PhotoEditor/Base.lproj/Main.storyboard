@@ -337,10 +337,10 @@
             </objects>
             <point key="canvasLocation" x="1576.3358778625955" y="136.61971830985917"/>
         </scene>
-        <!--View Controller-->
+        <!--Share PageVC-->
         <scene sceneID="Rpw-pa-nmg">
             <objects>
-                <viewController id="y16-0X-fOf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SharePageVC" id="y16-0X-fOf" customClass="SharePageVC" customModule="PhotoEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTx-C5-veX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -355,6 +355,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="menubar-back-button"/>
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="y16-0X-fOf" eventType="touchUpInside" id="g9M-Pc-MIY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbd-hX-cPv">
                                         <rect key="frame" x="175" y="12" width="47" height="22"/>
@@ -372,19 +375,40 @@
                                     <constraint firstItem="7MB-Ki-7rm" firstAttribute="top" secondItem="ySj-Fl-oKM" secondAttribute="top" id="v2L-uG-T11"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqQ-Nz-C4r">
+                                <rect key="frame" x="0.0" y="88" width="393" height="496"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esV-B6-wtY" userLabel="MenuView">
+                                <rect key="frame" x="0.0" y="584" width="393" height="268"/>
+                                <color key="backgroundColor" name="TopBarColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="Yex-op-JJR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="c7q-66-hsC"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="TopBarColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ySj-Fl-oKM" secondAttribute="trailing" id="49J-KO-u2g"/>
                             <constraint firstItem="ySj-Fl-oKM" firstAttribute="top" secondItem="bTx-C5-veX" secondAttribute="top" constant="44" id="Gaf-Xj-fjx"/>
                             <constraint firstItem="ySj-Fl-oKM" firstAttribute="leading" secondItem="bTx-C5-veX" secondAttribute="leading" id="L54-Ib-ZrJ"/>
+                            <constraint firstAttribute="bottom" secondItem="esV-B6-wtY" secondAttribute="bottom" id="d8Y-zC-r95"/>
+                            <constraint firstItem="esV-B6-wtY" firstAttribute="trailing" secondItem="c7q-66-hsC" secondAttribute="trailing" id="jIp-A6-FGp"/>
+                            <constraint firstItem="esV-B6-wtY" firstAttribute="top" secondItem="mqQ-Nz-C4r" secondAttribute="bottom" id="ltY-pv-sZq"/>
+                            <constraint firstItem="mqQ-Nz-C4r" firstAttribute="top" secondItem="ySj-Fl-oKM" secondAttribute="bottom" id="s7d-Hv-wAZ"/>
+                            <constraint firstItem="mqQ-Nz-C4r" firstAttribute="trailing" secondItem="c7q-66-hsC" secondAttribute="trailing" id="vzq-A1-IW4"/>
+                            <constraint firstItem="esV-B6-wtY" firstAttribute="leading" secondItem="c7q-66-hsC" secondAttribute="leading" id="xgq-Xh-1qv"/>
+                            <constraint firstItem="mqQ-Nz-C4r" firstAttribute="leading" secondItem="c7q-66-hsC" secondAttribute="leading" id="y7s-h7-D4B"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="mqQ-Nz-C4r" id="lRD-P5-ycF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bFm-gV-JKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="137"/>
+            <point key="canvasLocation" x="2300" y="136.61971830985917"/>
         </scene>
     </scenes>
     <resources>
@@ -401,7 +425,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.78431372549019607" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -98,24 +98,37 @@ class BottomMenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegat
             switch menuItems[indexPath.row] {
             case ._PhotoGallery:
                 delegate.bottomMenuBar_FGGalleryButtonTapped?()
+                break
             case ._Canvas:
                 delegate.bottomMenuBar_CanvasButtonTapped?()
+                break
             case ._Crop:
                 delegate.bottomMenuBar_CropButtonTapped?()
+                break
             case ._Background:
                 delegate.bottomMenuBar_BGGalleryButtonTapped?()
+                break
             case ._Filter:
                 delegate.bottomMenuBar_FilterButtonTapped?()
+                break
             case ._Transform:
                 delegate.bottomMenuBar_TransformButtonTapped?()
+                break
             case ._Sticker:
                 delegate.bottomMenuBar_StickerButtonTapped?()
+                break
             case ._Frame:
                 delegate.bottomMenuBar_FrameButtonTapped?()
+                break
             case ._Overlay:
                 delegate.bottomMenuBar_OverlayButtonTapped?()
+                break
             case ._Text:
                 delegate.bottomMenuBar_TextButtonTapped?()
+                break
+            case ._Doodle:
+                delegate.bottomMenuBar_DoodleButtonTapped?()
+                break
             default:
                 delegate.bottomMenuBar_FGGalleryButtonTapped?()
             }

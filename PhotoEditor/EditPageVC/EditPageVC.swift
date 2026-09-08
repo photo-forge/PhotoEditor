@@ -70,9 +70,39 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         }
     }
     
+//    func takeScreenshot() -> UIImage {
+//
+//            // Begin context
+//            UIGraphicsBeginImageContextWithOptions(editView.bounds.size, false, UIScreen.main.scale)
+//
+//            // Draw view in that context
+//            drawHierarchy(in: editView.bounds, afterScreenUpdates: true)
+//
+//            // And finally, get image
+//            let image = UIGraphicsGetImageFromCurrentImageContext()
+//            UIGraphicsEndImageContext()
+//
+//            if (image != nil)
+//            {
+//                return image!
+//            }
+//            return UIImage()
+//        }
+    
     @IBAction func shareButtonAction(_ sender: UIButton) {
         print("Show Share View")
         
+        deselectAllStickers()
+        
+        // Take screenshot
+//        let image = CommonMethods.ins.drawImage(fromView: editView, withRect: editView.bounds)
+        let image = CommonMethods.ins.renderImage(fromLayer: editView.layer, withRect: editView.bounds, andScale: 1.0)
+        
+        // Present Share View
+        let sharePageVC = self.storyboard?.instantiateViewController(withIdentifier: "SharePageVC") as! SharePageVC
+        sharePageVC.modalPresentationStyle = .fullScreen
+        sharePageVC.image = image
+        self.present(sharePageVC, animated: true, completion: nil)
     }
     
     // MARK: BottomMenuBarDelegate
