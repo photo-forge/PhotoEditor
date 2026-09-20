@@ -439,6 +439,10 @@
 		CB8347692FADFF34005EC518 /* Rario3x4.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8347592FADFF34005EC518 /* Rario3x4.png */; };
 		CB83476A2FADFF34005EC518 /* RarioOriginal.png in Resources */ = {isa = PBXBuildFile; fileRef = CB83475D2FADFF34005EC518 /* RarioOriginal.png */; };
 		CB8600DC2FDFB85200424AC8 /* CapsuleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CB8600DB2FDFB85200424AC8 /* CapsuleImage.png */; };
+		CB924FF830501F3C00D0CA70 /* FilterMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB924FF630501F3C00D0CA70 /* FilterMenuView.xib */; };
+		CB924FF930501F3C00D0CA70 /* FilterInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB924FF430501F3C00D0CA70 /* FilterInfo.plist */; };
+		CB924FFA30501F3C00D0CA70 /* FilterMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB924FF530501F3C00D0CA70 /* FilterMenuView.swift */; };
+		CB924FFB30501F3C00D0CA70 /* FilterCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB924FF330501F3C00D0CA70 /* FilterCategoryView.swift */; };
 		CBA588E12FA2471F00DA5902 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBA588E02FA2471F00DA5902 /* Colors.xcassets */; };
 		CBB0BA3D2FFA175400BD48C6 /* bgGradient.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB0BA392FFA175400BD48C6 /* bgGradient.png */; };
 		CBB0BA3E2FFA175400BD48C6 /* bgPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB0BA3A2FFA175400BD48C6 /* bgPattern.png */; };
@@ -913,6 +917,10 @@
 		CB83475C2FADFF34005EC518 /* Rario16x9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Rario16x9.png; sourceTree = "<group>"; };
 		CB83475D2FADFF34005EC518 /* RarioOriginal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RarioOriginal.png; sourceTree = "<group>"; };
 		CB8600DB2FDFB85200424AC8 /* CapsuleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CapsuleImage.png; sourceTree = "<group>"; };
+		CB924FF330501F3C00D0CA70 /* FilterCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCategoryView.swift; sourceTree = "<group>"; };
+		CB924FF430501F3C00D0CA70 /* FilterInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = FilterInfo.plist; sourceTree = "<group>"; };
+		CB924FF530501F3C00D0CA70 /* FilterMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterMenuView.swift; sourceTree = "<group>"; };
+		CB924FF630501F3C00D0CA70 /* FilterMenuView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterMenuView.xib; sourceTree = "<group>"; };
 		CBA588E02FA2471F00DA5902 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CBB0BA382FFA175400BD48C6 /* bgColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgColor.png; sourceTree = "<group>"; };
 		CBB0BA392FFA175400BD48C6 /* bgGradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgGradient.png; sourceTree = "<group>"; };
@@ -1002,6 +1010,7 @@
 				CB5C53402FE434FF00B86E4F /* StrickerMenuView */,
 				CB3CE05C2FF2B138003B1E7A /* FrameMenu */,
 				CBB95D3A30411E4B00730124 /* OverlayMenu */,
+				CB924FF730501F3C00D0CA70 /* FilterMenu */,
 				CB0620582FDDBA7D00341CDE /* TransformMenu */,
 				CB19E2D72F98C02A003CAB54 /* Canvas */,
 			);
@@ -1781,6 +1790,17 @@
 			path = "Ratio Images";
 			sourceTree = "<group>";
 		};
+		CB924FF730501F3C00D0CA70 /* FilterMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CB924FF430501F3C00D0CA70 /* FilterInfo.plist */,
+				CB924FF330501F3C00D0CA70 /* FilterCategoryView.swift */,
+				CB924FF530501F3C00D0CA70 /* FilterMenuView.swift */,
+				CB924FF630501F3C00D0CA70 /* FilterMenuView.xib */,
+			);
+			path = FilterMenu;
+			sourceTree = "<group>";
+		};
 		CBB0BA3C2FFA175400BD48C6 /* BGImages */ = {
 			isa = PBXGroup;
 			children = (
@@ -2265,6 +2285,8 @@
 				CB2071C22FFE93370062D5FF /* GradientImage10.png in Resources */,
 				CB2071C32FFE93370062D5FF /* GradientImage12.png in Resources */,
 				CB2071C42FFE93370062D5FF /* GradientImage13.png in Resources */,
+				CB924FF830501F3C00D0CA70 /* FilterMenuView.xib in Resources */,
+				CB924FF930501F3C00D0CA70 /* FilterInfo.plist in Resources */,
 				CB2071C52FFE93370062D5FF /* GradientImage2.png in Resources */,
 				CB2071C62FFE93370062D5FF /* GradientImage17.png in Resources */,
 				CB2071C72FFE93370062D5FF /* GradientImage14.png in Resources */,
@@ -2606,6 +2628,8 @@
 				CB7A595B30451DBD00D0C57B /* SharePageVC.swift in Sources */,
 				CBE3456A2F934B2C004BD70B /* UIImage+features.swift in Sources */,
 				CBE3456F2F93972E004BD70B /* EditPageVC.swift in Sources */,
+				CB924FFA30501F3C00D0CA70 /* FilterMenuView.swift in Sources */,
+				CB924FFB30501F3C00D0CA70 /* FilterCategoryView.swift in Sources */,
 				CBD324A92FA1BF5C00DD6811 /* GlobalConstant.swift in Sources */,
 				CBF449AB2F926B930098C788 /* AppDelegate.swift in Sources */,
 				CB5C53F72FE4354B00B86E4F /* SimpleTopMenuBar.swift in Sources */,

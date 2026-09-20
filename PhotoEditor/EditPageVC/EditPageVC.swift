@@ -8,7 +8,7 @@
 import UIKit
 import Mantis
 
-class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate, OverlayMenuViewDelegate, CropViewControllerDelegate {
+class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDelegate, PEImagePickerVCDelegate, SampleMenuViewDelegate, BGMenuViewDelegate, CanvasViewDelegate, TransformMenuViewDelegate, StickerMenuViewDelegate, ImageStickerViewDelegate, FrameMenuViewDelegate, FilterMenuViewDelegate, OverlayMenuViewDelegate, CropViewControllerDelegate {
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bottomMenuBar: BottomMenuBar!
@@ -125,6 +125,7 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
     }
     func bottomMenuBar_FilterButtonTapped() {
         print("Filter")
+        appearFilterMenuView()
     }
     func bottomMenuBar_TransformButtonTapped() {
         print("Transform")
@@ -531,6 +532,28 @@ class EditPageVC: UIViewController, UIGestureRecognizerDelegate, BottomMenuBarDe
         rotateDegree  = (rotateValue - 0.5)*360
         let tiltedImage = mainImage?.rotated(byDegrees: rotateDegree + rotationDegree)
         imageView.image = tiltedImage
+    }
+    
+    // MARK: FILTER View and Delegates
+    var filterMenuView: FilterMenuView!
+    
+    func appearFilterMenuView() {
+        let viewHeight: CGFloat = 180
+        let viewFrame: CGRect = CGRect(x: 0, y: 0, width: menuContainerView.frame.width, height: viewHeight)
+        if filterMenuView == nil {
+            filterMenuView = Bundle.main.loadNibNamed("FilterMenuView", owner: nil, options: nil)?.first as? FilterMenuView
+            filterMenuView?.delegate = self
+        }
+        filterMenuView?.frame = viewFrame
+        filterMenuView.layoutIfNeeded()
+        
+        // Show View
+        showMenuView(view: filterMenuView!, height: viewHeight)
+    }
+    
+    func filterMenuView_didSelectFilterName(filterName: String) {
+        let image = UIImage(named: filterName)
+        frameImageView.image = image
     }
     
     // MARK: OVERLAY View and Delegates
